@@ -33,26 +33,26 @@
 <h1 id="titleheader">Tits JS command list</h1>
 
 <main>
-  
-  <input class="HeaderTabs" id="tab1" type="radio" name="tabs" checked>
-  <label for="tab1">Main</label>
-    
-  <input class="HeaderTabs" id="tab2" type="radio" name="tabs">
-  <label for="tab2">Transformations</label>
-    
-  <input class="HeaderTabs" id="tab3" type="radio" name="tabs">
-  <label for="tab3">Status Effects</label>
-    
-  <input class="HeaderTabs" id="tab4" type="radio" name="tabs">
-  <label for="tab4">Enemies</label>
 
-  <input class="HeaderTabs" id="tab5" type="radio" name="tabs">
-  <label for="tab5">Events</label>
-
-  <input class="HeaderTabs" id="tab6" type="radio" name="tabs">
-  <label for="tab6">Flags</label>
+<input class="HeaderTabs" id="tab1" type="radio" name="tabs" checked>
+<label for="tab1">Main</label>
     
-  <section id="content1">
+<input class="HeaderTabs" id="tab2" type="radio" name="tabs">
+<label for="tab2">Transformations</label>
+    
+<input class="HeaderTabs" id="tab3" type="radio" name="tabs">
+<label for="tab3">Status Effects</label>
+    
+<input class="HeaderTabs" id="tab4" type="radio" name="tabs">
+<label for="tab4">Enemies</label>
+
+<input class="HeaderTabs" id="tab5" type="radio" name="tabs">
+<label for="tab5">Events</label>
+
+<input class="HeaderTabs" id="tab6" type="radio" name="tabs">
+<label for="tab6">Flags</label>
+    
+<section id="content1">
     <h3>Image URL Source</h3>
     <input type="text" id="replacementUrl" />
     <input type="button" id="replacementUrlSubmit" value="submit" />
@@ -71,9 +71,9 @@
     </script>
     <p>&nbsp</p>
     <p><strong>Max Stats</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre></p>
-  </section>
+</section>
     
-  <section id="content2">
+<section id="content2">
     <h1>NOTICE</h1>
     <p>I didn't know this when I started this project, but another similar one already exists for transformations; <a class="link" href="https://github.com/Chase-san/TiTsEdJS/tree/master" >TiTsEdJS</a> adds a side popup to the game for changing your character's stats and body.
         The simple method for adding it is to open the console and type. <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">(function(){var s=document.createElement("script");s.src="https://chase-san.github.io/TiTsEdJS/titsed.js";document.head.appendChild(s)})()</code></pre></p>
@@ -99,9 +99,9 @@
         </li>
         -->
     </ul>
-  </section>
+</section>
     
-  <section id="content3">
+<section id="content3">
     <div class="gridFourAcross">
         <!-- Rut Status -->
         <div class="statusGrid">
@@ -169,7 +169,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_water_drop"><path d="M12,0S3.66,10.1,3.66,15.66a8.34,8.34,0,0,0,16.68,0C20.34,10.1,12,0,12,0ZM8.36,16.21a18.89,18.89,0,0,0,1.05,5,6.48,6.48,0,0,1-3.56-6C5.85,12.31,9.26,8,11.2,4,11,6.1,8.36,12.21,8.36,16.21Z"></path></g></svg>
                     </div>
                     <div>
-                        <p class="statusEffectHeaderText" style="float: right;">Deep Heat</p>
+                        <p class="statusEffectHeaderText" style="float: right;">Deep Heat<br>& Pussy Drenched</p>
                     </div>
                 </div>
                 <div class="statusEffectDescription">
@@ -180,7 +180,6 @@
                         +25 Libido<br>
                         +5 Tease Damage
                     </p>
-                    <p class="statusEffectHeaderText">Pussy Drenched</p>
                     <p>
                     You’re drenched in girlcum! Anyone can tell at a glance what sort of activities you’ve been engaging in!
                     </p>
@@ -217,6 +216,7 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
             </div>
         </div>
     </div>
+    <!--
     <ul>
         <li class="">
             <details>
@@ -230,272 +230,341 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
             </details>
         </li>
     </ul>
-  </section>
+    -->
+</section>
     
-  <section id="content4">
-    <h1 class="areaheader">Zheng Shi</h1>
-    <div class="gridThreeAcross">
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Mining_Robot" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/mining_robot.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Mining Robot</h2>
-                <p>Doesent have sex scenes so I'm not gonna waste more time than I already have trying to find the encounter dialog.</p>
-                <p>If someone tells me what it is I'll add it.</p>
-            </div>
+<section id="content4">
+    <div class="areaContainer">
+        <div class="areaBioContainer">
+            <h1 class="areaHeader">Zheng Shi</h1>
+            <p class="areaDescription">A pirate station built on the largest asteroid in the asteroid field of the Herisiod System. </p>
         </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bored_Jumper" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperHumanImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_terran_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperEquineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_horse_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperCanineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperFelineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_feline_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperEasterImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_easter.Adjatha.webp" alt="logo">
-            <style>
-                #jumperHumanImg, #jumperEquineImg, #jumperCanineImg, #jumperFelineImg, #jumperEasterImg{
-                opacity: 0;
-                }
-                #jumperEquine:hover ~ #jumperEquineImg{
-                transition: opacity 0.1s ease-in-out;
-                opacity: 1;
-                }
-            </style>
-            <script>
-                $(document).ready(function() {
-                $('#jumperHuman').mouseover(function() {
-                    $('#jumperHumanImg').stop().fadeTo(50, 1);
-                }).mouseout(function() {
-                    $('#jumperHumanImg').stop().fadeTo(50, 0);
-                });
-
-                $('#jumperEquine').mouseover(function() {
-                    $('#jumperEquineImg').stop().fadeTo(50, 1);
-                }).mouseout(function() {
-                    $('#jumperEquineImg').stop().fadeTo(50, 0);
-                });
-
-
-                $('#jumperCanine').mouseover(function() {
-                    $('#jumperCanineImg').stop().fadeTo(50, 1);
-                }).mouseout(function() {
-                    $('#jumperCanineImg').stop().fadeTo(50, 0);
-                });
-
-                $('#jumperFeline').mouseover(function() {
-                    $('#jumperFelineImg').stop().fadeTo(50, 1);
-                }).mouseout(function() {
-                    $('#jumperFelineImg').stop().fadeTo(50, 0);
-                });
-
-                $('#jumperEaster').mouseover(function() {
-                    $('#jumperEasterImg').stop().fadeTo(50, 1);
-                }).mouseout(function() {
-                    $('#jumperEasterImg').stop().fadeTo(50, 0);
-                });
-                });
-            </script>
-            <div class="gridtext">
-                <h2>Bored Jumper</h2>
-                <p><strong>Human</strong>: Thanks to how its ordered the Human varient cannot be assured.<pre id="jumperHuman"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(0)</code></pre></p>
-                <p><strong>Equine</strong><pre id="jumperEquine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(1)</code></pre></p> 
-                <p><strong>Canine</strong><pre id="jumperCanine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(3)</code></pre></p> 
-                <p><strong>Feline</strong><pre id="jumperFeline"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(4)</code></pre></p> 
-                <p><strong>Easter</strong>: <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Easter_Jumper" >Wiki</a> <pre id="jumperEaster"><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterEasterJumper()</code></pre></p>
+        <Details>
+            <summary>Zone Maps</summary>
+            <div class="areaZoneMaps">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/9/9a/ZhengShi_-_Main.png">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/8/82/ZhengShi_-_Foundry.png">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/7/7b/ZhengShi_-_Scaffold.png">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/f/fc/ZhengShi_-_Rec_Deck.png">
             </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Roz" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/roz.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/roz_nude.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Roz</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterRoz()</code></pre></p>
-            </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Overseer_Maike" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/maike.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/maike_nude.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Overseer Maike</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">maikeEncounterFun()</code></pre></p>
-            </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Excavation_Robot" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/excavation_robot.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Excavation Robot</h2>
-                <p>Doesent have sex scenes so I'm not gonna waste more time than I already have trying to find the encounter dialog.</p>
-                <p>If someone tells me what it is I'll add it.</p>
-            </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Forgehound" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Shou/x1/forgehound.Shou.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Shou/x1/forgehound_nude.Shou.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Forgehound</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">forgehoundEncounter()</code></pre></p>
-            </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Corona_Flamer" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/firepup.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/firepup_nude.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Corona Flamer</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">coronaFlamerEncounter()</code></pre></p>
-            </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Agrosh" >W</a>
-            <img class="backimg" src="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" alt="logo">
-            <div class="gridtext">
-                <h2>Agrosh</h2>
-                <p>Only Appears During Zheng Shi Quest Events</p>
-            </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cyberpunk_Security_Operatives" >W</a>
-            <div id="imageContainer">
-                <img id="punksecopimage1" class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Image 1">
-                <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Image 1">
-                <img id="punksecopimage2" class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp" alt="Image 2">
-                <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Image 2">
-            </div>
-            <script>
-            $(document).ready(function() {
-                var currentImage = 1;
-
-                function cycleImages() {
-                    if (currentImage === 1) {
-                    $('#punksecopimage1').fadeOut(400, function() {
-                        $(this).attr('src', 'imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp').fadeIn(1000);
-                    });
-                    currentImage = 2;
-                    } else {
-                    $('#punksecopimage2').fadeOut(400, function() {
-                        $(this).attr('src', 'imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp').fadeIn(1000);
-                    });
-                    currentImage = 1;
+        </Details>
+        <div class="gridThreeAcross">
+            <!--Bored Jumpers-->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Bored Jumper</h2>
+                    <p><strong>Human</strong>: Thanks to how its ordered the Human varient cannot be assured.<pre id="jumperHuman"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(0)</code></pre></p>
+                    <p><strong>Equine</strong><pre id="jumperEquine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(1)</code></pre></p> 
+                    <p><strong>Canine</strong><pre id="jumperCanine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(3)</code></pre></p> 
+                    <p><strong>Feline</strong><pre id="jumperFeline"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(4)</code></pre></p> 
+                    <p><strong>Easter</strong>: <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Easter_Jumper" >Wiki</a> <pre id="jumperEaster"><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterEasterJumper()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bored_Jumper" >W</a>
+                <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine.Adjatha.webp" alt="Canine Bored Jumper">
+                <img class="sideimg" id="jumperHumanImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_terran_nude.Adjatha.webp" alt="Human Bored Jumper Nude">
+                <img class="sideimg" id="jumperEquineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_horse_nude.Adjatha.webp" alt="Equine Bored Jumper Nude">
+                <img class="sideimg" id="jumperCanineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine_nude.Adjatha.webp" alt="Canine Bored Jumper Nude">
+                <img class="sideimg" id="jumperFelineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_feline_nude.Adjatha.webp" alt="Feline Bored Jumper Nude">
+                <img class="sideimg" id="jumperEasterImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_easter.Adjatha.webp" alt="Easter Bored Jumper Nude">
+                <style>
+                    #jumperHumanImg, #jumperEquineImg, #jumperCanineImg, #jumperFelineImg, #jumperEasterImg{
+                    opacity: 0;
                     }
-                }
-                setInterval(cycleImages, 2000); // Change image every 3 seconds
-                });
-            </script>
-            <div class="gridtext">
-                <h2>Cyberpunk Security Operatives</h2>
-                <p><strong>Standard Encounter</strong>: Will ignore you if wearing prisoner outfit<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPunkSecOp()</code></pre></p>
+                    #jumperEquine:hover ~ #jumperEquineImg{
+                    transition: opacity 0.1s ease-in-out;
+                    opacity: 1;
+                    }
+                </style>
+                <script>
+                    $(document).ready(function() {
+                    $('#jumperHuman').mouseover(function() {
+                        $('#jumperHumanImg').stop().fadeTo(50, 1);
+                    }).mouseout(function() {
+                        $('#jumperHumanImg').stop().fadeTo(50, 0);
+                    });
+
+                    $('#jumperEquine').mouseover(function() {
+                        $('#jumperEquineImg').stop().fadeTo(50, 1);
+                    }).mouseout(function() {
+                        $('#jumperEquineImg').stop().fadeTo(50, 0);
+                    });
+
+
+                    $('#jumperCanine').mouseover(function() {
+                        $('#jumperCanineImg').stop().fadeTo(50, 1);
+                    }).mouseout(function() {
+                        $('#jumperCanineImg').stop().fadeTo(50, 0);
+                    });
+
+                    $('#jumperFeline').mouseover(function() {
+                        $('#jumperFelineImg').stop().fadeTo(50, 1);
+                    }).mouseout(function() {
+                        $('#jumperFelineImg').stop().fadeTo(50, 0);
+                    });
+
+                    $('#jumperEaster').mouseover(function() {
+                        $('#jumperEasterImg').stop().fadeTo(50, 1);
+                    }).mouseout(function() {
+                        $('#jumperEasterImg').stop().fadeTo(50, 0);
+                    });
+                    });
+                </script>
+                </div>
             </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Slyveren_Slavebreaker" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2_nude.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Slyveren Slavebreaker</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSlyverenSlavebreaker()</code></pre></p>
+            <!-- Roz -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Roz</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterRoz()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Roz" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/roz.Adjatha.webp" alt="Roz">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/roz_nude.Adjatha.webp" alt="Roz Nude">
+                </div>
             </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Dr._Teyaal" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/teyaal.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/teyaal_nude.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Dr. Teyaal</h2>
-                <p><strong>Post-Quest Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">teyaalRepeatShitstompins()</code></pre></p>
-                <p><strong>Quest Encounter</strong>: Doesent work post quest, not sure why yet<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">docTeyaaaaaaalsOffice()</code></pre></p>
+            <!-- Overseer Maike -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Overseer Maike</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">maikeEncounterFun()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Overseer_Maike" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/maike.Adjatha.webp" alt="Overseer Maike">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/maike_nude.Adjatha.webp" alt="Overseer Maike Nude">
+                </div>
             </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Rat_Thieves" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one_nude.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Rat Thieves</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsInTheMineEncounter()</code></pre></p>
-                <p><strong>Christmas Event</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsRaidingXXXmas2018ByWill()</code></pre></p>
+
+            <!-- Forgehound -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Forgehound</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">forgehoundEncounter()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Forgehound" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/forgehound.Shou.webp" alt="Forgehound">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/forgehound_nude.Shou.webp" alt="Forgehound Nude">
+                </div>
             </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Shock_Hopper" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper_nude.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Shock Hopper</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">shockHopperEncounter()</code></pre></p>
+            <!-- Corona Flamer -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Corona Flamer</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">coronaFlamerEncounter()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Corona_Flamer" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/firepup.Adjatha.webp" alt="logo">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/firepup_nude.Adjatha.webp" alt="logo">
+                </div>
             </div>
-        </div>
-        <div class="enemyGrid">
-            <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" >W</a>
-            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/cheetah_pirate.Adjatha.webp" alt="logo">
-            <div class="gridtext">
-                <h2>Cyper Punk Cheeta Operative</h2>
-                <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">cyberpunkRandoSpaceBattle()</code></pre></p>
-                <p>Character does not have a wiki page</p>
+            <!-- Cyberpunk Security Operatives -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Cyberpunk Security Operatives</h2>
+                    <p><strong>Standard Encounter</strong>: Will ignore you if wearing prisoner outfit<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPunkSecOp()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cyberpunk_Security_Operatives" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Cyberpunk Security Operatives Female Nude">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Cyberpunk Security Operative 'Male' Nude">
+                    <!-- The Image cycling is broken so I'm leaving it commended out for now 
+
+                    <div id="imageContainer">
+                        <img id="punksecopimage1" class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Cyberpunk Security Operative Female">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Cyberpunk Security Operatives Female Nude">
+                        <img id="punksecopimage2" class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp" alt="Cyberpunk Security Operative 'Male'">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Cyberpunk Security Operative 'Male' Nude">
+                    </div>
+                    <script>
+                    $(document).ready(function() {
+                        var currentImage = 1;
+        
+                        function cycleImages() {
+                            if (currentImage === 1) {
+                            $('#punksecopimage1').fadeOut(400, function() {
+                                $(this).attr('src', 'imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp').fadeIn(1000);
+                            });
+                            currentImage = 2;
+                            } else {
+                            $('#punksecopimage2').fadeOut(400, function() {
+                                $(this).attr('src', 'imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp').fadeIn(1000);
+                            });
+                            currentImage = 1;
+                            }
+                        }
+                        setInterval(cycleImages, 2000); // Change image every 3 seconds
+                        });
+                    </script>
+                    -->
+                </div>
+            </div>
+            <!-- Slyveren Slavebreaker -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Slyveren Slavebreaker</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSlyverenSlavebreaker()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Slyveren_Slavebreaker" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2.Adjatha.webp" alt="Slyveren_Slavebreaker">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2_nude.Adjatha.webp" alt="Slyveren_Slavebreaker Nude">
+                </div>
+            </div>
+            <!-- Dr.Teyaal -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Dr. Teyaal</h2>
+                    <p><strong>Post-Quest Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">teyaalRepeatShitstompins()</code></pre></p>
+                    <p><strong>Quest Encounter</strong>: Doesent work post quest, not sure why yet.<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">docTeyaaaaaaalsOffice()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Dr._Teyaal" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/teyaal.Adjatha.webp" alt="Dr.Teyaal">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/teyaal_nude.Adjatha.webp" alt="Dr.Teyaal Nude">
+                </div>
+            </div>
+            <!-- Rat Thieves -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Rat Thieves</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsInTheMineEncounter()</code></pre></p>
+                    <p><strong>Christmas Event</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsRaidingXXXmas2018ByWill()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Rat_Thieves" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one.Adjatha.webp" alt="Rat Thieves">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one_nude.Adjatha.webp" alt="Rat Thieves Nude">
+                </div>
+            </div>
+            <!-- Shock Hopper / Vanika -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Shock Hopper / Vanika</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">shockHopperEncounter()</code></pre></p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Shock_Hopper" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper.Adjatha.webp" alt="Shock Hopper">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper_nude.Adjatha.webp" alt="Shock Hopper Nude">
+                </div>
+            </div>
+            <!-- Cheetah Pirate -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Cyper Punk Cheeta Operative</h2>
+                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">cyberpunkRandoSpaceBattle()</code></pre></p>
+                    <p>Character does not have a wiki page</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/cheetah_pirate.Adjatha.webp" alt="Cheetah Pirate">
+                </div>
+            </div>
+            <!-- Agrosh -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Agrosh</h2>
+                    <p>Only Appears During Zheng Shi Quest Events</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Agrosh" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/agrosh.Adjatha.webp" alt="logo">
+                </div>
+            </div>
+            <!--Mining Robot-->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Mining Robot</h2>
+                    <p>Doesent have sex scenes so I'm not gonna waste more time than I already have trying to find the encounter dialog.</p>
+                    <p>If someone tells me what it is I'll add it.</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Mining_Robot" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/mining_robot.Adjatha.webp" alt="Mining Robot">
+                </div>
+            </div>
+            <!-- Excavation Robot -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Excavation Robot</h2>
+                    <p>Doesent have sex scenes so I'm not gonna waste more time than I already have trying to find the encounter dialog.</p>
+                    <p>If someone tells me what it is I'll add it.</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Excavation_Robot" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/excavation_robot.Adjatha.webp" alt="Excevation Robot">
+                </div>
             </div>
         </div>
     </div>
-    </section>
+</section>
 
 
-    <section id="content5">
-        <div class="gridThreeAcross">
-            <div class="enemyGrid">
-                <div class="halfBoxLeft">       
-                    <div>
-                        <h2>Breedwell</h2>
-                        <p><strong>Ping</strong>: Trigger Roaming Query<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallPing()</code></pre></p>
-                        <details>
-                            <summary>Specific Pings</summary>
-                        <p><strong>Tavros</strong>: Married Rahn Couple<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosCouple</code></pre></p>
-                        <p><strong>Tavros</strong>: AusaRahn<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosAusar</code></pre></p>
-                        <p><strong>Tavros</strong>: Domme Business Do'Rahn<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosDomme</code></pre></p>
-                        <p><strong>Mhen'ga</strong>: Flahne<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsFlahne</code></pre></p>
-                        <p><strong>Mhen'ga</strong>: Pheromonal Fuu'Rahn Field Researcher<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsPheromonalFuurahn</code></pre></p>
-                        <p><strong>Tarkus</strong>: Mercenary Duo<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusMercs</code></pre></p>
-                        <p><strong>Tarkus</strong>: Stacey the Bimbo Loo'Rahn <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusStacey</code></pre></p>
-                        <p><strong>Myrellion</strong>: Loo'Rahn UGC Officer <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsMyrellionQuickie</code></pre></p>
-                        <p><strong>Uveto</strong>: Frozen Fuu'Rahn Explorer<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsUvetanExplorer</code></pre></p>
-                        <p><strong>Zheng Shi</strong>: Fuu'Rahn Pirate<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsZhengShiTwofer</code></pre></p>        
-                        </details>
-                    </div>
-                </div>
-                <div class="halfBoxRight">
-                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Breedwell" >W</a>
-                    <img class="sideimg" src="img/Breedwell2.png" alt="logo">
-                </div>
+<section id="content5">
+    <div class="gridThreeAcross">
+        <!-- Breedwell -->
+        <div class="enemyGrid">
+            <div class="halfBoxLeft">
+                <h2>Breedwell</h2>
+                    <p><strong>Ping</strong>: Trigger Roaming Query<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallPing()</code></pre></p>
+                    <details>
+                        <summary>Specific Pings</summary>
+                    <p><strong>Tavros</strong>: Married Rahn Couple<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosCouple</code></pre></p>
+                    <p><strong>Tavros</strong>: AusaRahn<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosAusar</code></pre></p>
+                    <p><strong>Tavros</strong>: Domme Business Do'Rahn<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosDomme</code></pre></p>
+                    <p><strong>Mhen'ga</strong>: Flahne<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsFlahne</code></pre></p>
+                    <p><strong>Mhen'ga</strong>: Pheromonal Fuu'Rahn Field Researcher<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsPheromonalFuurahn</code></pre></p>
+                    <p><strong>Tarkus</strong>: Mercenary Duo<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusMercs</code></pre></p>
+                    <p><strong>Tarkus</strong>: Stacey the Bimbo Loo'Rahn <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusStacey</code></pre></p>
+                    <p><strong>Myrellion</strong>: Loo'Rahn UGC Officer <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsMyrellionQuickie</code></pre></p>
+                    <p><strong>Uveto</strong>: Frozen Fuu'Rahn Explorer<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsUvetanExplorer</code></pre></p>
+                    <p><strong>Zheng Shi</strong>: Fuu'Rahn Pirate<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsZhengShiTwofer</code></pre></p>        
+                    </details>
+            </div>
+            <div class="halfBoxRight">
+                <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Breedwell" >W</a>
+                <img class="widthsideimg" src="img/Breedwell2.png" alt="logo">
             </div>
         </div>
-    </section>
-    <section id="content6">
-        <div class="gridThreeAcross">
-            <div class="enemyGrid">
+    </div>
+
+</section>
+<section id="content6">
+    <div class="gridThreeAcross">
+        <!-- Ardia Dominance -->
+        <div class="enemyGrid">
+            <div class="halfBoxLeft">
+                <h2>Ardia Dominance</h2>
+                <p><strong>Sub</strong>: 1-3 Ardia is Sub<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 1</code></pre></p>
+                <p><strong>Dom</strong>: 4-6 Ardia is Dom<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 5</code></pre></p> 
+                <p><strong>Alpha</strong>: 7-10 Ardia is Alpha<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 10</code></pre></p> 
+            </div>
+            <div class="halfBoxRight">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ardia" >W</a>
-                <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/ardia_sub.Adjatha.webp" alt="logo">
-                <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/ardia_dom.Adjatha.webp" alt="logo">
-                <div class="gridtext">
-                    <h2>Ardia Dominance</h2>
-                    <p><strong>Sub</strong>: 1-3 Ardia is Sub<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 1</code></pre></p>
-                    <p><strong>Dom</strong>: 4-6 Ardia is Dom<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 5</code></pre></p> 
-                    <p><strong>Alpha</strong>: 7-10 Ardia is Alpha<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 10</code></pre></p> 
-                </div>
-            </div>
-            <div class="enemyGrid">
-                <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ula" >W</a>
-                <img class="backimg" src="imgsourceurl/resources/img/Gats/x1/korgonne_female_barbarian.Gats.webp" alt="logo">
-                <div class="gridtext">
-                    <h2>Ula Deflowered</h2>
-                    <p><strong>Virgin</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = null</code></pre></p>
-                    <p><strong>Deflowered</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = 1</code></pre></p>
-                    <h2>Korgi Translation</h2>
-                    <p><strong>Untranslated</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = null</code></pre></p>
-                    <p><strong>Translated</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = 1</code></pre></p>
-                </div>
+                <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/ardia_sub.Adjatha.webp" alt="logo">
+                <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/ardia_dom.Adjatha.webp" alt="logo">
             </div>
         </div>
-    </section>
+        <!-- Korgonne -->
+        <div class="enemyGrid">
+            <div class="halfBoxLeft">
+                <h2>Ula Deflowered</h2>
+                <p><strong>Virgin</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = null</code></pre></p>
+                <p><strong>Deflowered</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = 1</code></pre></p>
+                <h2>Korgi Translation</h2>
+                <p><strong>Untranslated</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = null</code></pre></p>
+                <p><strong>Translated</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = 1</code></pre></p>
+            </div>
+            <div class="halfBoxRight">
+                <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ula" >W</a>
+                <img class="sideimg" src="imgsourceurl/resources/img/Gats/x1/korgonne_female_barbarian.Gats.webp" alt="logo">
+            </div>
+        </div>
+    </div>
+</section>
     
 </main>

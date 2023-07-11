@@ -74,6 +74,9 @@
 
 html, body {
   height: 100%;
+  scrollbar-color: var(--foregroundColorB);
+  scrollbar-width: thin;
+  overflow-y: scroll;
 }
 
 body {
@@ -89,7 +92,7 @@ body {
   padding: 20px 0;
   font-weight: bold;
   text-align: center;
-  position: absolute;
+  position: relative;
   right: 5vw;
 }
 
@@ -244,37 +247,58 @@ summary {
   font-weight: bolder;
 }
 
-.backimg {
+.widthsideimg {
   float: right;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  max-width: 50%;
+  max-height: 120%;
   object-fit: cover;
   position: absolute;
-  background-color: var(--paleColor);
   right: 0;
-  max-height: 500px;
+  top: 0;
+  background-color: var(--paleColor);
 }
 
 .sideimg {
-  width: 100%;
+  float: right;
+  height: 100%;
+  max-width: 50%;
+  max-height: 120%;
   object-fit: cover;
-  background-color: var(--paleColor);
+  position: absolute;
   right: 0;
-  max-width: 100%;
-  max-height: 100%;
+  top: 0;
+  background-color: var(--paleColor);
 }
 
-.backimglayer {
+.sideimglayer {
   opacity: 0;
   }
-  .backimglayer:hover {
+  .sideimglayer:hover {
   transition: opacity 0.1s ease-in-out;
   opacity: 1;
   }
 
-.areaheader {
-  font-size: xx-large;
+.areaHeader {
+  font-size: 50px;
   border-bottom: 1px solid var(--highlightColor);
+}
+
+.areaZoneMaps {
+    /* We first create a flex layout context */
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.areaZoneMapImg {
+  padding: 5px;
+  width: 25%;
+  margin-top: 10px;
 }
 
 .link {
@@ -359,6 +383,7 @@ svg{
 .halfBoxBottom {
   padding: 5px;
   bottom: 0;
+  position: relative;
 }
 
 
@@ -463,7 +488,7 @@ p {
     padding: 20px 0;
     font-weight: bold;
     text-align: center;
-    position: absolute;
+    position: relative;
     right: 5vw;
   }
 
