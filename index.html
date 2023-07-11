@@ -34,25 +34,41 @@
 
 <main>
   
-  <input id="tab1" type="radio" name="tabs" checked>
-  <label for="tab1">Stats</label>
+  <input class="HeaderTabs" id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1">Main</label>
     
-  <input id="tab2" type="radio" name="tabs">
+  <input class="HeaderTabs" id="tab2" type="radio" name="tabs">
   <label for="tab2">Transformations</label>
     
-  <input id="tab3" type="radio" name="tabs">
+  <input class="HeaderTabs" id="tab3" type="radio" name="tabs">
   <label for="tab3">Status Effects</label>
     
-  <input id="tab4" type="radio" name="tabs">
+  <input class="HeaderTabs" id="tab4" type="radio" name="tabs">
   <label for="tab4">Enemies</label>
 
-  <input id="tab5" type="radio" name="tabs">
+  <input class="HeaderTabs" id="tab5" type="radio" name="tabs">
   <label for="tab5">Events</label>
 
-  <input id="tab6" type="radio" name="tabs">
+  <input class="HeaderTabs" id="tab6" type="radio" name="tabs">
   <label for="tab6">Flags</label>
     
   <section id="content1">
+    <h3>Image URL Source</h3>
+    <input type="text" id="replacementUrl" />
+    <input type="button" id="replacementUrlSubmit" value="submit" />
+    <p>For example 'https://www.fenoxo.com/play/TiTS/release' or the path to a local game install and '\resources\app'</p>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('#replacementUrlSubmit').click(function() {
+            var replacementUrl = $('#replacementUrl').val();
+            var textToReplace = 'imgsourceurl';
+            
+            // Find all occurrences of 'imgsourceurl' and replace them with the inputted text
+            $('body').html($('body').html().replace(new RegExp(textToReplace, 'g'), replacementUrl));
+        });
+        });
+    </script>
+    <p>&nbsp</p>
     <p><strong>Max Stats</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre></p>
   </section>
     
@@ -103,7 +119,7 @@
     <div class="flexgrid">
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Mining_Robot" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/mining_robot.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/mining_robot.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Mining Robot</h2>
                 <p>Doesent have sex scenes so I'm not gonna waste more time than I already have trying to find the encounter dialog.</p>
@@ -112,12 +128,12 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bored_Jumper" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/bored_jumper_canine.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperHumanImg" src="[webaddress]/resources/img/Adjatha/x1/bored_jumper_terran_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperEquineImg" src="[webaddress]/resources/img/Adjatha/x1/bored_jumper_horse_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperCanineImg" src="[webaddress]/resources/img/Adjatha/x1/bored_jumper_canine_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperFelineImg" src="[webaddress]/resources/img/Adjatha/x1/bored_jumper_feline_nude.Adjatha.webp" alt="logo">
-            <img class="backimg" id="jumperEasterImg" src="[webaddress]/resources/img/Adjatha/x1/bored_jumper_easter.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine.Adjatha.webp" alt="logo">
+            <img class="backimg" id="jumperHumanImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_terran_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" id="jumperEquineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_horse_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" id="jumperCanineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" id="jumperFelineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_feline_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" id="jumperEasterImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_easter.Adjatha.webp" alt="logo">
             <style>
                 #jumperHumanImg, #jumperEquineImg, #jumperCanineImg, #jumperFelineImg, #jumperEasterImg{
                 opacity: 0;
@@ -172,8 +188,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Roz" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/roz.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/roz_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/roz.Adjatha.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/roz_nude.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Roz</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterRoz()</code></pre></p>
@@ -181,8 +197,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Overseer_Maike" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/maike.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/maike_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/maike.Adjatha.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/maike_nude.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Overseer Maike</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">maikeEncounterFun()</code></pre></p>
@@ -190,7 +206,7 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Excavation_Robot" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/excavation_robot.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/excavation_robot.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Excavation Robot</h2>
                 <p>Doesent have sex scenes so I'm not gonna waste more time than I already have trying to find the encounter dialog.</p>
@@ -199,8 +215,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Forgehound" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Shou/x1/forgehound.Shou.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Shou/x1/forgehound_nude.Shou.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Shou/x1/forgehound.Shou.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Shou/x1/forgehound_nude.Shou.webp" alt="logo">
             <div class="gridtext">
                 <h2>Forgehound</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">forgehoundEncounter()</code></pre></p>
@@ -208,8 +224,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Corona_Flamer" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/firepup.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/firepup_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/firepup.Adjatha.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/firepup_nude.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Corona Flamer</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">coronaFlamerEncounter()</code></pre></p>
@@ -226,10 +242,10 @@
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cyberpunk_Security_Operatives" >W</a>
             <div id="imageContainer">
-                <img id="punksecopimage1" class="backimg" src="[webaddress]/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Image 1">
-                <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Image 1">
-                <img id="punksecopimage2" class="backimg" src="[webaddress]/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp" alt="Image 2">
-                <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Image 2">
+                <img id="punksecopimage1" class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Image 1">
+                <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Image 1">
+                <img id="punksecopimage2" class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp" alt="Image 2">
+                <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Image 2">
             </div>
             <script>
             $(document).ready(function() {
@@ -238,12 +254,12 @@
                 function cycleImages() {
                     if (currentImage === 1) {
                     $('#punksecopimage1').fadeOut(400, function() {
-                        $(this).attr('src', '[webaddress]/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp').fadeIn(1000);
+                        $(this).attr('src', 'imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp').fadeIn(1000);
                     });
                     currentImage = 2;
                     } else {
                     $('#punksecopimage2').fadeOut(400, function() {
-                        $(this).attr('src', '[webaddress]/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp').fadeIn(1000);
+                        $(this).attr('src', 'imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp').fadeIn(1000);
                     });
                     currentImage = 1;
                     }
@@ -258,8 +274,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Slyveren_Slavebreaker" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/slavebreaker_2.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/slavebreaker_2_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2.Adjatha.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2_nude.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Slyveren Slavebreaker</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSlyverenSlavebreaker()</code></pre></p>
@@ -267,8 +283,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Dr._Teyaal" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/teyaal.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/teyaal_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/teyaal.Adjatha.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/teyaal_nude.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Dr. Teyaal</h2>
                 <p><strong>Post-Quest Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">teyaalRepeatShitstompins()</code></pre></p>
@@ -277,8 +293,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Rat_Thieves" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/rats_raider_group_one.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/rats_raider_group_one_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one.Adjatha.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one_nude.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Rat Thieves</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsInTheMineEncounter()</code></pre></p>
@@ -287,8 +303,8 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Shock_Hopper" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/shock_hopper.Adjatha.webp" alt="logo">
-            <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/shock_hopper_nude.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper.Adjatha.webp" alt="logo">
+            <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper_nude.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Shock Hopper</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">shockHopperEncounter()</code></pre></p>
@@ -296,7 +312,7 @@
         </div>
         <div class="threeXgrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" >W</a>
-            <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/cheetah_pirate.Adjatha.webp" alt="logo">
+            <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/cheetah_pirate.Adjatha.webp" alt="logo">
             <div class="gridtext">
                 <h2>Cyper Punk Cheeta Operative</h2>
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">cyberpunkRandoSpaceBattle()</code></pre></p>
@@ -336,8 +352,8 @@
         <div class="flexgrid">
             <div class="threeXgrid">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ardia" >W</a>
-                <img class="backimg" src="[webaddress]/resources/img/Adjatha/x1/ardia_sub.Adjatha.webp" alt="logo">
-                <img class="backimg backimglayer" src="[webaddress]/resources/img/Adjatha/x1/ardia_dom.Adjatha.webp" alt="logo">
+                <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/ardia_sub.Adjatha.webp" alt="logo">
+                <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/ardia_dom.Adjatha.webp" alt="logo">
                 <div class="gridtext">
                     <h2>Ardia Dominance</h2>
                     <p><strong>Sub</strong>: 1-3 Ardia is Sub<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 1</code></pre></p>
@@ -347,7 +363,7 @@
             </div>
             <div class="threeXgrid">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ula" >W</a>
-                <img class="backimg" src="[webaddress]/resources/img/Gats/x1/korgonne_female_barbarian.Gats.webp" alt="logo">
+                <img class="backimg" src="imgsourceurl/resources/img/Gats/x1/korgonne_female_barbarian.Gats.webp" alt="logo">
                 <div class="gridtext">
                     <h2>Ula Deflowered</h2>
                     <p><strong>Virgin</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = null</code></pre></p>

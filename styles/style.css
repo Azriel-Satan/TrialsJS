@@ -46,7 +46,7 @@ section {
   border-top: 5px solid #8D31B0;
 }
 
-input {
+.HeaderTabs {
   display: none;
 }
 
