@@ -101,7 +101,7 @@ p {
 main {
   min-width: 320px;
   max-width: 95vw;
-  padding: 50px;
+  padding: 25px;
   margin: 0 auto;
   background: var(--backgroundColor);
 }
@@ -176,12 +176,16 @@ summary {
   color: var(--textColor);
 }
 
+.gridFourAcross {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
 .gridThreeAcross {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
 }
-
 .gridTwoAcross {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -190,12 +194,12 @@ summary {
 
 .statusGrid{
   position: relative;
-  margin: 2%;
+  margin: 0.1vw;
   display:block;
   text-align: left;;
   background-color: var(--paleColor);
   min-height: 300px;
-  max-width: 45vw;
+  max-width: 23vw;
 }
 
 .statusGrid h2 {
@@ -226,7 +230,6 @@ summary {
 }
 
 .statusBoxHeader {
-  height: 30%;
   position: relative;
   background-color: var(--backgroundColor);
   display: flex;
@@ -250,6 +253,15 @@ summary {
   background-color: var(--paleColor);
   right: 0;
   max-height: 500px;
+}
+
+.sideimg {
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--paleColor);
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .backimglayer {
@@ -339,6 +351,16 @@ svg{
   float: right;
   padding: 5px;
 }
+
+.halfBoxTop {
+ padding: 5px;
+}
+
+.halfBoxBottom {
+  padding: 5px;
+  bottom: 0;
+}
+
 
 .codePadding {
   padding: 5px;
