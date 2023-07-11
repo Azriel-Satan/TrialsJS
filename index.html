@@ -67,6 +67,7 @@
             $('body').html($('body').html().replace(new RegExp(textToReplace, 'g'), replacementUrl));
         });
         });
+
     </script>
     <p>&nbsp</p>
     <p><strong>Max Stats</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre></p>
@@ -88,6 +89,7 @@
                 <p>Warning, Naga and Shark change leg type (species)</p>
             </details>
         </li>
+        <!--
         <li>
             <details>
                 <summary>Presets</summary>
@@ -95,16 +97,109 @@
                 <p><strong>Return Vags</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createVagina(), pc.createVagina(), pc.createVagina(), pc.vaginas[0].neverSerialize = false, pc.vaginas[0].version = 3, pc.vaginas[0].hymen = false, pc.vaginas[0].clits = 1, pc.vaginas[0].vaginaColor = "pale", pc.vaginas[0].wetnessRaw = 5, pc.vaginas[0].wetnessMod = 0, pc.vaginas[0].loosenessRaw = 1, pc.vaginas[0].loosenessMod = 0, pc.vaginas[0].minLooseness = 1, pc.vaginas[0].bonusCapacity = 60, pc.vaginas[0].shrinkCounter = 0, pc.vaginas[0].flags = [30,3,37], pc.vaginas[0].fullness = 0, pc.vaginas[0].piercing = null, pc.vaginas[0].clitPiercing = null, pc.vaginas[1].neverSerialize = false, pc.vaginas[1].version = 3, pc.vaginas[1].hymen = false, pc.vaginas[1].clits = 1, pc.vaginas[1].vaginaColor = "pale", pc.vaginas[1].wetnessRaw = 5, pc.vaginas[1].wetnessMod = 0, pc.vaginas[1].loosenessRaw = 1, pc.vaginas[1].loosenessMod = 0, pc.vaginas[1].minLooseness = 1, pc.vaginas[1].bonusCapacity = 60, pc.vaginas[1].shrinkCounter = 0, pc.vaginas[1].flags = [30,3,37], pc.vaginas[1].fullness = 0, pc.vaginas[1].piercing = null, pc.vaginas[1].clitPiercing = null, pc.vaginas[2].neverSerialize = false, pc.vaginas[2].version = 3, pc.vaginas[2].hymen = false, pc.vaginas[2].clits = 1, pc.vaginas[2].vaginaColor = "pale", pc.vaginas[2].wetnessRaw = 5, pc.vaginas[2].wetnessMod = 0, pc.vaginas[2].loosenessRaw = 1, pc.vaginas[2].loosenessMod = 0, pc.vaginas[2].minLooseness = 1, pc.vaginas[2].bonusCapacity = 60, pc.vaginas[2].shrinkCounter = 0, pc.vaginas[2].flags = [30,3,37], pc.vaginas[2].fullness = 0, pc.vaginas[2].piercing = null,pc.vaginas[2].clitPiercing = null, pc.vaginas</code></pre></p>
             </details>
         </li>
+        -->
     </ul>
   </section>
     
   <section id="content3">
+    <div class="gridTwoAcross">
+        <!-- Rut Status -->
+        <div class="statusGrid">
+            <div class="halfBoxLeft">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Rut</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your body is driven for aggressive breeding, increasing your libido and virility, as well as boosting your minimum cum output.<br> <br>
+                        +5 Libido <br>
+                        +25 Minimum Lust Rating <br>
+                        +1000mLs Minimum Cum <br>
+                        +400% Virility
+                    </p>
+                </div>
+            </div>
+            <div class="halfBoxRight">
+                <div>   
+                    <p class="codePadding"><strong>Apply Rut Status</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Rut", 5, 25, 1e3, 4, !1, "LustUp", "Your body is driven for aggressive breeding, increasing your libido and virility, as well as boosting your minimum cum output.\n\n+5 Libido\n+25 Minimum Lust Rating\n+1000mLs Minimum Cum\n+400% Virility",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                    <p><strong> Extend Rut </strong> - x is the time to extend by <code class="language-js line-numbers" data-prismajs-copy="Copy">pc.extendRut(x)</code></p>
+                </div>
+            </div>
+        </div>
+        <!-- Heat Status -->
+        <div class="statusGrid">
+            <div class="halfBoxLeft">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Heat</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
+                        <br><br>
+                        +500% Fertility<br>
+                        +25 Minimum Lust Rating<br>
+                        +10 Libido<br>
+                        +3 Tease Damage
+                    </p>
+                </div>
+            </div>
+            <div class="halfBoxRight">
+                <div>   
+                    <p class="codePadding"><strong>Apply Heat Status</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                    <p><strong> Extend Heat </strong> - x is the time to extend by <code class="language-js line-numbers" data-prismajs-copy="Copy">pc.extendHeat(x)</code></p>
+                </div>
+            </div>
+        </div>
+        <!-- Deep Heat Status -->
+        <div class="statusGrid">
+            <div class="halfBoxLeft">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
+                    </div>
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_water_drop"><path d="M12,0S3.66,10.1,3.66,15.66a8.34,8.34,0,0,0,16.68,0C20.34,10.1,12,0,12,0ZM8.36,16.21a18.89,18.89,0,0,0,1.05,5,6.48,6.48,0,0,1-3.56-6C5.85,12.31,9.26,8,11.2,4,11,6.1,8.36,12.21,8.36,16.21Z"></path></g></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText" style="float: right;">Deep Heat</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p><b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
+                        <br><br>
+                        +1000% Fertility<br>
+                        +35 Minimum Lust Rating<br>
+                        +25 Libido<br>
+                        +5 Tease Damage
+                    </p>
+                    <p class="statusEffectHeaderText">Pussy Drenched</p>
+                    <p>
+                    You’re drenched in girlcum! Anyone can tell at a glance what sort of activities you’ve been engaging in!
+                    </p>
+                </div>
+            </div>
+            <div class="halfBoxRight">
+                <div>   
+                    <p class="codePadding"><strong>Deep Heat Status</strong> is a modifier to Heat, this command applies both sequentially.<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                    <p><strong> Extend Heat </strong> - x is the time to extend by <code class="language-js line-numbers" data-prismajs-copy="Copy">pc.extendHeat(x)</code></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <ul>
         <li class="">
             <details>
                 <summary>Rut/Heat</summary>
                 <p><strong>Rut</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Rut", 5, 25, 1e3, 4, !1, "LustUp", "Your body is driven for aggressive breeding, increasing your libido and virility, as well as boosting your minimum cum output.\n\n+5 Libido\n+25 Minimum Lust Rating\n+1000mLs Minimum Cum\n+400% Virility",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
-                <p><strong> Extend Rut </strong> - x is the time to extend by <code class="language-js line-numbers" data-prismajs-copy="Copy">pc.extendRut(x)</code></p>
+                
                 <p> &nbsp;</p>
                 <p><strong>Heat</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
                 <p><strong>Deep heat</strong>  is a modifier to Heat, this command applies both in order<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY) pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("Heat", 2, 35), pc.setStatusValue("Heat", 3, 25), pc.setStatusValue("Heat", 4, 5), pc.setStatusTooltip("Heat", "<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+" + 100 * pc.statusEffectv1("Heat") + "% Fertility\n+" + pc.statusEffectv2("Heat") + " Minimum Lust Rating\n+" + pc.statusEffectv3("Heat") + " Libido\n+" + pc.statusEffectv4("Heat") + " Tease Damage"), pc.extendHeat(14400)</code></pre></p>
@@ -116,8 +211,8 @@
     
   <section id="content4">
     <h1 class="areaheader">Zheng Shi</h1>
-    <div class="flexgrid">
-        <div class="threeXgrid">
+    <div class="gridThreeAcross">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Mining_Robot" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/mining_robot.Adjatha.webp" alt="logo">
             <div class="gridtext">
@@ -126,7 +221,7 @@
                 <p>If someone tells me what it is I'll add it.</p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bored_Jumper" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine.Adjatha.webp" alt="logo">
             <img class="backimg" id="jumperHumanImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_terran_nude.Adjatha.webp" alt="logo">
@@ -186,7 +281,7 @@
                 <p><strong>Easter</strong>: <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Easter_Jumper" >Wiki</a> <pre id="jumperEaster"><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterEasterJumper()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Roz" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/roz.Adjatha.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/roz_nude.Adjatha.webp" alt="logo">
@@ -195,7 +290,7 @@
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterRoz()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Overseer_Maike" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/maike.Adjatha.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/maike_nude.Adjatha.webp" alt="logo">
@@ -204,7 +299,7 @@
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">maikeEncounterFun()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Excavation_Robot" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/excavation_robot.Adjatha.webp" alt="logo">
             <div class="gridtext">
@@ -213,7 +308,7 @@
                 <p>If someone tells me what it is I'll add it.</p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Forgehound" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Shou/x1/forgehound.Shou.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Shou/x1/forgehound_nude.Shou.webp" alt="logo">
@@ -222,7 +317,7 @@
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">forgehoundEncounter()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Corona_Flamer" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/firepup.Adjatha.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/firepup_nude.Adjatha.webp" alt="logo">
@@ -231,7 +326,7 @@
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">coronaFlamerEncounter()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Agrosh" >W</a>
             <img class="backimg" src="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" alt="logo">
             <div class="gridtext">
@@ -239,7 +334,7 @@
                 <p>Only Appears During Zheng Shi Quest Events</p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cyberpunk_Security_Operatives" >W</a>
             <div id="imageContainer">
                 <img id="punksecopimage1" class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Image 1">
@@ -272,7 +367,7 @@
                 <p><strong>Standard Encounter</strong>: Will ignore you if wearing prisoner outfit<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPunkSecOp()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Slyveren_Slavebreaker" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2.Adjatha.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/slavebreaker_2_nude.Adjatha.webp" alt="logo">
@@ -281,7 +376,7 @@
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSlyverenSlavebreaker()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Dr._Teyaal" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/teyaal.Adjatha.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/teyaal_nude.Adjatha.webp" alt="logo">
@@ -291,7 +386,7 @@
                 <p><strong>Quest Encounter</strong>: Doesent work post quest, not sure why yet<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">docTeyaaaaaaalsOffice()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Rat_Thieves" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one.Adjatha.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/rats_raider_group_one_nude.Adjatha.webp" alt="logo">
@@ -301,7 +396,7 @@
                 <p><strong>Christmas Event</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsRaidingXXXmas2018ByWill()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Shock_Hopper" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper.Adjatha.webp" alt="logo">
             <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/shock_hopper_nude.Adjatha.webp" alt="logo">
@@ -310,7 +405,7 @@
                 <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">shockHopperEncounter()</code></pre></p>
             </div>
         </div>
-        <div class="threeXgrid">
+        <div class="enemyGrid">
             <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" >W</a>
             <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/cheetah_pirate.Adjatha.webp" alt="logo">
             <div class="gridtext">
@@ -324,8 +419,8 @@
 
 
     <section id="content5">
-        <div class="flexgrid">
-            <div class="threeXgrid">
+        <div class="gridThreeAcross">
+            <div class="enemyGrid">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Breedwell" >W</a>
                 <img class="backimg" src="img/Breedwell2.png" alt="logo">
                 <div class="gridtext">
@@ -349,8 +444,8 @@
         </div>
     </section>
     <section id="content6">
-        <div class="flexgrid">
-            <div class="threeXgrid">
+        <div class="gridThreeAcross">
+            <div class="enemyGrid">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ardia" >W</a>
                 <img class="backimg" src="imgsourceurl/resources/img/Adjatha/x1/ardia_sub.Adjatha.webp" alt="logo">
                 <img class="backimg backimglayer" src="imgsourceurl/resources/img/Adjatha/x1/ardia_dom.Adjatha.webp" alt="logo">
@@ -361,7 +456,7 @@
                     <p><strong>Alpha</strong>: 7-10 Ardia is Alpha<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 10</code></pre></p> 
                 </div>
             </div>
-            <div class="threeXgrid">
+            <div class="enemyGrid">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ula" >W</a>
                 <img class="backimg" src="imgsourceurl/resources/img/Gats/x1/korgonne_female_barbarian.Gats.webp" alt="logo">
                 <div class="gridtext">
