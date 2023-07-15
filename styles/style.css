@@ -334,7 +334,6 @@ summary {
 }
 details {
   position: relative;
-  cursor: pointer;
   border-radius: 3px;
   transition: 0.15s background linear;
   background: var(--paleColor)
