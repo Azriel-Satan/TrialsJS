@@ -256,69 +256,36 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
                     </div>
                 </div>
             </div>
-            <!-- Sore -->
-            <div class="statusGrid"  id="StatusSore">
+            <!-- Sore/Very sore/Worn Out -->
+            <div class="statusGrid statusGridWide"  id="StatusSore">
                 <div class="halfBoxTop">
                     <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_crying svgWhite"><path d="M11.62,12.58c-.34.59-3.33,5.84-3.33,7.71a3.71,3.71,0,0,0,7.42,0c0-1.87-3-7.12-3.33-7.71A.46.46,0,0,0,11.62,12.58Zm1.47,7.71a.44.44,0,0,1,.44-.43.43.43,0,0,1,.43.43,2,2,0,0,1-2,2,.44.44,0,0,1-.44-.43.44.44,0,0,1,.44-.44A1.09,1.09,0,0,0,13.09,20.29Z"></path><path d="M14.31,5.81a2.31,2.31,0,0,1-4.62,0A2.28,2.28,0,0,1,12,3.58c.69,0-.42,1.77,0,2.23S14.31,5.24,14.31,5.81Zm8.07,0c0,.8-3.57,5.81-10.38,5.81S1.62,6.61,1.62,5.81,5.19,0,12,0,22.38,5,22.38,5.81Zm-5.77,0A4.54,4.54,0,0,0,12,1.34,4.54,4.54,0,0,0,7.39,5.81,4.54,4.54,0,0,0,12,10.28,4.54,4.54,0,0,0,16.61,5.81Z"></path></g></svg>
                         </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Sore</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>You are sore and will regain energy slower. Sleep to recover.</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre></p>
-                        <p class="codePadding"><strong>Remove Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Very sore -->
-            <div class="statusGrid"  id="StatusVerySore">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_crying svgYellow"><path d="M11.62,12.58c-.34.59-3.33,5.84-3.33,7.71a3.71,3.71,0,0,0,7.42,0c0-1.87-3-7.12-3.33-7.71A.46.46,0,0,0,11.62,12.58Zm1.47,7.71a.44.44,0,0,1,.44-.43.43.43,0,0,1,.43.43,2,2,0,0,1-2,2,.44.44,0,0,1-.44-.43.44.44,0,0,1,.44-.44A1.09,1.09,0,0,0,13.09,20.29Z"></path><path d="M14.31,5.81a2.31,2.31,0,0,1-4.62,0A2.28,2.28,0,0,1,12,3.58c.69,0-.42,1.77,0,2.23S14.31,5.24,14.31,5.81Zm8.07,0c0,.8-3.57,5.81-10.38,5.81S1.62,6.61,1.62,5.81,5.19,0,12,0,22.38,5,22.38,5.81Zm-5.77,0A4.54,4.54,0,0,0,12,1.34,4.54,4.54,0,0,0,7.39,5.81,4.54,4.54,0,0,0,12,10.28,4.54,4.54,0,0,0,16.61,5.81Z"></path></g></svg>
                         </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Very sore</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>You are very sore and will regain energy much slower. Sleep to recover.</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply Very Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(6)</code></pre></p>
-                        <p class="codePadding"><strong>Remove Very Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Worn Out -->
-            <div class="statusGrid"  id="StatusWornOut">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_crying svgRed"><path d="M11.62,12.58c-.34.59-3.33,5.84-3.33,7.71a3.71,3.71,0,0,0,7.42,0c0-1.87-3-7.12-3.33-7.71A.46.46,0,0,0,11.62,12.58Zm1.47,7.71a.44.44,0,0,1,.44-.43.43.43,0,0,1,.43.43,2,2,0,0,1-2,2,.44.44,0,0,1-.44-.43.44.44,0,0,1,.44-.44A1.09,1.09,0,0,0,13.09,20.29Z"></path><path d="M14.31,5.81a2.31,2.31,0,0,1-4.62,0A2.28,2.28,0,0,1,12,3.58c.69,0-.42,1.77,0,2.23S14.31,5.24,14.31,5.81Zm8.07,0c0,.8-3.57,5.81-10.38,5.81S1.62,6.61,1.62,5.81,5.19,0,12,0,22.38,5,22.38,5.81Zm-5.77,0A4.54,4.54,0,0,0,12,1.34,4.54,4.54,0,0,0,7.39,5.81,4.54,4.54,0,0,0,12,10.28,4.54,4.54,0,0,0,16.61,5.81Z"></path></g></svg>
                         </div>
                         <div>
-                            <p class="statusEffectHeaderText">Worn Out</p>
+                            <p class="statusEffectHeaderText">Sore | Very Sore | Worn Out</p>
                         </div>
                     </div>
                     <div class="statusEffectDescription">
-                        <p>You are worn out and unable to regain energy. Working out is also impossible in this state. Sleep to recover.</p>
+                        <p>The sore, very sore, and Worn out statusus are all tied to a single invisible status effect that tracks a counter of sore level</p>
+                        <p><strong>Sore</strong>: You are sore and will regain energy slower. Sleep to recover.</p>
+                        <p><strong>Very sore</strong>: You are very sore and will regain energy much slower. Sleep to recover.</p>
+                        <p><strong>Worn out</strong>: You are worn out and unable to regain energy. Working out is also impossible in this state. Sleep to recover.</p>
                     </div>
                 </div>
                 <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply Worn Out</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(9)</code></pre></p>
-                        <p class="codePadding"><strong>Remove Worn Out</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre></p>
+                    <div class="gridFourAcross">
+                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre></p></div>
+                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Very</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(6)</code></pre></p></div>
+                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Worn Out</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(9)</code></pre></p></div>
+                        <div class="substatusgrid"><p class="codePadding"><strong>Remove Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre></p></div>
                     </div>
                 </div>
             </div>
@@ -1453,8 +1420,8 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Corona_Flamer" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/firepup.Adjatha.webp" alt="logo" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/firepup_nude.Adjatha.webp" alt="logo" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/firepup.Adjatha.webp" alt="Corona Flamer" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/firepup_nude.Adjatha.webp" alt="Corona Flamer Nude" loading="lazy">
                 </div>
             </div>
             <!-- Cyberpunk Security Operatives -->
@@ -1568,7 +1535,7 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Agrosh" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/agrosh.Adjatha.webp" alt="logo" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/agrosh.Adjatha.webp" alt="Agrosh" loading="lazy">
                 </div>
             </div>
             <!--Mining Robot-->
@@ -1657,7 +1624,7 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
             </div>
             <div class="halfBoxRight">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ula" >W</a>
-                <img class="sideimg" src="imgsourceurl/resources/img/Gats/x1/korgonne_female_barbarian.Gats.webp" alt="logo" loading="lazy">
+                <img class="sideimg" src="imgsourceurl/resources/img/Gats/x1/korgonne_female_barbarian.Gats.webp" alt="Korgonne Female" loading="lazy">
             </div>
         </div>
     </div>
