@@ -103,8 +103,8 @@
     
 <section id="content3">
     <div class="gridFourAcross">
-        <!-- Rut Status -->
-        <div class="statusGrid">
+        <!-- Rut -->
+        <div class="statusGrid" id="StatusRut">
             <div class="halfBoxTop">
                 <div class="statusBoxHeader">
                     <div class="statusEffectBlock">
@@ -130,8 +130,8 @@
                 </div>
             </div>
         </div>
-        <!-- Heat Status -->
-        <div class="statusGrid">
+        <!-- Heat -->
+        <div class="statusGrid" id="StatusHeat">
             <div class="halfBoxTop">
                 <div class="statusBoxHeader">
                     <div class="statusEffectBlock">
@@ -158,8 +158,8 @@
                 </div>
             </div>
         </div>
-        <!-- Deep Heat Status -->
-        <div class="statusGrid">
+        <!-- Deep Heat -->
+        <div class="statusGrid" id="StatusDeepHeat">
             <div class="halfBoxTop">
                 <div class="statusBoxHeader">
                     <div class="statusEffectBlock">
@@ -180,9 +180,7 @@
                         +25 Libido<br>
                         +5 Tease Damage
                     </p>
-                    <p>
-                    You’re drenched in girlcum! Anyone can tell at a glance what sort of activities you’ve been engaging in!
-                    </p>
+                    <p>You’re drenched in girlcum! Anyone can tell at a glance what sort of activities you’ve been engaging in!</p>
                 </div>
             </div>
             <div class="halfBoxBottom">
@@ -193,25 +191,1125 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
                 </div>
             </div>
         </div>
-        <!-- Placeholder Status -->
-        <div class="statusGrid">
+        <!-- Sweaty -->
+        <div class="statusGrid" id="StatusSweaty">
             <div class="halfBoxTop">
                 <div class="statusBoxHeader">
                     <div class="statusEffectBlock">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_smelly"><path d="M2.86,24A1,1,0,0,1,2,23.49,16.9,16.9,0,0,1,.18,16.34a8.38,8.38,0,0,1,1.92-4.9A6.21,6.21,0,0,0,3.59,8,18.79,18.79,0,0,0,2,1.38,1,1,0,0,1,2.45.09,1,1,0,0,1,3.74.57,20.59,20.59,0,0,1,5.53,8a8,8,0,0,1-1.82,4.58,6.7,6.7,0,0,0-1.58,3.81,15,15,0,0,0,1.59,6.23,1,1,0,0,1-.4,1.31A1,1,0,0,1,2.86,24Z"></path><path d="M9,24a1,1,0,0,1-.85-.51,16.74,16.74,0,0,1-1.82-7.15,8.44,8.44,0,0,1,1.91-4.9A6.21,6.21,0,0,0,9.68,8,18.88,18.88,0,0,0,8.07,1.38,1,1,0,1,1,9.84.57,20.59,20.59,0,0,1,11.63,8,8,8,0,0,1,9.8,12.53a6.7,6.7,0,0,0-1.58,3.81,15,15,0,0,0,1.59,6.23,1,1,0,0,1-.4,1.31A.93.93,0,0,1,9,24Z"></path><path d="M15.05,24a1,1,0,0,1-.86-.51,16.9,16.9,0,0,1-1.82-7.15,8.38,8.38,0,0,1,1.92-4.9A6.21,6.21,0,0,0,15.78,8a18.79,18.79,0,0,0-1.62-6.57A1,1,0,0,1,14.64.09a1,1,0,0,1,1.29.48A20.59,20.59,0,0,1,17.72,8a8,8,0,0,1-1.82,4.58,6.64,6.64,0,0,0-1.58,3.81,15.28,15.28,0,0,0,1.58,6.23,1,1,0,0,1-.39,1.31A1,1,0,0,1,15.05,24Z"></path><path d="M21.14,24a1,1,0,0,1-.85-.51,16.74,16.74,0,0,1-1.82-7.15,8.44,8.44,0,0,1,1.91-4.9A6.21,6.21,0,0,0,21.87,8a19.12,19.12,0,0,0-1.61-6.57A1,1,0,0,1,20.73.09,1,1,0,0,1,22,.57,20.59,20.59,0,0,1,23.82,8,8,8,0,0,1,22,12.53a6.7,6.7,0,0,0-1.58,3.81A15,15,0,0,0,22,22.57a1,1,0,0,1-.4,1.31A.93.93,0,0,1,21.14,24Z"></path></g></svg>
                     </div>
                     <div>
-                        <p class="statusEffectHeaderText">Placeholder</p>
+                        <p class="statusEffectHeaderText">Sweaty</p>
                     </div>
                 </div>
                 <div class="statusEffectDescription">
-                    <p>does nothing.<br>
-                    </p>
+                    <p>You are covered with sweat from a workout, reducing your potential sexiness to many foes. Some, however, may like it.</p>
                 </div>
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Anally-Filled -->
+        <div class="statusGrid" id="StatusAnallyFIlled">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Anally-Filled</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You've got some fluids inside you, leftovers from a recent lover.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Orally-Filled -->
+        <div class="statusGrid" id="StatusOrallyFilled">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Orally-Filled</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You've got some fluids inside you.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Vaginally-Filled -->
+        <div class="statusGrid" id="StatusVaginallyFilled">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Vaginally-Filled</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You've got some fluids inside you, leftovers from a recent lover.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Blue-balls -->
+        <div class="statusGrid" id="StatusBlueBalls">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_sperm_hearts"><path d="M10.26,14.87c-.1-.75,1.66-1.93,2.31-3a3,3,0,0,0,0-2.94c2.18-2,4.53-4.8,4.26-7.38C16.75.27,16.17,0,15.34,0a5.68,5.68,0,0,0-3.45,1.44l-1.05.94-1-.94A5.73,5.73,0,0,0,6.34,0C5.51,0,4.93.27,4.8,1.56,4.54,4,6.67,6.71,8.75,8.65h0s2.1,1.91,1.81,2.88S8.42,13.6,8.42,15c0,2.12,5,2,5.49,4.7C13.91,16.86,10.43,16.23,10.26,14.87Z"></path><path d="M8,10.1c-.08-.77-.42-.92-.91-.92a3.39,3.39,0,0,0-2,.85l-.62.55L3.83,10a3.37,3.37,0,0,0-2-.85c-.49,0-.83.15-.91.92-.15,1.46,1.1,3,2.33,4.19h0S4.45,15.43,4.28,16,3,17.22,3,18.05C3,19.3,6,19.22,6.26,20.82c0-1.68-2-2.05-2.16-2.85,0-.44,1-1.14,1.37-1.77a1.73,1.73,0,0,0,0-1.74C6.79,13.3,8.18,11.62,8,10.1Z"></path><path d="M18.13,20.37c-.07-.57,1.25-1.45,1.74-2.25a2.22,2.22,0,0,0,0-2.21c1.64-1.49,3.41-3.62,3.21-5.55-.1-1-.54-1.18-1.16-1.18a4.29,4.29,0,0,0-2.6,1.08l-.79.71-.79-.71a4.28,4.28,0,0,0-2.59-1.08c-.63,0-1.07.2-1.17,1.17-.19,1.86,1.41,3.88,3,5.34h0s1.58,1.44,1.36,2.17-1.6,1.55-1.6,2.6c0,1.6,3.76,1.5,4.13,3.54C20.88,21.86,18.26,21.39,18.13,20.37Z"></path></g></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Blue-balls</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Take 25% more lust damage in combat!</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply Blue-balls</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Blue Balls", 0, 0, 0, 0, false, "Icon_Sperm_Hearts", "Take 25% more lust damage in combat!", false, 0, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Cum Soaked -->
+        <div class="statusGrid" id="StatusCumSoaked">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Cum Soaked</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>does nothing.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Disarmed -->
+        <div class="statusGrid" id="StatusDisarmed">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Disarmed</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You’ve checked all forms of weaponry at (New Texas' customs./Gastigoth’s security checkpoint.)</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Bulky Belly -->
+        <div class="statusGrid" id="StatusBulkyBelly">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_belly_pregnant"><path d="M16.47,23.4a.5.5,0,0,1,0,.32A.48.48,0,0,1,16,24H6a.48.48,0,0,1-.35-.16,5.91,5.91,0,0,1-1-3.71,7.42,7.42,0,0,1,1.46-3.39,6.62,6.62,0,0,0,1.15-2.4,5.83,5.83,0,0,0-.93-2.25A11.59,11.59,0,0,1,4.68,8c-.35-2.83,1-7.43,1-7.62A.46.46,0,0,1,6.17,0h4.37A.47.47,0,0,1,11,.3a19.67,19.67,0,0,0,1.68,3.46,6.37,6.37,0,0,0,3,1.58,1.3,1.3,0,0,1,.87,1.6,4.55,4.55,0,0,1-.26.76A4.67,4.67,0,0,1,15.29,9,7.79,7.79,0,0,1,17,10a6.23,6.23,0,0,1,2.43,5.05A8,8,0,0,1,16,21.46a18.36,18.36,0,0,0-2-2c-1.54-1.24-2-1.58-2-1.59a.48.48,0,0,0-.66.1.46.46,0,0,0,.1.65s.46.34,2,1.56A25.62,25.62,0,0,1,16.47,23.4Z"></path></g></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Bulky Belly</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>The size of your belly weighs you down, dropping your reflexes and evasion chances by 10-70%</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <p><strong>Can't be added by command is is tied to player appearance.</strong></p>
+            </div>
+        </div>
+        <!-- Mare Musk -->
+        <div class="statusGrid" id="StatusMareMusk">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Mare Musk</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You smell like a horny mare! The potent female scent is sure to drive others wild - though it gets you a little worked up as well.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Ass Slap patch -->
+        <div class="statusGrid" id="StatusAssSlapPatch">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Ass Slap patch</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>The applied Ass Slap patch is gradually working to fill out your butt cheeks. You can remove it at any point via the “Remove Ass Slap Patch” command in the “Masturbation” menu, but the patch will still be consumed. It’s one use only.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Boobswell Pads -->
+        <div class="statusGrid" id="StatusBoobsweelPads">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Boobswell Pads</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>The applied Boobswell pads are slowly but steadily working to fill out your chest. You can remove them at any point via the “Remove Boobswell Pads” command in the “Masturbation” menu, but the pads will still be consumed. They’re one use only.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Anal Lubricant -->
+        <div class="statusGrid" id="StatusAnalLubricant">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Anal Lubricant</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Thanks to some YTR Lube, your anus is particularly slippery! ...at least for a while.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Infertile -->
+        <div class="statusGrid" id="StatusInfertile">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Infertile</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are unable to make any pregnancies happen.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Clippex Gel -->
+        <div class="statusGrid" id="StatusClippexGel">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Clippex Gel</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your nipples tingle by the gel you applied...</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Sweet tooth -->
+        <div class="statusGrid" id="StatusSweetTooth">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Sweet tooth</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Sucking seductively on a lollipop.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Priapin -->
+        <div class="statusGrid" id="StatusPriapin">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Priapin</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your masculine virility has been piqued temporarily</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Condensol-A -->
+        <div class="statusGrid" id="StatusCondensol-A">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Condensol-A</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Any and all phalli are reduced in size by 50%.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Condensol-B -->
+        <div class="statusGrid" id="StatusCondensol-B">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Condensol-B</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Any and all phalli are reduced in size by 75%.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Thicc&Shake -->
+        <div class="statusGrid" id="StatusThiccShake">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Thicc&Shake</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your hips and butt are covered in and under the effects of the Thicc&Shake batter.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Curdsonwhey -->
+        <div class="statusGrid" id="StatusCurdsonwhey">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Curdsonwhey</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are currently under the effects of the Curdsonwhey lozenge.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Sweaty -->
+        <div class="statusGrid"  id="StatusSweaty">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Sweaty</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are covered with sweat from a workout, reducing your potential sexiness to many foes. Some, however, may like it.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Sore -->
+        <div class="statusGrid"  id="StatusSore">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Sore</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Very sore -->
+        <div class="statusGrid"  id="StatusVerySore">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Very sore</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Worn Out -->
+        <div class="statusGrid"  id="StatusWornOut">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Worn Out</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Semen's Candy -->
+        <div class="statusGrid"  id="StatusSemensCandy">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Semen's Candy</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>The Semen’s Friend candy is still in your system.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Strangely Warm -->
+        <div class="statusGrid"  id="StatusStrangelyWarm">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Strangely Warm</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are more passively lusty than before.<br><br>(+15 minimum lust)</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Flushed -->
+        <div class="statusGrid"  id="StatusFlushed">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Flushed</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are significantly more passively lusty than before.<br><br>(+25 minimum lust)<br>(Vulnerable to phallus-bearing foes.)</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Fuck Fever -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Fuck Fever</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are significantly more passively lusty than before.<br>(+33 minimum lust)<br>(Extremely vulnerable to phallus-bearing foes.)</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Painted Penis -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Painted Penis</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>With your phallus professionally painted, you feel slightly more libidinous. Your crotch-based teases will likely be more effective against those vulnerable to them.<br><br>
+                    +2 Tease Damage<br>
+                    +5 Tease Damage Cap<br>
+                    +5 Libido </p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Priapism -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Priapism</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Lagonic Rut -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Lagonic Rut</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your body is driven for aggressive breeding, increasing your libido and virility, as well as boosting your minimum cum output.<br><br>
+                        +5 Libido<br>
+                        +25 Minimum Lust<br>
+                        +2000mLs Minimum Cum<br>
+                        +500% Virility</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Laquine Ears -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Laquine Ears</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are wearing Laquine Ears and will slowly transform into a Laquine over time, so long as the ears’ supply of microsurgeons holds out.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Tentatool -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Tentatool</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your skin tingles from the Tentatool pill.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- adjjjisjjrhiwig -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">adjjjisjjrhiwig</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Under the effects of the Capraphorm inhaler.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Cooties -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Cooties</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You’ve been infected with Cooties! If left untreated, it is likely to cause the growth of a vagina or the expansion of vaginal lips... and an uptick in libido.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Cerespirin -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Cerespirin</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You have injected yourself with an experimental drug...</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- The Treatment -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">The Treatment</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are currently under the effects of the Treatment. Who knows what havoc it will wreak upon your system.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding">Use the in game cheat menu</p>
+                </div>
+            </div>
+        </div>
+        <!-- Milkazon -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Milkazon</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Amazon Varient of the Treatment</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding">Use the in game cheat menu</p>
+                </div>
+            </div>
+        </div>
+        <!-- Cum High -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Cum High</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You get high on the cum inside you!
+                        You feel energetic but your thoughts and movements are relaxed. It is also harder to resist indulging yourself.<br><br>
+                        +10-30 Max Energy -1-3 Reflexes<br>
+                        -1-3 Intelligence<br>
+                        -1-3 Willpower </p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Cerespirin -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Cerespirin</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your have injected yourself with an experimental drug...</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Horse Pill -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Horse Pill</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are under the effects of at least one horse pill. Flashes of heat and tingly sensations randomly run across your body as you’re slowly transformed into a more equine shape.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Dumbfuck -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Dumbfuck</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are currently under the effects of “dumbfuck,” an illegal drug known for making its users more and more sex-crazed with every orgasm over a 24 hour period. Intelligence loss is also common.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Leitha Charm -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Leitha Charm</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your leitha charm necklace hangs from your neck, infusing your body with targeted transformative nanomachines.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- SoakSoak -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">SoakSoak</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>You are currently high on Soak, leaving you a horny, sopping-wet mess with a serious drooling problem.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Soak Overdose -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Soak Overdose</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Your risky behavior has left you a sodden mess of slickened holes and pure libido.</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Ovalasting -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Ovalasting</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Will induce Ovalasting pregnancy after getting filled with cum</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Iyla's Milk -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Iyla's Milk</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Iyla's milk leaves you feeling extremely sexy!</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Xanose -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Xanose</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Vipris -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Vipris</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Sinthine -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Sinthine</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Cromesc -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Cromesc</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Beta's Satisfaction -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Beta's Satisfaction</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                </div>
+            </div>
+        </div>
+        <!-- Dzaan Withdrawal -->
+        <div class="statusGrid">
+            <div class="halfBoxTop">
+                <div class="statusBoxHeader">
+                    <div class="statusEffectBlock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
+                    </div>
+                    <div>
+                        <p class="statusEffectHeaderText">Dzaan Withdrawal</p>
+                    </div>
+                </div>
+                <div class="statusEffectDescription">
+                    <p>Placeholder</p>
+                </div>
+            </div>
+            <div class="halfBoxBottom">
+                <div>   
+                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
                 </div>
             </div>
         </div>

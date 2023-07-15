@@ -365,9 +365,9 @@ svg{
 }
 
 .halfBoxLeft {
- width:50%;
- float: left;
- padding: 5px;
+  width:50%;
+  float: left;
+  padding: 5px;
 }
 
 .halfBoxRight {
@@ -377,7 +377,7 @@ svg{
 }
 
 .halfBoxTop {
- padding: 5px;
+  padding: 5px;
 }
 
 .halfBoxBottom {
@@ -418,7 +418,7 @@ p {
 ::-webkit-scrollbar-track {
   background: var(--foregroundColorB); 
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--highlightColor); 
