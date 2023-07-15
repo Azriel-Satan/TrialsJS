@@ -259,6 +259,8 @@ input:checked + label {
   display:block;
   text-align: left;;
   background-color: var(--paleColor);
+  max-width: 22vw;
+  margin: 2px;
 }
 
 .widthsideimg {
@@ -292,6 +294,34 @@ input:checked + label {
   transition: opacity 0.1s ease-in-out;
   opacity: 1;
   }
+
+.halfBoxLeft {
+  width:50%;
+  float: left;
+  padding: 5px;
+}
+
+.halfBoxRight {
+  width:50%;
+  float: right;
+  padding: 5px;
+}
+
+.halfBoxTop {
+  padding: 5px;
+  padding-bottom: 0;
+}
+
+.halfBoxBottom {
+  padding: 5px;
+  bottom: 0;
+  position: relative;
+  padding-top: 0;
+}
+
+.codePadding {
+  padding: 5px;
+}
 
 /* Collapsables */
 summary {
@@ -466,33 +496,6 @@ svg{
 }
 .svgRed {
   fill: var(--negativeColor)
-}
-
-.halfBoxLeft {
-  width:50%;
-  float: left;
-  padding: 5px;
-}
-
-.halfBoxRight {
-  width:50%;
-  float: right;
-  padding: 5px;
-}
-
-.halfBoxTop {
-  padding: 5px;
-}
-
-.halfBoxBottom {
-  padding: 5px;
-  bottom: 0;
-  position: relative;
-}
-
-
-.codePadding {
-  padding: 5px;
 }
 
 

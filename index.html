@@ -105,6 +105,27 @@
     <Details class="statusCategory">
         <summary class="IconStatus">General</summary>
         <div class="gridFourAcross">
+            <!-- Blue-balls -->
+            <div class="statusGrid" id="StatusBlueBalls">
+                <div class="halfBoxTop">
+                    <div class="statusBoxHeader">
+                        <div class="statusEffectBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_sperm_hearts"><path d="M10.26,14.87c-.1-.75,1.66-1.93,2.31-3a3,3,0,0,0,0-2.94c2.18-2,4.53-4.8,4.26-7.38C16.75.27,16.17,0,15.34,0a5.68,5.68,0,0,0-3.45,1.44l-1.05.94-1-.94A5.73,5.73,0,0,0,6.34,0C5.51,0,4.93.27,4.8,1.56,4.54,4,6.67,6.71,8.75,8.65h0s2.1,1.91,1.81,2.88S8.42,13.6,8.42,15c0,2.12,5,2,5.49,4.7C13.91,16.86,10.43,16.23,10.26,14.87Z"></path><path d="M8,10.1c-.08-.77-.42-.92-.91-.92a3.39,3.39,0,0,0-2,.85l-.62.55L3.83,10a3.37,3.37,0,0,0-2-.85c-.49,0-.83.15-.91.92-.15,1.46,1.1,3,2.33,4.19h0S4.45,15.43,4.28,16,3,17.22,3,18.05C3,19.3,6,19.22,6.26,20.82c0-1.68-2-2.05-2.16-2.85,0-.44,1-1.14,1.37-1.77a1.73,1.73,0,0,0,0-1.74C6.79,13.3,8.18,11.62,8,10.1Z"></path><path d="M18.13,20.37c-.07-.57,1.25-1.45,1.74-2.25a2.22,2.22,0,0,0,0-2.21c1.64-1.49,3.41-3.62,3.21-5.55-.1-1-.54-1.18-1.16-1.18a4.29,4.29,0,0,0-2.6,1.08l-.79.71-.79-.71a4.28,4.28,0,0,0-2.59-1.08c-.63,0-1.07.2-1.17,1.17-.19,1.86,1.41,3.88,3,5.34h0s1.58,1.44,1.36,2.17-1.6,1.55-1.6,2.6c0,1.6,3.76,1.5,4.13,3.54C20.88,21.86,18.26,21.39,18.13,20.37Z"></path></g></svg>
+                        </div>
+                        <div>
+                            <p class="statusEffectHeaderText">Blue-balls</p>
+                        </div>
+                    </div>
+                    <div class="statusEffectDescription">
+                        <p>Take 25% more lust damage in combat!</p>
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div>   
+                        <p class="codePadding"><strong>Apply Blue-balls</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Blue Balls", 0, 0, 0, 0, false, "Icon_Sperm_Hearts", "Take 25% more lust damage in combat!", false, 0, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                    </div>
+                </div>
+            </div>
             <!-- Rut -->
             <div class="statusGrid" id="StatusRut">
                 <div class="halfBoxTop">
@@ -132,36 +153,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Heat -->
-            <div class="statusGrid" id="StatusHeat">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
-                        <div class="statusEffectBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
-                        </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Heat</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
-                            <br><br>
-                            +500% Fertility<br>
-                            +25 Minimum Lust Rating<br>
-                            +10 Libido<br>
-                            +3 Tease Damage
-                        </p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply Heat Status</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
-                        <p><strong> Extend Heat </strong> - x is the time to extend by <code class="language-js line-numbers" data-prismajs-copy="Copy">pc.extendHeat(x)</code></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Deep Heat -->
-            <div class="statusGrid" id="StatusDeepHeat">
+            <!-- Heat/Deep Heat -->
+            <div class="statusGrid statusGridWide" id="StatusHeat">
                 <div class="halfBoxTop">
                     <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
@@ -171,46 +164,35 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_water_drop"><path d="M12,0S3.66,10.1,3.66,15.66a8.34,8.34,0,0,0,16.68,0C20.34,10.1,12,0,12,0ZM8.36,16.21a18.89,18.89,0,0,0,1.05,5,6.48,6.48,0,0,1-3.56-6C5.85,12.31,9.26,8,11.2,4,11,6.1,8.36,12.21,8.36,16.21Z"></path></g></svg>
                         </div>
                         <div>
-                            <p class="statusEffectHeaderText" style="float: right;">Deep Heat<br>& Pussy Drenched</p>
+                            <p class="statusEffectHeaderText">Heat | Deep Heat</p>
                         </div>
                     </div>
                     <div class="statusEffectDescription">
-                        <p><b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
-                            <br><br>
-                            +1000% Fertility<br>
-                            +35 Minimum Lust Rating<br>
-                            +25 Libido<br>
-                            +5 Tease Damage
-                        </p>
-                        <p>You’re drenched in girlcum! Anyone can tell at a glance what sort of activities you’ve been engaging in!</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply Deep Heat Status</strong><br> is a modifier to Heat, this command applies both sequentially.<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)
-pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("Heat", 2, 35), pc.setStatusValue("Heat", 3, 25), pc.setStatusValue("Heat", 4, 5), pc.setStatusTooltip("Heat", "<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+" + 100 * pc.statusEffectv1("Heat") + "% Fertility\n+" + pc.statusEffectv2("Heat") + " Minimum Lust Rating\n+" + pc.statusEffectv3("Heat") + " Libido\n+" + pc.statusEffectv4("Heat") + " Tease Damage"), pc.extendHeat(14400)</code></pre></p>
-                        <p><strong> Extend Heat </strong> - x is the time to extend by <code class="language-js line-numbers" data-prismajs-copy="Copy">pc.extendHeat(x)</code></p>
-                    </div>
-                </div>
-            </div>
-            <!-- Blue-balls -->
-            <div class="statusGrid" id="StatusBlueBalls">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
-                        <div class="statusEffectBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_sperm_hearts"><path d="M10.26,14.87c-.1-.75,1.66-1.93,2.31-3a3,3,0,0,0,0-2.94c2.18-2,4.53-4.8,4.26-7.38C16.75.27,16.17,0,15.34,0a5.68,5.68,0,0,0-3.45,1.44l-1.05.94-1-.94A5.73,5.73,0,0,0,6.34,0C5.51,0,4.93.27,4.8,1.56,4.54,4,6.67,6.71,8.75,8.65h0s2.1,1.91,1.81,2.88S8.42,13.6,8.42,15c0,2.12,5,2,5.49,4.7C13.91,16.86,10.43,16.23,10.26,14.87Z"></path><path d="M8,10.1c-.08-.77-.42-.92-.91-.92a3.39,3.39,0,0,0-2,.85l-.62.55L3.83,10a3.37,3.37,0,0,0-2-.85c-.49,0-.83.15-.91.92-.15,1.46,1.1,3,2.33,4.19h0S4.45,15.43,4.28,16,3,17.22,3,18.05C3,19.3,6,19.22,6.26,20.82c0-1.68-2-2.05-2.16-2.85,0-.44,1-1.14,1.37-1.77a1.73,1.73,0,0,0,0-1.74C6.79,13.3,8.18,11.62,8,10.1Z"></path><path d="M18.13,20.37c-.07-.57,1.25-1.45,1.74-2.25a2.22,2.22,0,0,0,0-2.21c1.64-1.49,3.41-3.62,3.21-5.55-.1-1-.54-1.18-1.16-1.18a4.29,4.29,0,0,0-2.6,1.08l-.79.71-.79-.71a4.28,4.28,0,0,0-2.59-1.08c-.63,0-1.07.2-1.17,1.17-.19,1.86,1.41,3.88,3,5.34h0s1.58,1.44,1.36,2.17-1.6,1.55-1.6,2.6c0,1.6,3.76,1.5,4.13,3.54C20.88,21.86,18.26,21.39,18.13,20.37Z"></path></g></svg>
+                        <div class="gridTwoAcross">
+                            <div class="substatusgrid">
+                                <p>Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
+                                    <br><br>
+                                    +500% Fertility<br>
+                                    +25 Minimum Lust Rating<br>
+                                    +10 Libido<br>
+                                    +3 Tease Damage
+                                </p>
+                                <p class="codePadding"><strong>Apply Heat Status</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                                    <p><strong> Extend Heat/Deep Heat </strong> - x is the time to extend by <code class="language-js line-numbers" data-prismajs-copy="Copy">pc.extendHeat(x)</code></p>
+                            </div>
+                            <div class="substatusgrid">
+                                <p><b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
+                                    <br><br>
+                                    +1000% Fertility<br>
+                                    +35 Minimum Lust Rating<br>
+                                    +25 Libido<br>
+                                    +5 Tease Damage
+                                </p>
+                                <p>You’re drenched in girlcum! Anyone can tell at a glance what sort of activities you’ve been engaging in!</p>
+                                <p class="codePadding"><strong>Apply Deep Heat Status</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Heat", 5, 25, 10, 3, !1, "LustUp", "Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",!1, 28800, GLOBAL.STATUS_LOW_PRIORITY)
+                                    pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("Heat", 2, 35), pc.setStatusValue("Heat", 3, 25), pc.setStatusValue("Heat", 4, 5), pc.setStatusTooltip("Heat", "<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+" + 100 * pc.statusEffectv1("Heat") + "% Fertility\n+" + pc.statusEffectv2("Heat") + " Minimum Lust Rating\n+" + pc.statusEffectv3("Heat") + " Libido\n+" + pc.statusEffectv4("Heat") + " Tease Damage"), pc.extendHeat(14400)</code></pre></p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Blue-balls</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>Take 25% more lust damage in combat!</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply Blue-balls</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Blue Balls", 0, 0, 0, 0, false, "Icon_Sperm_Hearts", "Take 25% more lust damage in combat!", false, 0, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
                     </div>
                 </div>
             </div>
@@ -274,7 +256,7 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
                         </div>
                     </div>
                     <div class="statusEffectDescription">
-                        <p>The sore, very sore, and Worn out statusus are all tied to a single invisible status effect that tracks a counter of sore level</p>
+                        <p>The sore, very sore, and Worn out statusus are all tied to a single invisible status effect that tracks a counter of sore level.</p>
                         <p><strong>Sore</strong>: You are sore and will regain energy slower. Sleep to recover.</p>
                         <p><strong>Very sore</strong>: You are very sore and will regain energy much slower. Sleep to recover.</p>
                         <p><strong>Worn out</strong>: You are worn out and unable to regain energy. Working out is also impossible in this state. Sleep to recover.</p>
@@ -283,7 +265,7 @@ pc.applyPussyDrenched(), pc.setStatusValue("Heat", 1, 10), pc.setStatusValue("He
                 <div class="halfBoxBottom">
                     <div class="gridFourAcross">
                         <div class="substatusgrid"><p class="codePadding"><strong>Apply Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre></p></div>
-                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Very</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(6)</code></pre></p></div>
+                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Very Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(6)</code></pre></p></div>
                         <div class="substatusgrid"><p class="codePadding"><strong>Apply Worn Out</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(9)</code></pre></p></div>
                         <div class="substatusgrid"><p class="codePadding"><strong>Remove Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre></p></div>
                     </div>
