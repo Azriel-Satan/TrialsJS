@@ -1330,6 +1330,80 @@
 </section>
     
 <section class="topselector" id="content4">
+    <div id="EnemyFilter">
+        <button class="btn active" onclick="filterSelection('all')">Show all</button>
+        <P>Enemy State</P>
+        <button class="btn" onclick="filterSelection('FilterFuta')">Futa</button>
+        <button class="btn" onclick="filterSelection('FilterMale')">Male</button>
+        <button class="btn" onclick="filterSelection('FilterFemale')">Female</button>
+        <button class="btn" onclick="filterSelection('FilterTaur')">Taur</button>
+        <button class="btn" onclick="filterSelection('FilterNaga')">Naga</button>
+        <button class="btn" onclick="filterSelection('FilterTailCock')">Tail Cock</button>
+        <button class="btn" onclick="filterSelection('FilterTailCunt')">Tail Cunt</button>
+        <P>Player State</P>
+        <button class="btn" onclick="filterSelection('SceneFilterTaur')">Taur</button>
+        <button class="btn" onclick="filterSelection('SceneFilterNaga')">Naga</button>
+        <button class="btn" onclick="filterSelection('SceneFilterHeat')">Heat</button>
+        <button class="btn" onclick="filterSelection('SceneFilterRut')">Rut</button>
+        <button class="btn" onclick="filterSelection('SceneFilterDeepthroat')">Deepthroat</button>
+        <button class="btn" onclick="filterSelection('SceneFilterSnakeByte')">SnakeByte</button>
+        <button class="btn" onclick="filterSelection('SceneFilterAphrodisiacTounge')">Aphrodisiac Tounge</button>
+        <button class="btn" onclick="filterSelection('SceneFilterTailCock')">Tail Cock</button>
+        <button class="btn" onclick="filterSelection('SceneFilterTailCunt')">Tail Cunt</button>
+        <button class="btn" onclick="filterSelection('SceneFilterParasiticTailCock')">Parasitic Tail Cock</button>
+        <button class="btn" onclick="filterSelection('SceneFilterParasiticTailCunt')">Parasitic Tail Cunt</button>
+        <button class="btn" onclick="filterSelection('SceneFilterMicroCock')">Small Penis</button>
+        <button class="btn" onclick="filterSelection('SceneFilterBimbo')">Bimbo</button>
+        <button class="btn" onclick="filterSelection('SceneFilterHimbo')">Himbo</button>
+        <P>Player Holding</P>
+        <button class="btn" onclick="filterSelection('SceneFilterStrapon')">Strapon</button>
+        <button class="btn" onclick="filterSelection('SceneFilterThrobb')">Throbb</button>
+        <button class="btn" onclick="filterSelection('SceneFilterBreedersBliss')">Breeders Bliss</button>
+    </div>
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("enemyGrid");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+        }
+
+        function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+        }
+
+        function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+        }
+        element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("EnemyFilter");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+        }
+    </script>
     <div class="areaContainer">
         <div class="areaBioContainer">
             <h1 class="areaHeader">Zheng Shi</h1>
@@ -1346,7 +1420,7 @@
         </Details>
         <div class="CharacterGridThreeAcross">
             <!--Bored Jumpers-->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFuta SceneFilterHeat SceneFilterBreedersBliss SceneFilterTaur SceneFilterRut">
                 <div class="halfBoxLeft">
                     <h2>Bored Jumper</h2>
                     <p><strong>Human</strong>: Thanks to how its ordered the Human varient cannot be assured.</p>
@@ -1407,7 +1481,7 @@
                 </div>
             </div>
             <!-- Roz -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFemale">
                 <div class="halfBoxLeft">
                     <h2>Roz</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1420,7 +1494,7 @@
                 </div>
             </div>
             <!-- Overseer Maike -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFemale FilterTailCock SceneFilterTailCunt SceneFilterStrapon">
                 <div class="halfBoxLeft">
                     <h2>Overseer Maike</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1434,7 +1508,7 @@
             </div>
 
             <!-- Forgehound -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterMale FilterTaur SceneFilterTaur">
                 <div class="halfBoxLeft">
                     <h2>Forgehound</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1447,7 +1521,7 @@
                 </div>
             </div>
             <!-- Corona Flamer -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFemale SceneFilterStrapon SceneFilterMicroCock">
                 <div class="halfBoxLeft">
                     <h2>Corona Flamer</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1460,9 +1534,10 @@
                 </div>
             </div>
             <!-- Cyberpunk Security Operatives -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFemale FilterMale SceneFilterParasiticTailCunt FilterTaur SceneFilterSnakeByte">
                 <div class="halfBoxLeft">
                     <h2>Cyberpunk Security Operatives</h2>
+                    <p>Taur and SnakeByte content in their Loss scenes.</p>
                     <p><strong>Standard Encounter</strong>: Will ignore you if wearing prisoner outfit</p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPunkSecOp()</code></pre>
                 </div>
@@ -1502,7 +1577,7 @@
                 </div>
             </div>
             <!-- Slyveren Slavebreaker -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFemale FilterNaga SceneFilterThrobb SceneFilterRut SceneFilterTaur SceneFilterMicroCock">
                 <div class="halfBoxLeft">
                     <h2>Slyveren Slavebreaker</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1515,7 +1590,7 @@
                 </div>
             </div>
             <!-- Dr.Teyaal -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFuta SceneFilterStrapon">
                 <div class="halfBoxLeft">
                     <h2>Dr. Teyaal</h2>
                     <p><strong>Post-Quest Encounter</strong></p>
@@ -1530,7 +1605,7 @@
                 </div>
             </div>
             <!-- Rat Thieves -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFemale FilterMale SceneFilterStrapon SceneFilterSnakeByte SceneFilterBimbo SceneFilterHimbo SceneFilterTaur SceneFilterNaga">
                 <div class="halfBoxLeft">
                     <h2>Rat Thieves</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1545,7 +1620,7 @@
                 </div>
             </div>
             <!-- Shock Hopper / Vanika -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFuta SceneFilterStrapon SceneFilterBimbo SceneFilterHimbo">
                 <div class="halfBoxLeft">
                     <h2>Shock Hopper / Vanika</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1558,7 +1633,7 @@
                 </div>
             </div>
             <!-- Cheetah Pirate -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterFemale">
                 <div class="halfBoxLeft">
                     <h2>Cyper Punk Cheeta Operative</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1571,7 +1646,7 @@
                 </div>
             </div>
             <!-- Agrosh -->
-            <div class="enemyGrid">
+            <div class="enemyGrid FilterMale">
                 <div class="halfBoxLeft">
                     <h2>Agrosh</h2>
                     <p>Only Appears During Zheng Shi Quest Events</p>
