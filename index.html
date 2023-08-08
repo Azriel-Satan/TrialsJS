@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Embed meta tags -->
-    <meta property="og:title" content="Tits JS Command List" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="1::" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="List of JS commands for the game Trials in Tainted Space" />
+    <meta property="og:title" content="Tits JS Command List">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="1::">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="List of JS commands for the game Trials in Tainted Space">
     <meta name="theme-color" content="#8D31B0">
     <!-- Style Sheets -->
     <link rel="stylesheet" href="styles/style.css">
@@ -54,10 +54,14 @@
     
 <section class="topselector" id="content1">
     <h3>Image URL Source</h3>
-    <input type="text" id="replacementUrl" />
-    <input type="button" id="replacementUrlSubmit" value="submit" />
-    <p>For example 'https://www.fenoxo.com/play/TiTS/release' or the path to a local game install and '\resources\app'</p>
-    <script type="text/javascript">
+    <input type="text" id="replacementUrl">
+    <input type="button" id="replacementUrlSubmit" value="submit">
+    <p>You will need to add an image source to see character portraits, the web version or a local copy are both acceptable.</p>
+    <ul>
+        <li>https://www.fenoxo.com/play/TiTS/release</li>
+        <li>[path to exe folder]\resources\app</li>
+    </ul>
+    <script>
         $(document).ready(function() {
         $('#replacementUrlSubmit').click(function() {
             var replacementUrl = $('#replacementUrl').val();
@@ -69,23 +73,30 @@
         });
 
     </script>
-    <p>&nbsp</p>
-    <p><strong>Max Stats</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre></p>
+    <p>&nbsp;</p>
+    <p><strong>Max Stats</strong></p>
+    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre>
 </section>
     
 <section class="topselector" id="content2">
     <h1>NOTICE</h1>
     <p>I didn't know this when I started this project, but another similar one already exists for transformations; <a class="link" href="https://github.com/Chase-san/TiTsEdJS/tree/master" >TiTsEdJS</a> adds a side popup to the game for changing your character's stats and body.
-        The simple method for adding it is to open the console and type. <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">(function(){var s=document.createElement("script");s.src="https://chase-san.github.io/TiTsEdJS/titsed.js";document.head.appendChild(s)})()</code></pre></p>
+        The simple method for adding it is to open the console and type.</p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">(function(){var s=document.createElement("script");s.src="https://chase-san.github.io/TiTsEdJS/titsed.js";document.head.appendChild(s)})()</code></pre>
     <ul>
         <li class="">
             <details>
                 <summary>Form</summary>
-                <p><strong>Biped</strong> Plantigrade (Humanoid feet)<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 2, pc.legFlags = [16], pc.genitalSpot = 0</code></pre></p>
-                <p><strong>Taur</strong> Digitigrade (Bestial feet)<pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre></p>
-                <p><strong>Taur 6leg</strong> Digitigrade (Bestial feet)<pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre></p>
-                <p><strong>Naga</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [2, 7, 6, 18, 21], pc.genitalSpot = 0, pc.legType = 13</code></pre></p>
-                <p><strong>Shark</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [16, 21], pc.genitalSpot = 0, pc.legType = 19</code></pre></p>
+                <p><strong>Biped</strong> Plantigrade (Humanoid feet)</p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 2, pc.legFlags = [16], pc.genitalSpot = 0</code></pre>
+                <p><strong>Taur</strong> Digitigrade (Bestial feet)</p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
+                <p><strong>Taur 6leg</strong> Digitigrade (Bestial feet)</p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
+                <p><strong>Naga</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [2, 7, 6, 18, 21], pc.genitalSpot = 0, pc.legType = 13</code></pre>
+                <p><strong>Shark</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [16, 21], pc.genitalSpot = 0, pc.legType = 19</code></pre>
                 <p>Warning, Naga and Shark change leg type (species)</p>
             </details>
         </li>
@@ -93,8 +104,10 @@
         <li>
             <details>
                 <summary>Presets</summary>
-                <p><strong>Remove Vags</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.removeVaginas()</code></pre></p>
-                <p><strong>Return Vags</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createVagina(), pc.createVagina(), pc.createVagina(), pc.vaginas[0].neverSerialize = false, pc.vaginas[0].version = 3, pc.vaginas[0].hymen = false, pc.vaginas[0].clits = 1, pc.vaginas[0].vaginaColor = "pale", pc.vaginas[0].wetnessRaw = 5, pc.vaginas[0].wetnessMod = 0, pc.vaginas[0].loosenessRaw = 1, pc.vaginas[0].loosenessMod = 0, pc.vaginas[0].minLooseness = 1, pc.vaginas[0].bonusCapacity = 60, pc.vaginas[0].shrinkCounter = 0, pc.vaginas[0].flags = [30,3,37], pc.vaginas[0].fullness = 0, pc.vaginas[0].piercing = null, pc.vaginas[0].clitPiercing = null, pc.vaginas[1].neverSerialize = false, pc.vaginas[1].version = 3, pc.vaginas[1].hymen = false, pc.vaginas[1].clits = 1, pc.vaginas[1].vaginaColor = "pale", pc.vaginas[1].wetnessRaw = 5, pc.vaginas[1].wetnessMod = 0, pc.vaginas[1].loosenessRaw = 1, pc.vaginas[1].loosenessMod = 0, pc.vaginas[1].minLooseness = 1, pc.vaginas[1].bonusCapacity = 60, pc.vaginas[1].shrinkCounter = 0, pc.vaginas[1].flags = [30,3,37], pc.vaginas[1].fullness = 0, pc.vaginas[1].piercing = null, pc.vaginas[1].clitPiercing = null, pc.vaginas[2].neverSerialize = false, pc.vaginas[2].version = 3, pc.vaginas[2].hymen = false, pc.vaginas[2].clits = 1, pc.vaginas[2].vaginaColor = "pale", pc.vaginas[2].wetnessRaw = 5, pc.vaginas[2].wetnessMod = 0, pc.vaginas[2].loosenessRaw = 1, pc.vaginas[2].loosenessMod = 0, pc.vaginas[2].minLooseness = 1, pc.vaginas[2].bonusCapacity = 60, pc.vaginas[2].shrinkCounter = 0, pc.vaginas[2].flags = [30,3,37], pc.vaginas[2].fullness = 0, pc.vaginas[2].piercing = null,pc.vaginas[2].clitPiercing = null, pc.vaginas</code></pre></p>
+                <p><strong>Remove Vags</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.removeVaginas()</code></pre>
+                <p><strong>Return Vags</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createVagina(), pc.createVagina(), pc.createVagina(), pc.vaginas[0].neverSerialize = false, pc.vaginas[0].version = 3, pc.vaginas[0].hymen = false, pc.vaginas[0].clits = 1, pc.vaginas[0].vaginaColor = "pale", pc.vaginas[0].wetnessRaw = 5, pc.vaginas[0].wetnessMod = 0, pc.vaginas[0].loosenessRaw = 1, pc.vaginas[0].loosenessMod = 0, pc.vaginas[0].minLooseness = 1, pc.vaginas[0].bonusCapacity = 60, pc.vaginas[0].shrinkCounter = 0, pc.vaginas[0].flags = [30,3,37], pc.vaginas[0].fullness = 0, pc.vaginas[0].piercing = null, pc.vaginas[0].clitPiercing = null, pc.vaginas[1].neverSerialize = false, pc.vaginas[1].version = 3, pc.vaginas[1].hymen = false, pc.vaginas[1].clits = 1, pc.vaginas[1].vaginaColor = "pale", pc.vaginas[1].wetnessRaw = 5, pc.vaginas[1].wetnessMod = 0, pc.vaginas[1].loosenessRaw = 1, pc.vaginas[1].loosenessMod = 0, pc.vaginas[1].minLooseness = 1, pc.vaginas[1].bonusCapacity = 60, pc.vaginas[1].shrinkCounter = 0, pc.vaginas[1].flags = [30,3,37], pc.vaginas[1].fullness = 0, pc.vaginas[1].piercing = null, pc.vaginas[1].clitPiercing = null, pc.vaginas[2].neverSerialize = false, pc.vaginas[2].version = 3, pc.vaginas[2].hymen = false, pc.vaginas[2].clits = 1, pc.vaginas[2].vaginaColor = "pale", pc.vaginas[2].wetnessRaw = 5, pc.vaginas[2].wetnessMod = 0, pc.vaginas[2].loosenessRaw = 1, pc.vaginas[2].loosenessMod = 0, pc.vaginas[2].minLooseness = 1, pc.vaginas[2].bonusCapacity = 60, pc.vaginas[2].shrinkCounter = 0, pc.vaginas[2].flags = [30,3,37], pc.vaginas[2].fullness = 0, pc.vaginas[2].piercing = null,pc.vaginas[2].clitPiercing = null, pc.vaginas</code></pre>
             </details>
         </li>
         -->
@@ -104,7 +117,7 @@
 <section class="topselector" id="content3">
     <Details class="statusCategory">
         <summary class="IconStatus">General</summary>
-        <div class="gridFourAcross">
+        <div class="StatusGridFourAcross">
             <!-- Blue-balls -->
             <div class="statusGrid" id="StatusBlueBalls">
                 <div class="halfBoxTop">
@@ -122,7 +135,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply Blue-balls</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Blue Balls", 0, 0, 0, 0, false, "Icon_Sperm_Hearts", "Take 25% more lust damage in combat!", false, 0, GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                        <p class="codePadding"><strong>Apply Blue-balls</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Blue Balls", 0, 0, 0, 0, false, "Icon_Sperm_Hearts", "Take 25% more lust damage in combat!", false, 0, GLOBAL.STATUS_LOW_PRIORITY)</code></pre>
                     </div>
                 </div>
             </div>
@@ -148,7 +162,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply Breeders Bliss Rut Status</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if (!pc.inRut()){ output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your [pc.cocks] begin");if (pc.cockTotal() === 1) output("s");output(" to harden slightly and bead pre-cum. It’s not a full erection; it’s more like you’re just constantly prepared to impregnate any fertile mates you meet. Your idle thoughts are replaced with fantasies of giving every woman you meet as many thick, virile creampies as her pussy can handle, immediately moving on to your next partner, using your slick seed for lube until you fill her to the brim as well. Yeah, you could really go for knocking somebody up right now.");output("\n\nThen the idea occurs to you that your potential partners might find mates of their own if you don’t drive any rivals off. No, you won’t stand for that! You will brook no competition from anything with a penis! Before the thought is even out of your head you begin searching for a fertile female. Wait, none of this seems right to you!\n\nThe aching, swelling sensation of increased productivity in your [pc.balls] tips you off at the same time as your Codex that <b>you are now in rut.</b>");pc.createStatusEffect("Rut", 5, 25, 1000, 4, false, "LustUp", "Your body is driven for aggressive breeding, increasing your libido and virility, as well as boosting your minimum cum output.\n\n+5 Libido\n+25 Minimum Lust Rating\n+1000mLs Minimum Cum\n+400% Virility", false, 28800, GLOBAL.STATUS_LOW_PRIORITY);}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given the intensity of your rut, but after several moments pass your [pc.cocks] harden"); if (pc.cockTotal() === 1) output("s"); output(" slightly and begin");if (pc.cockTotal() === 1) output("s");output(" to leak more pre-cum.");if (pc.rutMinutes() < 22 * 24 * 60){output(" You groan as you realize instinctively that <b>your rut has been extended.</b>");pc.extendRut(7 * 24 * 60);}else{output(" You groan as you realize that <b>you cannot go any deeper into rut.</b>");}}</code></pre></p>
+                        <p class="codePadding"><strong>Apply Breeders Bliss Rut Status</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if (!pc.inRut()){ output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your [pc.cocks] begin");if (pc.cockTotal() === 1) output("s");output(" to harden slightly and bead pre-cum. It’s not a full erection; it’s more like you’re just constantly prepared to impregnate any fertile mates you meet. Your idle thoughts are replaced with fantasies of giving every woman you meet as many thick, virile creampies as her pussy can handle, immediately moving on to your next partner, using your slick seed for lube until you fill her to the brim as well. Yeah, you could really go for knocking somebody up right now.");output("\n\nThen the idea occurs to you that your potential partners might find mates of their own if you don’t drive any rivals off. No, you won’t stand for that! You will brook no competition from anything with a penis! Before the thought is even out of your head you begin searching for a fertile female. Wait, none of this seems right to you!\n\nThe aching, swelling sensation of increased productivity in your [pc.balls] tips you off at the same time as your Codex that <b>you are now in rut.</b>");pc.createStatusEffect("Rut", 5, 25, 1000, 4, false, "LustUp", "Your body is driven for aggressive breeding, increasing your libido and virility, as well as boosting your minimum cum output.\n\n+5 Libido\n+25 Minimum Lust Rating\n+1000mLs Minimum Cum\n+400% Virility", false, 28800, GLOBAL.STATUS_LOW_PRIORITY);}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given the intensity of your rut, but after several moments pass your [pc.cocks] harden"); if (pc.cockTotal() === 1) output("s"); output(" slightly and begin");if (pc.cockTotal() === 1) output("s");output(" to leak more pre-cum.");if (pc.rutMinutes() < 22 * 24 * 60){output(" You groan as you realize instinctively that <b>your rut has been extended.</b>");pc.extendRut(7 * 24 * 60);}else{output(" You groan as you realize that <b>you cannot go any deeper into rut.</b>");}}</code></pre>
                     </div>
                 </div>
             </div>
@@ -167,7 +182,7 @@
                         </div>
                     </div>
                     <div class="statusEffectDescription">
-                        <div class="gridTwoAcross">
+                        <div class="StatusApplyGridTwoAcross">
                             <div class="substatusgrid">
                                 <p>Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
                                     <br><br>
@@ -192,7 +207,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply Breeders Bliss Heat Status</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if(!pc.inHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your nethers flush warmly with blood as heat blooms in ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("each of ")}output("your ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("unoccupied ")}output("womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(". Suddenly your posture feels inexplicably wrong, so you shift to a more comfortable stance, unconsciously adjusting your ");if(!pc.hasLegs()){output("[pc.lowerBody]")}else{output("[pc.legs]")}output(" slightly and lifting your [pc.ass]");if(pc.tailCount>0){output(" and [pc.tails]")}output(" to better present your sex to those around you. Wait, what? That’s not how you’re supposed to stand! The thought is suddenly wiped from your mind as you begin to daydream vividly about ");if(pc.isTaur()){output("lying down")}else{output("bending over")}output(" and letting a train of horny studs creampie your twat");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" until your womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" swell");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("s")}output(" with offspring. You’ve got a nursery ready for any future children already! Why aren’t you using it to its fullest capabilities?");output("\n\nThe ");if(pc.hasPheromones()){output("scent of fertile pheromones wafting from")}else{output("heat and moisture blossoming in")}output(" [pc.eachVagina] clues you in on what’s happening at the same time as your Codex beeping to alert you that <b>you have gone into heat!</b>");pc.createStatusEffect("Heat",5,25,10,3,false,"LustUp","Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",false,28800,GLOBAL.STATUS_LOW_PRIORITY);pc.libido(1)}else if(!pc.inDeepHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel feverishly <i>hot</i>. Your already breed-hungry womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s cry")}else{output(" cries")}output(" out in frustration. Before swallowing this pill you were horny; now you’re positively juicing yourself at the mere thought of a cock to fill your achingly empty puss");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("y")}else{output("ies")}output(". You’re desperate to be filled with hot cum, to have your breasts swell with milk to feed the young growing in your equally swollen belly! As your mind glazes over with daydreams of being thoroughly bred by endless hordes of virile mates, your posture becomes even more wantonly slutty, ");if(!pc.hasLegs()){output("ass thrust outwards")}else{output("legs spread wide")}if(pc.tailCount>0){output(", [pc.tails] waving and held as high as possible")}output(" to display your flushed, dripping sex to anyone who might be present.");output("\n\nThe unmistakable scent of a fertile, needy breeding bitch fills the area. ");if(pc.hasPheromones()){output("You realize immediately")}else{output("Even your untrained nose can detect")}output(" that the smell is coming from ");if(isSillyModeEnabled()){output("INSIDE THE HOUSE!!!")}else{output("[pc.eachVagina].")}output(" Clouds of potent pheromones advertising your ability and readiness to bear children waft up from [pc.eachVagina] like an organic smokestack");if(!pc.isCrotchExposed()){output(", even in spite of your [pc.lowerGarment]")}output(". Anyone that even comes close to you now is going to be able to tell how badly your body wants a baby, and you’re not sure you won’t just stick your [pc.ass] out and beg them for one.");output("\n\nIt’s painfully apparent to you now that <b>you are in a deep heat.</b> If you don’t plan on taking an endless string of creampies as deep as possible in your randy [pc.cunts] you should probably avoid other people for a few weeks. Given how fertile you are in your current state just a drop of cum could knock you up.");pc.setStatusValue("Heat",1,10);pc.setStatusValue("Heat",2,35);pc.setStatusValue("Heat",3,25);pc.setStatusValue("Heat",4,5);pc.setStatusTooltip("Heat","<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+"+pc.statusEffectv1("Heat")*100+"% Fertility\n+"+pc.statusEffectv2("Heat")+" Minimum Lust Rating\n+"+pc.statusEffectv3("Heat")+" Libido\n+"+pc.statusEffectv4("Heat")+" Tease Damage");pc.extendHeat(7*24*60)}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given how extreme your heat is already, but after several moments you feel your [pc.cunts] growing warmer. You groan as you realize instinctively that ");if(pc.heatMinutes()<22*24*60){pc.extendHeat(7*24*60);output("<b>your heat has been extended.</b>")}else{output("<b>you are as deep into heat as you can possibly go.</b>")}}</code></pre></p>
+                        <p class="codePadding"><strong>Apply Breeders Bliss Heat Status</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if(!pc.inHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your nethers flush warmly with blood as heat blooms in ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("each of ")}output("your ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("unoccupied ")}output("womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(". Suddenly your posture feels inexplicably wrong, so you shift to a more comfortable stance, unconsciously adjusting your ");if(!pc.hasLegs()){output("[pc.lowerBody]")}else{output("[pc.legs]")}output(" slightly and lifting your [pc.ass]");if(pc.tailCount>0){output(" and [pc.tails]")}output(" to better present your sex to those around you. Wait, what? That’s not how you’re supposed to stand! The thought is suddenly wiped from your mind as you begin to daydream vividly about ");if(pc.isTaur()){output("lying down")}else{output("bending over")}output(" and letting a train of horny studs creampie your twat");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" until your womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" swell");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("s")}output(" with offspring. You’ve got a nursery ready for any future children already! Why aren’t you using it to its fullest capabilities?");output("\n\nThe ");if(pc.hasPheromones()){output("scent of fertile pheromones wafting from")}else{output("heat and moisture blossoming in")}output(" [pc.eachVagina] clues you in on what’s happening at the same time as your Codex beeping to alert you that <b>you have gone into heat!</b>");pc.createStatusEffect("Heat",5,25,10,3,false,"LustUp","Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",false,28800,GLOBAL.STATUS_LOW_PRIORITY);pc.libido(1)}else if(!pc.inDeepHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel feverishly <i>hot</i>. Your already breed-hungry womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s cry")}else{output(" cries")}output(" out in frustration. Before swallowing this pill you were horny; now you’re positively juicing yourself at the mere thought of a cock to fill your achingly empty puss");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("y")}else{output("ies")}output(". You’re desperate to be filled with hot cum, to have your breasts swell with milk to feed the young growing in your equally swollen belly! As your mind glazes over with daydreams of being thoroughly bred by endless hordes of virile mates, your posture becomes even more wantonly slutty, ");if(!pc.hasLegs()){output("ass thrust outwards")}else{output("legs spread wide")}if(pc.tailCount>0){output(", [pc.tails] waving and held as high as possible")}output(" to display your flushed, dripping sex to anyone who might be present.");output("\n\nThe unmistakable scent of a fertile, needy breeding bitch fills the area. ");if(pc.hasPheromones()){output("You realize immediately")}else{output("Even your untrained nose can detect")}output(" that the smell is coming from ");if(isSillyModeEnabled()){output("INSIDE THE HOUSE!!!")}else{output("[pc.eachVagina].")}output(" Clouds of potent pheromones advertising your ability and readiness to bear children waft up from [pc.eachVagina] like an organic smokestack");if(!pc.isCrotchExposed()){output(", even in spite of your [pc.lowerGarment]")}output(". Anyone that even comes close to you now is going to be able to tell how badly your body wants a baby, and you’re not sure you won’t just stick your [pc.ass] out and beg them for one.");output("\n\nIt’s painfully apparent to you now that <b>you are in a deep heat.</b> If you don’t plan on taking an endless string of creampies as deep as possible in your randy [pc.cunts] you should probably avoid other people for a few weeks. Given how fertile you are in your current state just a drop of cum could knock you up.");pc.setStatusValue("Heat",1,10);pc.setStatusValue("Heat",2,35);pc.setStatusValue("Heat",3,25);pc.setStatusValue("Heat",4,5);pc.setStatusTooltip("Heat","<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+"+pc.statusEffectv1("Heat")*100+"% Fertility\n+"+pc.statusEffectv2("Heat")+" Minimum Lust Rating\n+"+pc.statusEffectv3("Heat")+" Libido\n+"+pc.statusEffectv4("Heat")+" Tease Damage");pc.extendHeat(7*24*60)}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given how extreme your heat is already, but after several moments you feel your [pc.cunts] growing warmer. You groan as you realize instinctively that ");if(pc.heatMinutes()<22*24*60){pc.extendHeat(7*24*60);output("<b>your heat has been extended.</b>")}else{output("<b>you are as deep into heat as you can possibly go.</b>")}}</code></pre>
                         <p>Use multiple times to extend/enter Deep Heat</p>
                     </div>
                 </div>
@@ -214,7 +230,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply Mare Musk</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Mare Musk", 0, 0, 0, 0, false, "Icon_Smelly", "You smell like a horny mare! The potent female scent is sure to drive others wild - though it gets you a little worked up as well.", false, 0);</code></pre></p>
+                        <p class="codePadding"><strong>Apply Mare Musk</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Mare Musk", 0, 0, 0, 0, false, "Icon_Smelly", "You smell like a horny mare! The potent female scent is sure to drive others wild - though it gets you a little worked up as well.", false, 0);</code></pre>
                     </div>
                 </div>
             </div>
@@ -235,7 +252,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Sweaty", 0, 0, 0, 0, false, "Icon_Smelly", "You are covered with sweat from a workout, reducing your potential sexiness to many foes. Some, however, may like it.", false, 0)</code></pre></p>
+                        <p class="codePadding"><strong>Apply nothing</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Sweaty", 0, 0, 0, 0, false, "Icon_Smelly", "You are covered with sweat from a workout, reducing your potential sexiness to many foes. Some, however, may like it.", false, 0)</code></pre>
                     </div>
                 </div>
             </div>
@@ -264,11 +282,23 @@
                     </div>
                 </div>
                 <div class="halfBoxBottom">
-                    <div class="gridFourAcross">
-                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre></p></div>
-                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Very Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(6)</code></pre></p></div>
-                        <div class="substatusgrid"><p class="codePadding"><strong>Apply Worn Out</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(9)</code></pre></p></div>
-                        <div class="substatusgrid"><p class="codePadding"><strong>Remove Sore</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre></p></div>
+                    <div class="StatusApplyGridFourAcross">
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Apply Sore</strong></p>
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre>
+                        </div>
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Apply Very Sore</strong></p>
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(6)</code></pre>
+                        </div>
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Apply Worn Out</strong></p>
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(9)</code></pre>
+                        </div>
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Remove Sore</strong></p>
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -289,7 +319,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply Semen's Candy</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if (clearOutput(), "PlayerCharacter" === pc.getClassName()) {author("Nonesuch"), output("You pop one of the sweets into your mouth. The incredibly strong flavor of aniseed and menthol makes your eyes water; when you swallow it the cold burn spreads from your mouth to your gut and then down to your groin."); pc.hasStatusEffect("Semen's Candy")? pc.addStatusValue("Semen's Candy", 2, 1) : pc.createStatusEffect("Semen's Candy", 300, 1, 0, 0, !1, "Pill", "The Semen’s Friend candy is still in your system.", !1, 300, GLOBAL.STATUS_LOW_PRIORITY)} else output(pc.capitalA + pc.short + " eats the candy to no effect.");</code></pre></p>
+                        <p class="codePadding"><strong>Apply Semen's Candy</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if (clearOutput(), "PlayerCharacter" === pc.getClassName()) {author("Nonesuch"), output("You pop one of the sweets into your mouth. The incredibly strong flavor of aniseed and menthol makes your eyes water; when you swallow it the cold burn spreads from your mouth to your gut and then down to your groin."); pc.hasStatusEffect("Semen's Candy")? pc.addStatusValue("Semen's Candy", 2, 1) : pc.createStatusEffect("Semen's Candy", 300, 1, 0, 0, !1, "Pill", "The Semen’s Friend candy is still in your system.", !1, 300, GLOBAL.STATUS_LOW_PRIORITY)} else output(pc.capitalA + pc.short + " eats the candy to no effect.");</code></pre>
                     </div>
                 </div>
             </div>
@@ -310,7 +341,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                        <p class="codePadding"><strong>Apply nothing</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                     </div>
                 </div>
             </div>
@@ -331,7 +363,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                        <p class="codePadding"><strong>Apply nothing</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                     </div>
                 </div>
             </div>
@@ -352,7 +385,8 @@
                 </div>
                 <div class="halfBoxBottom">
                     <div>   
-                        <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                        <p class="codePadding"><strong>Apply nothing</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                     </div>
                 </div>
             </div>
@@ -360,7 +394,7 @@
     </Details>
     <Details class="statusCategory">
         <summary class="IconTransformation">Transformation</summary>
-        <div class="gridFourAcross">
+        <div class="StatusGridFourAcross">
             <!-- The Treatment -->
             <div class="statusGrid" id="StatusTreatment">
                 <div class="halfBoxTop">
@@ -407,7 +441,7 @@
     </Details>
     <Details class="statusCategory">
         <summary class="IconBody">Body Dependent</summary>
-        <div class="gridFourAcross">
+        <div class="StatusGridFourAcross">
             <!-- Bulky Belly -->
             <div class="statusGrid" id="StatusBulkyBelly">
                 <div class="halfBoxTop">
@@ -431,18 +465,18 @@
     </Details>
     <Details class="statusCategory">
         <summary class="Iconclothing">Clothing</summary>
-        <div class="gridFourAcross">
+        <div class="StatusGridFourAcross">
 
         </div>
     </Details>
     <Details class="statusCategory ">
         <summary class="Iconhidden">Hidden</summary>
-        <div class="gridFourAcross">
+        <div class="StatusGridFourAcross">
 
         </div>
     </Details>
 
-    <div class="gridFourAcross">
+    <div class="StatusGridFourAcross">
         <!-- Anally-Filled -->
         <div class="statusGrid" id="StatusAnallyFIlled">
             <div class="halfBoxTop">
@@ -460,7 +494,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -481,7 +516,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -502,7 +538,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -523,7 +560,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -544,7 +582,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -566,7 +605,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -587,7 +627,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -608,7 +649,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -629,7 +671,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -650,7 +693,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -671,7 +715,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -692,7 +737,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Priapin",1,1,1.75,30,!1,"Icon_DrugVial",("PlayerCharacter"===pc.getClassName()?"Your masculine":"Masculine")+" virility has been piqued temporarily.",!1,1440,GLOBAL.STATUS_LOW_PRIORITY)</code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Priapin",1,1,1.75,30,!1,"Icon_DrugVial",("PlayerCharacter"===pc.getClassName()?"Your masculine":"Masculine")+" virility has been piqued temporarily.",!1,1440,GLOBAL.STATUS_LOW_PRIORITY)</code></pre>
                 </div>
             </div>
         </div>
@@ -713,7 +759,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -734,7 +781,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -755,7 +803,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -776,7 +825,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -801,7 +851,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -822,7 +873,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -847,7 +899,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -868,7 +921,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -889,7 +943,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -910,7 +965,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -931,32 +987,11 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
-        <!-- Cerespirin -->
-        <div class="statusGrid" id="StatusCerespirin">
-            <div class="halfBoxTop">
-                <div class="statusBoxHeader">
-                    <div class="statusEffectBlock">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                    </div>
-                    <div>
-                        <p class="statusEffectHeaderText">Cerespirin</p>
-                    </div>
-                </div>
-                <div class="statusEffectDescription">
-                    <p>You have injected yourself with an experimental drug...</p>
-                </div>
-            </div>
-            <div class="halfBoxBottom">
-                <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
-                </div>
-            </div>
-        </div>
- 
         <!-- Cum High -->
         <div class="statusGrid" id="StatusCumHigh">
             <div class="halfBoxTop">
@@ -978,7 +1013,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -999,7 +1035,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1020,7 +1057,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1041,7 +1079,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1062,7 +1101,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1083,7 +1123,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1104,7 +1145,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1125,7 +1167,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1146,7 +1189,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1167,7 +1211,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1188,7 +1233,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1209,7 +1255,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1230,7 +1277,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1251,7 +1299,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1272,7 +1321,8 @@
             </div>
             <div class="halfBoxBottom">
                 <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre></p>
+                    <p class="codePadding"><strong>Apply nothing</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
                 </div>
             </div>
         </div>
@@ -1288,40 +1338,37 @@
         <Details>
             <summary class="IconMaps">Zone Maps</summary>
             <div class="areaZoneMaps">
-                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/9/9a/ZhengShi_-_Main.png" loading="lazy">
-                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/8/82/ZhengShi_-_Foundry.png" loading="lazy">
-                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/7/7b/ZhengShi_-_Scaffold.png" loading="lazy">
-                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/f/fc/ZhengShi_-_Rec_Deck.png" loading="lazy">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/9/9a/ZhengShi_-_Main.png" loading="lazy" alt="ZhengShi Main Map">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/8/82/ZhengShi_-_Foundry.png" loading="lazy" alt="ZhengShi Foundry Map">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/7/7b/ZhengShi_-_Scaffold.png" loading="lazy" alt="ZhengShi Scaffold Map">
+                <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/f/fc/ZhengShi_-_Rec_Deck.png" loading="lazy" alt="ZhengShi Recreation Deck Map">
             </div>
         </Details>
-        <div class="gridThreeAcross">
+        <div class="CharacterGridThreeAcross">
             <!--Bored Jumpers-->
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Bored Jumper</h2>
-                    <p><strong>Human</strong>: Thanks to how its ordered the Human varient cannot be assured.<pre id="jumperHuman"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(0)</code></pre></p>
-                    <p><strong>Equine</strong><pre id="jumperEquine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(1)</code></pre></p> 
-                    <p><strong>Canine</strong><pre id="jumperCanine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(3)</code></pre></p> 
-                    <p><strong>Feline</strong><pre id="jumperFeline"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(4)</code></pre></p> 
-                    <p><strong>Easter</strong>: <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Easter_Jumper" >Wiki</a> <pre id="jumperEaster"><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterEasterJumper()</code></pre></p>
+                    <p><strong>Human</strong>: Thanks to how its ordered the Human varient cannot be assured.</p>
+                    <pre id="jumperHuman"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(0)</code></pre>
+                    <p><strong>Equine</strong></p>
+                    <pre id="jumperEquine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(1)</code></pre>
+                    <p><strong>Canine</strong></p>
+                    <pre id="jumperCanine"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(3)</code></pre>
+                    <p><strong>Feline</strong></p>
+                    <pre id="jumperFeline"><code class="language-js line-numbers" data-prismajs-copy="Copy">boredJumperAttackProc(4)</code></pre>
+                    <p><strong>Easter</strong>: <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Easter_Jumper" >Wiki</a></p>
+                    <pre id="jumperEaster"><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterEasterJumper()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bored_Jumper" >W</a>
                 <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine.Adjatha.webp" alt="Canine Bored Jumper">
-                <img class="sideimg" id="jumperHumanImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_terran_nude.Adjatha.webp" alt="Human Bored Jumper Nude" loading="lazy">
-                <img class="sideimg" id="jumperEquineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_horse_nude.Adjatha.webp" alt="Equine Bored Jumper Nude" loading="lazy">
-                <img class="sideimg" id="jumperCanineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine_nude.Adjatha.webp" alt="Canine Bored Jumper Nude" loading="lazy">
-                <img class="sideimg" id="jumperFelineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_feline_nude.Adjatha.webp" alt="Feline Bored Jumper Nude" loading="lazy">
-                <img class="sideimg" id="jumperEasterImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_easter.Adjatha.webp" alt="Easter Bored Jumper Nude" loading="lazy">
-                <style>
-                    #jumperHumanImg, #jumperEquineImg, #jumperCanineImg, #jumperFelineImg, #jumperEasterImg{
-                    opacity: 0;
-                    }
-                    #jumperEquine:hover ~ #jumperEquineImg{
-                    transition: opacity 0.1s ease-in-out;
-                    opacity: 1;
-                    }
-                </style>
+                <img class="sideimg startHidden" id="jumperHumanImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_terran_nude.Adjatha.webp" alt="Human Bored Jumper Nude" loading="lazy">
+                <img class="sideimg startHidden" id="jumperEquineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_horse_nude.Adjatha.webp" alt="Equine Bored Jumper Nude" loading="lazy">
+                <img class="sideimg startHidden" id="jumperCanineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_canine_nude.Adjatha.webp" alt="Canine Bored Jumper Nude" loading="lazy">
+                <img class="sideimg startHidden" id="jumperFelineImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_feline_nude.Adjatha.webp" alt="Feline Bored Jumper Nude" loading="lazy">
+                <img class="sideimg startHidden" id="jumperEasterImg" src="imgsourceurl/resources/img/Adjatha/x1/bored_jumper_easter.Adjatha.webp" alt="Easter Bored Jumper Nude" loading="lazy">
+                <div>
                 <script>
                     $(document).ready(function() {
                     $('#jumperHuman').mouseover(function() {
@@ -1356,13 +1403,15 @@
                     });
                     });
                 </script>
+                                </div>
                 </div>
             </div>
             <!-- Roz -->
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Roz</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterRoz()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterRoz()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Roz" >W</a>
@@ -1374,7 +1423,8 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Overseer Maike</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">maikeEncounterFun()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">maikeEncounterFun()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Overseer_Maike" >W</a>
@@ -1387,7 +1437,8 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Forgehound</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">forgehoundEncounter()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">forgehoundEncounter()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Forgehound" >W</a>
@@ -1399,7 +1450,8 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Corona Flamer</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">coronaFlamerEncounter()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">coronaFlamerEncounter()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Corona_Flamer" >W</a>
@@ -1411,13 +1463,14 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Cyberpunk Security Operatives</h2>
-                    <p><strong>Standard Encounter</strong>: Will ignore you if wearing prisoner outfit<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPunkSecOp()</code></pre></p>
+                    <p><strong>Standard Encounter</strong>: Will ignore you if wearing prisoner outfit</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPunkSecOp()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cyberpunk_Security_Operatives" >W</a>
                     <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Cyberpunk Security Operatives Female Nude" loading="lazy">
                     <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Cyberpunk Security Operative 'Male' Nude" loading="lazy">
-                    <!-- The Image cycling is broken so I'm leaving it commended out for now 
+                    <!-- The Image cycling is broken so I'm leaving it commented out for now 
 
                     <div id="imageContainer">
                         <img id="punksecopimage1" class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Cyberpunk Security Operative Female" loading="lazy">
@@ -1452,7 +1505,8 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Slyveren Slavebreaker</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSlyverenSlavebreaker()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSlyverenSlavebreaker()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Slyveren_Slavebreaker" >W</a>
@@ -1464,8 +1518,10 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Dr. Teyaal</h2>
-                    <p><strong>Post-Quest Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">teyaalRepeatShitstompins()</code></pre></p>
-                    <p><strong>Quest Encounter</strong>: Doesent work post quest, not sure why yet.<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">docTeyaaaaaaalsOffice()</code></pre></p>
+                    <p><strong>Post-Quest Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">teyaalRepeatShitstompins()</code></pre>
+                    <p><strong>Quest Encounter</strong>: Doesent work post quest, not sure why yet.</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">docTeyaaaaaaalsOffice()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Dr._Teyaal" >W</a>
@@ -1477,8 +1533,10 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Rat Thieves</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsInTheMineEncounter()</code></pre></p>
-                    <p><strong>Christmas Event</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsRaidingXXXmas2018ByWill()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsInTheMineEncounter()</code></pre>
+                    <p><strong>Christmas Event</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">ratsRaidingXXXmas2018ByWill()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Rat_Thieves" >W</a>
@@ -1490,7 +1548,8 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Shock Hopper / Vanika</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">shockHopperEncounter()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">shockHopperEncounter()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Shock_Hopper" >W</a>
@@ -1502,7 +1561,8 @@
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
                     <h2>Cyper Punk Cheeta Operative</h2>
-                    <p><strong>Standard Encounter</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">cyberpunkRandoSpaceBattle()</code></pre></p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">cyberpunkRandoSpaceBattle()</code></pre>
                     <p>Character does not have a wiki page</p>
                 </div>
                 <div class="halfBoxRight">
@@ -1551,24 +1611,35 @@
 
 
 <section class="topselector" id="content5">
-    <div class="gridThreeAcross">
+    <div class="CharacterGridThreeAcross">
         <!-- Breedwell -->
         <div class="enemyGrid">
             <div class="halfBoxLeft">
                 <h2>Breedwell</h2>
-                    <p><strong>Ping</strong>: Trigger Roaming Query<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallPing()</code></pre></p>
+                    <p><strong>Ping</strong>: Trigger Roaming Query</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallPing()</code></pre>
                     <details>
                         <summary>Specific Pings</summary>
-                    <p><strong>Tavros</strong>: Married Rahn Couple<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosCouple</code></pre></p>
-                    <p><strong>Tavros</strong>: AusaRahn<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosAusar</code></pre></p>
-                    <p><strong>Tavros</strong>: Domme Business Do'Rahn<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosDomme</code></pre></p>
-                    <p><strong>Mhen'ga</strong>: Flahne<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsFlahne</code></pre></p>
-                    <p><strong>Mhen'ga</strong>: Pheromonal Fuu'Rahn Field Researcher<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsPheromonalFuurahn</code></pre></p>
-                    <p><strong>Tarkus</strong>: Mercenary Duo<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusMercs</code></pre></p>
-                    <p><strong>Tarkus</strong>: Stacey the Bimbo Loo'Rahn <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusStacey</code></pre></p>
-                    <p><strong>Myrellion</strong>: Loo'Rahn UGC Officer <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsMyrellionQuickie</code></pre></p>
-                    <p><strong>Uveto</strong>: Frozen Fuu'Rahn Explorer<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsUvetanExplorer</code></pre></p>
-                    <p><strong>Zheng Shi</strong>: Fuu'Rahn Pirate<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsZhengShiTwofer</code></pre></p>        
+                    <p><strong>Tavros</strong>: Married Rahn Couple</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosCouple</code></pre>
+                    <p><strong>Tavros</strong>: AusaRahn</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosAusar</code></pre>
+                    <p><strong>Tavros</strong>: Domme Business Do'Rahn</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTavrosDomme</code></pre>
+                    <p><strong>Mhen'ga</strong>: Flahne</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsFlahne</code></pre>
+                    <p><strong>Mhen'ga</strong>: Pheromonal Fuu'Rahn Field Researcher</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsPheromonalFuurahn</code></pre>
+                    <p><strong>Tarkus</strong>: Mercenary Duo</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusMercs</code></pre>
+                    <p><strong>Tarkus</strong>: Stacey the Bimbo Loo'Rahn</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsTarkusStacey</code></pre>
+                    <p><strong>Myrellion</strong>: Loo'Rahn UGC Officer</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsMyrellionQuickie</code></pre>
+                    <p><strong>Uveto</strong>: Frozen Fuu'Rahn Explorer</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsUvetanExplorer</code></pre>
+                    <p><strong>Zheng Shi</strong>: Fuu'Rahn Pirate</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">breedwellPremiumBootyCallsZhengShiTwofer</code></pre>
                     </details>
             </div>
             <div class="halfBoxRight">
@@ -1580,14 +1651,17 @@
 
 </section>
 <section class="topselector" id="content6">
-    <div class="gridThreeAcross">
+    <div class="CharacterGridThreeAcross">
         <!-- Ardia Dominance -->
         <div class="enemyGrid">
             <div class="halfBoxLeft">
                 <h2>Ardia Dominance</h2>
-                <p><strong>Sub</strong>: 1-3 Ardia is Sub<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 1</code></pre></p>
-                <p><strong>Dom</strong>: 4-6 Ardia is Dom<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 5</code></pre></p> 
-                <p><strong>Alpha</strong>: 7-10 Ardia is Alpha<pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 10</code></pre></p> 
+                <p><strong>Sub</strong>: 1-3 Ardia is Sub</p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 1</code></pre>
+                <p><strong>Dom</strong>: 4-6 Ardia is Dom</p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 5</code></pre>
+                <p><strong>Alpha</strong>: 7-10 Ardia is Alpha</p> 
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 10</code></pre>
             </div>
             <div class="halfBoxRight">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ardia" >W</a>
@@ -1599,11 +1673,15 @@
         <div class="enemyGrid">
             <div class="halfBoxLeft">
                 <h2>Ula Deflowered</h2>
-                <p><strong>Virgin</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = null</code></pre></p>
-                <p><strong>Deflowered</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = 1</code></pre></p>
+                <p><strong>Virgin</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = null</code></pre>
+                <p><strong>Deflowered</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ULA_DEFLOWERED = 1</code></pre>
                 <h2>Korgi Translation</h2>
-                <p><strong>Untranslated</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = null</code></pre></p>
-                <p><strong>Translated</strong><pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = 1</code></pre></p>
+                <p><strong>Untranslated</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = null</code></pre>
+                <p><strong>Translated</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.KORGI_TRANSLATING = 1</code></pre>
             </div>
             <div class="halfBoxRight">
                 <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ula" >W</a>
