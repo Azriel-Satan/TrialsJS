@@ -63,15 +63,18 @@
     </ul>
     <script>
         $(document).ready(function() {
-        $('#replacementUrlSubmit').click(function() {
-            var replacementUrl = $('#replacementUrl').val();
-            var textToReplace = 'imgsourceurl';
-            
-            // Find all occurrences of 'imgsourceurl' and replace them with the inputted text
-            $('body').html($('body').html().replace(new RegExp(textToReplace, 'g'), replacementUrl));
-        });
-        });
+            $('#replacementUrlSubmit').click(function() {
+                var replacementUrl = $('#replacementUrl').val();
+                var textToReplace = 'imgsourceurl';
 
+                $('img').each(function() {
+                    var currentSrc = $(this).attr('src');
+                    if (currentSrc.includes(textToReplace)) {
+                        $(this).attr('src', currentSrc.replace(new RegExp(textToReplace, 'g'), replacementUrl));
+                    }
+                });
+            });
+        });
     </script>
     <p>&nbsp;</p>
     <p><strong>Max Stats</strong></p>
@@ -1341,24 +1344,24 @@
         <button class="btn" onclick="filterSelection('FilterTailCock')">Tail Cock</button>
         <button class="btn" onclick="filterSelection('FilterTailCunt')">Tail Cunt</button>
         <P>Player State</P>
-        <button class="btn" onclick="filterSelection('SceneFilterTaur')">Taur</button>
-        <button class="btn" onclick="filterSelection('SceneFilterNaga')">Naga</button>
-        <button class="btn" onclick="filterSelection('SceneFilterHeat')">Heat</button>
-        <button class="btn" onclick="filterSelection('SceneFilterRut')">Rut</button>
-        <button class="btn" onclick="filterSelection('SceneFilterDeepthroat')">Deepthroat</button>
-        <button class="btn" onclick="filterSelection('SceneFilterSnakeByte')">SnakeByte</button>
-        <button class="btn" onclick="filterSelection('SceneFilterAphrodisiacTounge')">Aphrodisiac Tounge</button>
-        <button class="btn" onclick="filterSelection('SceneFilterTailCock')">Tail Cock</button>
-        <button class="btn" onclick="filterSelection('SceneFilterTailCunt')">Tail Cunt</button>
-        <button class="btn" onclick="filterSelection('SceneFilterParasiticTailCock')">Parasitic Tail Cock</button>
-        <button class="btn" onclick="filterSelection('SceneFilterParasiticTailCunt')">Parasitic Tail Cunt</button>
-        <button class="btn" onclick="filterSelection('SceneFilterMicroCock')">Small Penis</button>
-        <button class="btn" onclick="filterSelection('SceneFilterBimbo')">Bimbo</button>
-        <button class="btn" onclick="filterSelection('SceneFilterHimbo')">Himbo</button>
+        <button class="btn" onclick="filterSelection('FilterSceneTaur')">Taur</button>
+        <button class="btn" onclick="filterSelection('FilterSceneNaga')">Naga</button>
+        <button class="btn" onclick="filterSelection('FilterSceneHeat')">Heat</button>
+        <button class="btn" onclick="filterSelection('FilterSceneRut')">Rut</button>
+        <button class="btn" onclick="filterSelection('FilterSceneDeepthroat')">Deepthroat</button>
+        <button class="btn" onclick="filterSelection('FilterSceneSnakeByte')">SnakeByte</button>
+        <button class="btn" onclick="filterSelection('FilterSceneAphrodisiacTounge')">Aphrodisiac Tounge</button>
+        <button class="btn" onclick="filterSelection('FilterSceneTailCock')">Tail Cock</button>
+        <button class="btn" onclick="filterSelection('FilterSceneTailCunt')">Tail Cunt</button>
+        <button class="btn" onclick="filterSelection('FilterSceneParasiticTailCock')">Parasitic Tail Cock</button>
+        <button class="btn" onclick="filterSelection('FilterSceneParasiticTailCunt')">Parasitic Tail Cunt</button>
+        <button class="btn" onclick="filterSelection('FilterSceneMicroCock')">Small Penis</button>
+        <button class="btn" onclick="filterSelection('FilterSceneBimbo')">Bimbo</button>
+        <button class="btn" onclick="filterSelection('FilterSceneHimbo')">Himbo</button>
         <P>Player Holding</P>
-        <button class="btn" onclick="filterSelection('SceneFilterStrapon')">Strapon</button>
-        <button class="btn" onclick="filterSelection('SceneFilterThrobb')">Throbb</button>
-        <button class="btn" onclick="filterSelection('SceneFilterBreedersBliss')">Breeders Bliss</button>
+        <button class="btn" onclick="filterSelection('FilterSceneStrapon')">Strapon</button>
+        <button class="btn" onclick="filterSelection('FilterSceneThrobb')">Throbb</button>
+        <button class="btn" onclick="filterSelection('FilterSceneBreedersBliss')">Breeders Bliss</button>
     </div>
     <script>
         filterSelection("all")
@@ -1420,7 +1423,7 @@
         </Details>
         <div class="CharacterGridThreeAcross">
             <!--Bored Jumpers-->
-            <div class="enemyGrid FilterFuta SceneFilterHeat SceneFilterBreedersBliss SceneFilterTaur SceneFilterRut">
+            <div class="enemyGrid FilterFuta FilterSceneHeat FilterSceneBreedersBliss FilterSceneTaur FilterSceneRut">
                 <div class="halfBoxLeft">
                     <h2>Bored Jumper</h2>
                     <p><strong>Human</strong>: Thanks to how its ordered the Human varient cannot be assured.</p>
@@ -1494,7 +1497,7 @@
                 </div>
             </div>
             <!-- Overseer Maike -->
-            <div class="enemyGrid FilterFemale FilterTailCock SceneFilterTailCunt SceneFilterStrapon">
+            <div class="enemyGrid FilterFemale FilterTailCock FilterSceneTailCunt FilterSceneStrapon">
                 <div class="halfBoxLeft">
                     <h2>Overseer Maike</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1506,9 +1509,8 @@
                     <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/maike_nude.Adjatha.webp" alt="Overseer Maike Nude" loading="lazy">
                 </div>
             </div>
-
             <!-- Forgehound -->
-            <div class="enemyGrid FilterMale FilterTaur SceneFilterTaur">
+            <div class="enemyGrid FilterMale FilterTaur FilterSceneTaur">
                 <div class="halfBoxLeft">
                     <h2>Forgehound</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1521,7 +1523,7 @@
                 </div>
             </div>
             <!-- Corona Flamer -->
-            <div class="enemyGrid FilterFemale SceneFilterStrapon SceneFilterMicroCock">
+            <div class="enemyGrid FilterFemale FilterSceneStrapon FilterSceneMicroCock">
                 <div class="halfBoxLeft">
                     <h2>Corona Flamer</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1534,7 +1536,7 @@
                 </div>
             </div>
             <!-- Cyberpunk Security Operatives -->
-            <div class="enemyGrid FilterFemale FilterMale SceneFilterParasiticTailCunt FilterTaur SceneFilterSnakeByte">
+            <div class="enemyGrid FilterFemale FilterMale FilterSceneParasiticTailCunt FilterTaur FilterSceneSnakeByte">
                 <div class="halfBoxLeft">
                     <h2>Cyberpunk Security Operatives</h2>
                     <p>Taur and SnakeByte content in their Loss scenes.</p>
@@ -1577,7 +1579,7 @@
                 </div>
             </div>
             <!-- Slyveren Slavebreaker -->
-            <div class="enemyGrid FilterFemale FilterNaga SceneFilterThrobb SceneFilterRut SceneFilterTaur SceneFilterMicroCock">
+            <div class="enemyGrid FilterFemale FilterNaga FilterSceneThrobb FilterSceneRut FilterSceneTaur FilterSceneMicroCock">
                 <div class="halfBoxLeft">
                     <h2>Slyveren Slavebreaker</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1590,7 +1592,7 @@
                 </div>
             </div>
             <!-- Dr.Teyaal -->
-            <div class="enemyGrid FilterFuta SceneFilterStrapon">
+            <div class="enemyGrid FilterFuta FilterSceneStrapon">
                 <div class="halfBoxLeft">
                     <h2>Dr. Teyaal</h2>
                     <p><strong>Post-Quest Encounter</strong></p>
@@ -1605,7 +1607,7 @@
                 </div>
             </div>
             <!-- Rat Thieves -->
-            <div class="enemyGrid FilterFemale FilterMale SceneFilterStrapon SceneFilterSnakeByte SceneFilterBimbo SceneFilterHimbo SceneFilterTaur SceneFilterNaga">
+            <div class="enemyGrid FilterFemale FilterMale FilterSceneStrapon FilterSceneSnakeByte FilterSceneBimbo FilterSceneHimbo FilterSceneTaur FilterSceneNaga">
                 <div class="halfBoxLeft">
                     <h2>Rat Thieves</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -1620,7 +1622,7 @@
                 </div>
             </div>
             <!-- Shock Hopper / Vanika -->
-            <div class="enemyGrid FilterFuta SceneFilterStrapon SceneFilterBimbo SceneFilterHimbo">
+            <div class="enemyGrid FilterFuta FilterSceneStrapon FilterSceneBimbo FilterSceneHimbo">
                 <div class="halfBoxLeft">
                     <h2>Shock Hopper / Vanika</h2>
                     <p><strong>Standard Encounter</strong></p>
