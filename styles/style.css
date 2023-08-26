@@ -229,6 +229,25 @@ input:checked + label {
   grid-auto-rows: minmax(100px, auto);
 }
 
+.MultiImgGridTwoAcross {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+.MultiImgGrid {
+  position: relative;
+  margin: 0.1vw;
+  display:block;
+  text-align: left;;
+  background-color: var(--paleColor);
+  min-height: 300px;
+  max-width: 23vw;
+}
+.MultiImgGrid img{
+  height: 100%;
+  min-width: 100%;
+}
+
 .PlanetBioGrid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -242,12 +261,12 @@ input:checked + label {
 .PlanetBioBoxImg {
   width:100%;
   padding: 5px;
-  & img {
-    min-height:150px;
-    max-width: 100%;
-    object-fit: contain;
-    float: right;
-  }
+}
+.PlanetBioBoxImg img {
+  min-height:150px;
+  max-width: 100%;
+  object-fit: contain;
+  float: right;
 }
 
 .statusGrid{
