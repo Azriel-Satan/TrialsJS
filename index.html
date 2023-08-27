@@ -305,6 +305,136 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </Details>
+    <Details class="statusCategory">
+        <summary class="IconTransformation">Transformation</summary>
+        <div class="StatusGridFourAcross">
+            <!-- The Treatment -->
+            <div class="statusGrid statusGridWide" id="StatusTreatment">
+                <div class="halfBoxTop">
+                    <div class="statusBoxHeader">
+                        <div class="statusEffectBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_cow"><path d="M22.55,6.4H19.1a8.73,8.73,0,0,0,.57-1.59A11.12,11.12,0,0,0,20,1.92L19.91,0,19,1.67a8,8,0,0,1-1.79,2.18A7.49,7.49,0,0,1,15.31,5a7,7,0,0,1-1.13.35H9.82A7.27,7.27,0,0,1,5,1.67L4.09,0,4,1.92a10.63,10.63,0,0,0,.32,2.89A7.46,7.46,0,0,0,4.9,6.4H1.45l0,.54a4.53,4.53,0,0,0,1.2,3A4.68,4.68,0,0,0,5.7,11.24,7.36,7.36,0,0,0,6.44,15c.9,1.53,1.13,6.06,1.14,7.68v.14l.07.12a1.64,1.64,0,0,0,.94.66A10.22,10.22,0,0,0,12,24a10.22,10.22,0,0,0,3.41-.44,1.64,1.64,0,0,0,.94-.66l.07-.12v-.14c0-1.62.23-6.15,1.14-7.68a7.36,7.36,0,0,0,.74-3.72,4.63,4.63,0,0,0,3.07-1.31,4.53,4.53,0,0,0,1.2-3ZM6.16,6.4a7.06,7.06,0,0,1-.9-2.54,9,9,0,0,0,.89.86,9.26,9.26,0,0,0,1.5,1,5.36,5.36,0,0,0-1,.69Zm1.22,7.25a1,1,0,0,1-.26-1.35,1,1,0,0,1,1.26-.55,1,1,0,0,1,.26,1.35A1,1,0,0,1,7.38,13.65Zm7.94,8.74a3.31,3.31,0,0,1-1,.32,2.59,2.59,0,0,0-2.32-1h0a2.62,2.62,0,0,0-2.32,1,3.29,3.29,0,0,1-1-.32c0-.23,0-.59,0-1.05a7.37,7.37,0,0,0,2.29-5.65C11,11.2,8,10.52,9.14,8.81A2.62,2.62,0,0,1,12,7.48a2.62,2.62,0,0,1,2.87,1.33C16,10.52,13,11.2,13.08,15.69a7.42,7.42,0,0,0,2.27,5.63C15.33,21.78,15.32,22.16,15.32,22.39Zm1.32-8.74a1,1,0,0,1-1.26-.55,1,1,0,0,1,.26-1.35,1,1,0,0,1,1.26.55A1,1,0,0,1,16.64,13.65ZM17.83,6.4h-.44a5.13,5.13,0,0,0-1.05-.69,8.93,8.93,0,0,0,1.51-1,9,9,0,0,0,.89-.86A7.08,7.08,0,0,1,17.83,6.4Z"></path></g></svg>
+                        </div>
+                        <div>
+                            <p class="statusEffectHeaderText">The Treatment | Milkazon</p>
+                        </div>
+                    </div>
+                    <div class="statusEffectDescription">
+                        <div class="StatusApplyGridTwoAcross">
+                            <div class="substatusgrid">
+                                <p>The treatment comes in a variety of flavors, including Cowgirl, Bull, CumCow, Amazon and Fauxcow. If you want the Mikazon status/Treated Milk Perk you need to perform the Amazon varient.</p>
+                                <p>You are currently under the effects of the Treatment. Who knows what havoc it will wreak upon your system.</p>
+                            </div>
+                            <div class="substatusgrid">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div>     
+                        <p class="codePadding"><strong>Apply Treatment</strong>: Use the in game cheat menu to ensure the varient</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("The Treatment",0,0,0,0,!1,"Icon_Cow","You are currently under the effects of the Treatment. Who knows what havoc it will wreak upon your system.",!1,10080,GLOBAL.STATUS_LOW_PRIORITY);</code></pre>
+                        <p class="codePadding"><strong>Gain Treated Milk</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createPerk("Treated Milk",0,0,0,0,"Any milk you lactate tastes better, and you are less likely to stop lactating.");</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- Omega Oil / Omega Fever -->
+            <div class="statusGrid statusGridWide" id="StatusTreatment">
+                <div class="halfBoxTop">
+                    <div class="statusBoxHeader">
+                        <div class="statusEffectBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
+                        </div>
+                        <div>
+                            <p class="statusEffectHeaderText">Omega Oil | Strangely Warm, Flushed, Fuck Fever</p>
+                        </div>
+                    </div>
+                    <div class="statusEffectDescription">
+                                <p>This item is applied on use. In doing so, the oil will have immediate effects on the player character. Each subsequent dose will have a chance to add a Heat status effect with increasing effects. Anal sex while under any of these effects will reduce the stage of the heat (Fuck Fever -> Flushed -> Strangely Warm). </p>
+                                <p><strong>Strangely Warm</strong>: You are more passively lusty than before. (+15 minimum lust)</p>
+                                <p><strong>Flushed</strong>: You are significantly more passively lusty than before. (+25 minimum lust)(Vulnerable to phallus-bearing foes.)</p>
+                                <p><strong>Fuck Fever</strong>: You are significantly more passively lusty than before. (+33 minimum lust) (Extremely vulnerable to phallus-bearing foes.)</p>
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div class="StatusApplyGridFourAcross">
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Apply Strangely Warm</strong><br>You are more passively lusty than before.<br><br>(+15 minimum lust)</p>
+                        </div>
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Apply Flushed</strong><br>You are significantly more passively lusty than before.<br><br>(+25 minimum lust)<br>(Vulnerable to phallus-bearing foes.)</p>
+                        </div>
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Apply Fuck Fever</strong><br>You are significantly more passively lusty than before.<br>(+33 minimum lust)<br>(Extremely vulnerable to phallus-bearing foes.)</p>
+                        </div>
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Give Omega Fever</strong><br>Your body will cycle through the stages of heat whenever your ass is not incubating.</p>
+                        </div>
+                    </div>
+                    <div class="StatusApplyGridFourAcross">
+                        <div class="substatusgrid">
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre>
+                        </div>
+                        <div class="substatusgrid">
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(6)</code></pre>
+                        </div>
+                        <div class="substatusgrid">
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(9)</code></pre>
+                        </div>
+                        <div class="substatusgrid">
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(-100)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ass Slap patch -->
+            <div class="statusGrid" id="StatusAssSlapPatch">
+                <div class="halfBoxTop">
+                    <div class="statusBoxHeader">
+                        <div class="statusEffectBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
+                        </div>
+                        <div>
+                            <p class="statusEffectHeaderText">Ass Slap patch</p>
+                        </div>
+                    </div>
+                    <div class="statusEffectDescription">
+                        <p>The applied Ass Slap patch is gradually working to fill out your butt cheeks. You can remove it at any point via the “Remove Ass Slap Patch” command in the “Masturbation” menu, but the patch will still be consumed. It’s one use only.</p>
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div>   
+                        <p class="codePadding"><strong>Apply Ass Slap Patch</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">clearOutput();author("Foxxling");addButton(0,"Next",mainGameMenu);if(pc.hasStatusEffect("Ass Slap Patch")){output("You can only wear one patch at a time.")}else{output("You tear the packet open and pull the smooth paper covering the adhesive side.");if(pc.isNude()){output(" Since you’re already naked, you go ahead and slap the patch on your [pc.ass].")}else if(!pc.isAssExposed()){if(!pc.inventory.hasArmor){output("You reach into your [pc.lowerUndergarment] and do your best to slap the patch onto your [pc.ass].")}else{output(" You reach into your [pc.armor] and press the patch onto your [pc.ass].")}}output(" The moment the patch is secure, you flinch when a low level electric shock fires into your buttocks. After that, the occupied spot on your butt grows warm. You adjust to the heat of the patch and it begins to gently vibrate against your [pc.skin].");pc.changeLust(5);output("\n\n");pc.createStatusEffect("Ass Slap Patch",1,0,0,0,false,"LustUp","The applied Ass Slap patch is gradually working to fill out your butt cheeks. You can remove it at any point via the “Remove Ass Slap Patch” command in the “Masturbation” menu, but the patch will still be consumed. It’s one use only.",false,4320,GLOBAL.STATUS_LOW_PRIORITY)}</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- Boobswell Pads -->
+            <div class="statusGrid" id="StatusBoobsweelPads">
+                <div class="halfBoxTop">
+                    <div class="statusBoxHeader">
+                        <div class="statusEffectBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_lust-up"><path d="M23.86,8.37c-.53,3.24-4.69,7.18-8,10.36-.91.85-1.82,1.71-2.38,2.32a2.25,2.25,0,0,1-1.4.79l.28-.28-.59-.6-1.67-1.72h0l.87-.88c.42.4.79.76,1.1,1.08.62-.65,1.51-1.5,2.31-2.25,2.65-2.51,6.58-6.25,7.3-8.77-2-.32-3.45,2.12-6,2.12-3,0-5.35-3.82-8.73-3.82-2.67,0-3.31,1.21-4.54,1.82a10.63,10.63,0,0,0,1.87,3.05L2.74,13.12A11.19,11.19,0,0,1,.14,8.37,6.83,6.83,0,0,1,1.13,3,6.75,6.75,0,0,1,6.07.61a5.68,5.68,0,0,1,.59,0A7.1,7.1,0,0,1,12,3.06,7.1,7.1,0,0,1,17.34.58a5.35,5.35,0,0,1,.58,0A6.74,6.74,0,0,1,22.87,3,6.83,6.83,0,0,1,23.86,8.37ZM5.67,15,9.38,18.7l.08-.08,1.08-1.09.58-.59L9,14.79l-2.35-2.4-1-1L.21,16.94,2,18.81Zm3.78,4.89,1.67,1.72L9.38,23.31,5.67,19.57,2,23.42.21,21.56,5.67,16Z"></path></g></svg>
+                        </div>
+                        <div>
+                            <p class="statusEffectHeaderText">Boobswell Pads</p>
+                        </div>
+                    </div>
+                    <div class="statusEffectDescription">
+                        <p>The applied Boobswell pads are slowly but steadily working to fill out your chest. You can remove them at any point via the “Remove Boobswell Pads” command in the “Masturbation” menu, but the pads will still be consumed. They’re one use only.</p>
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div>   
+                        <p class="codePadding"><strong>Apply nothing</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">clearOutput();addButton(0,"Next",mainGameMenu);arg=0;if(pc.isChestGarbed()&&pc.biggestTitSize()>=1){output("You pull the set of sticky, form-adhering pads out of their packaging");if(pc.inventory.hasArmor){output(" and wiggle out of your [pc.armor]")}output(". You quickly slip the pads into "+(pc.inventory.hasUpperUndergarment?"place":"your [pc.upperUndergarment]")+", spending a moment adjusting them so they hug the undersides of your breasts just right. As you’re working, the pads begin gently vibrating, and quickly become ever so slightly moist as the cocktail of hormones and nanomachines leaks out of the pad and into your [pc.skinFurScales]. ")}else if(pc.biggestTitSize()>=1){output("You pull the set of sticky, form-adhering pads out of their packaging and peel off the adhesive layer underneath them before slapping them onto the undersides of your [pc.breasts "+arg+"]. Once they’re secured, the pads begin gently vibrating, and quickly become ever so slightly moist as the cocktail of hormones and nanomachines leaks out of the pad and into your [pc.skinFurScales], making you go flush with sudden arousal.")}else{output("You pull the set of sticky, form-adhering pads out of their packaging and peel off the adhesive layer underneath them. A bit nervously, you slip the pads ");if(pc.isChestGarbed()){output("under your [pc.upperGarments] and ")}output("onto your flat chest. You give a little gasp as the cold adhesive adheres to you, and again as the pads turn suddenly slightly... wet. As if they’re leaking something onto your skin, and makes you go flush with a combination of sudden arousal and chill.")}pc.changeLust(5);pc.createStatusEffect("Boobswell Pads",arg,0,0,0,false,"LustUp","The applied Boobswell pads are slowly but steadily working to fill out your chest. You can remove them at any point via the “Remove Boobswell Pads” command in the “Masturbation” menu, but the pads will still be consumed. They’re one use only.",false,4320,GLOBAL.STATUS_LOW_PRIORITY);</code></pre>
+                    </div>
+                </div>
+            </div>
             <!-- Semen's Candy -->
             <div class="statusGrid"  id="StatusSemensCandy">
                 <div class="halfBoxTop">
@@ -324,119 +454,6 @@
                     <div>   
                         <p class="codePadding"><strong>Apply Semen's Candy</strong></p>
                         <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if (clearOutput(), "PlayerCharacter" === pc.getClassName()) {author("Nonesuch"), output("You pop one of the sweets into your mouth. The incredibly strong flavor of aniseed and menthol makes your eyes water; when you swallow it the cold burn spreads from your mouth to your gut and then down to your groin."); pc.hasStatusEffect("Semen's Candy")? pc.addStatusValue("Semen's Candy", 2, 1) : pc.createStatusEffect("Semen's Candy", 300, 1, 0, 0, !1, "Pill", "The Semen’s Friend candy is still in your system.", !1, 300, GLOBAL.STATUS_LOW_PRIORITY)} else output(pc.capitalA + pc.short + " eats the candy to no effect.");</code></pre>
-                    </div>
-                </div>
-            </div>
-            <!-- Strangely Warm -->
-            <div class="statusGrid"  id="StatusStrangelyWarm">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
-                        <div class="statusEffectBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                        </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Strangely Warm</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>You are more passively lusty than before.<br><br>(+15 minimum lust)</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply nothing</strong></p>
-                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
-                    </div>
-                </div>
-            </div>
-            <!-- Flushed -->
-            <div class="statusGrid"  id="StatusFlushed">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
-                        <div class="statusEffectBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                        </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Flushed</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>You are significantly more passively lusty than before.<br><br>(+25 minimum lust)<br>(Vulnerable to phallus-bearing foes.)</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply nothing</strong></p>
-                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
-                    </div>
-                </div>
-            </div>
-            <!-- Fuck Fever -->
-            <div class="statusGrid">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
-                        <div class="statusEffectBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                        </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Fuck Fever</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>You are significantly more passively lusty than before.<br>(+33 minimum lust)<br>(Extremely vulnerable to phallus-bearing foes.)</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply nothing</strong></p>
-                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </Details>
-    <Details class="statusCategory">
-        <summary class="IconTransformation">Transformation</summary>
-        <div class="StatusGridFourAcross">
-            <!-- The Treatment -->
-            <div class="statusGrid" id="StatusTreatment">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
-                        <div class="statusEffectBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                        </div>
-                        <div>
-                            <p class="statusEffectHeaderText">The Treatment</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>You are currently under the effects of the Treatment. Who knows what havoc it will wreak upon your system.</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding">Use the in game cheat menu</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Milkazon -->
-            <div class="statusGrid" id="StatusMilkazon">
-                <div class="halfBoxTop">
-                    <div class="statusBoxHeader">
-                        <div class="statusEffectBlock">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                        </div>
-                        <div>
-                            <p class="statusEffectHeaderText">Milkazon</p>
-                        </div>
-                    </div>
-                    <div class="statusEffectDescription">
-                        <p>Amazon Varient of the Treatment</p>
-                    </div>
-                </div>
-                <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding">Use the in game cheat menu</p>
                     </div>
                 </div>
             </div>
@@ -581,51 +598,6 @@
                 </div>
                 <div class="statusEffectDescription">
                     <p>You’ve checked all forms of weaponry at (New Texas' customs./Gastigoth’s security checkpoint.)</p>
-                </div>
-            </div>
-            <div class="halfBoxBottom">
-                <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong></p>
-                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Ass Slap patch -->
-        <div class="statusGrid" id="StatusAssSlapPatch">
-            <div class="halfBoxTop">
-                <div class="statusBoxHeader">
-                    <div class="statusEffectBlock">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                    </div>
-                    <div>
-                        <p class="statusEffectHeaderText">Ass Slap patch</p>
-                    </div>
-                </div>
-                <div class="statusEffectDescription">
-                    <p>The applied Ass Slap patch is gradually working to fill out your butt cheeks. You can remove it at any point via the “Remove Ass Slap Patch” command in the “Masturbation” menu, but the patch will still be consumed. It’s one use only.</p>
-                </div>
-            </div>
-            <div class="halfBoxBottom">
-                <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong></p>
-                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
-                </div>
-            </div>
-        </div>
-        <!-- Boobswell Pads -->
-        <div class="statusGrid" id="StatusBoobsweelPads">
-            <div class="halfBoxTop">
-                <div class="statusBoxHeader">
-                    <div class="statusEffectBlock">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                    </div>
-                    <div>
-                        <p class="statusEffectHeaderText">Boobswell Pads</p>
-                    </div>
-                </div>
-                <div class="statusEffectDescription">
-                    <p>The applied Boobswell pads are slowly but steadily working to fill out your chest. You can remove them at any point via the “Remove Boobswell Pads” command in the “Masturbation” menu, but the pads will still be consumed. They’re one use only.</p>
                 </div>
             </div>
             <div class="halfBoxBottom">
@@ -1470,7 +1442,8 @@
                     <Details>
                         <summary class="IconMaps">Zone Maps</summary>
                         <div class="areaZoneMaps">
-            
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/e/e5/Mhen%27ga_-_Esbeth.png" loading="lazy" alt="Mhen'ga - Esbeth">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/1/12/Mhen%27ga_-_Jungles.png" loading="lazy" alt="Mhen'ga - Jungles">
                         </div>
                     </Details>
                 </div>
@@ -1489,7 +1462,7 @@
                     <p>Can be recruited, Command only triggers forest meeting.</p>
                 </div>
                 <div class="halfBoxRight">
-                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Amber#Regular" >W</a>
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Amber" >W</a>
                     <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\dryad.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
@@ -1675,7 +1648,6 @@
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Male" >W</a>
                     <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\zil_male.Cheshire.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Zil Female -->
@@ -1715,12 +1687,12 @@
                 <div class="halfBoxRight MultiImgGridTwoAcross">
                     <a class="characterWikiLink" href="" >W</a>
                     <div class="MultiImgGrid">
-                        <img class="sideimg imgoffset1" src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_male.Shou.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer imgoffset1" src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_male_nude.Shou.webp" alt="Nude">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_male.Shou.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_male_nude.Shou.webp" alt="Nude">
                     </div>
                     <div class="MultiImgGrid">
-                        <img class="sideimg imgoffset2" src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_fem.Shou.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer imgoffset2" src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_fem_nude.Shou.webp" alt="Nude"loading="lazy">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_fem.Shou.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_fem_nude.Shou.webp" alt="Nude"loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1770,11 +1742,14 @@
                     <p>Appears during Plantation Quest</p>
                     <p>no sex scenes</p>
                 </div>
-                <div class="halfBoxRight">
+                <div class="halfBoxRight MultiImgGridTwoAcross">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Tribe" >W</a>
-                    <img class="sideimg" src="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" alt="Clothed" loading="lazy">
-                    <!-- No Images
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/" alt="Nude" loading="lazy">-->
+                    <div class="MultiImgGrid">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Cheshire\x1\zil_female.Cheshire.webp" alt="Clothed" loading="lazy">
+                    </div>
+                    <div class="MultiImgGrid">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Cheshire\x1\zil_male.Cheshire.webp" alt="Clothed" loading="lazy">
+                    </div>
                 </div>
             </div>
             <!-- Red Zil Male -->
@@ -1887,7 +1862,7 @@
                     <Details>
                         <summary class="IconMaps">Zone Maps</summary>
                         <div class="areaZoneMaps">
-            
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/c/ce/Tarkus_-_Main.png" loading="lazy" alt="Tarkus Main Map">
                         </div>
                     </Details>
                 </div>
@@ -1897,7 +1872,239 @@
             </div>
         </div>
         <div class="CharacterGridThreeAcross">
-            
+            <!-- Chaurmine -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Chaurmine</h2>
+                    <p>After the first encounter he can be found in the MESS, and later the hanger. From there he will move to Uvueto</p>
+                    <p><strong>Tarkus Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterChaurmine()</code></pre>
+                    <p><strong>Relationship Level:</strong> 0 to 100</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.CHAURMINE_RELATIONSHIP</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Chaurmine" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\chaurmine.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\chaurmine_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Raskvel Gang -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Raskvel Gang</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">raskvelGangEncounter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Gang" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\raskvel_gang.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\raskvel_gang_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Raskvel Female -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Raskvel Female</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterHostileRaskvelFemale()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Female" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/JayfireGrowlithe/x1/raskvel_female.JayfireGrowlithe.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/JayfireGrowlithe\x1\raskvel_female_nude.JayfireGrowlithe.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Lumi -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Lumi</h2>
+                    <p>Only appears after lv 7</p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterLumi()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Lumi" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\lumi.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\lumi_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Gabilani Vacationers -->
+            <div class="enemyGrid FilterFemale FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Gabilani Vacationers</h2>
+                    <p>Only appears after lv 5</p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterLGBT()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gabilani_Vacationers" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\lgbt.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\lgbt_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Sand Worm -->
+            <div class="enemyGrid FilterMale FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Sand Worm</h2>
+                    <p><strong>Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSandWorm()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sand_Worm" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\buttbug_no_goo.Shou.webp" alt="Missing" loading="lazy">
+                </div>
+            </div>
+            <!-- Sydian Male -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Sydian Male</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterMaleSydian()</code></pre>
+                    <p><strong>Anal Rutting Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterMaleSydianAnalRutting()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Male" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_male.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\sydian_male_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Sydian Female -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Sydian Female</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterFemaleSydian()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Female" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00\x1\sydian_female.Jacques00.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Jacques00\x1\sydian_female_nude.Jacques00.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Sydian Cuntboy/Herm -->
+            <div class="enemyGrid FilterUnusualSex">
+                <div class="halfBoxLeft">
+                    <h2>Sydian Cuntboy/Herm</h2>
+                    <p>If given Throbb or Virection will permenenatly become Herm</p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterSydianCboy()</code></pre>
+                    <p><strong>Set Penis Flag</strong></p>
+                    <p><code class="language-js">null</code> for Cuntboy, <code class="language-js">1</code> for Herm</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.SYD_CBOY_GREW_COCK = null</code></pre>
+                </div>
+                <div class="halfBoxRight MultiImgGridTwoAcross">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Cuntboy" >W</a>
+                    <div class="MultiImgGrid">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_cboy.Adjatha.webp" alt="Clothed" loading="lazy">
+                    </div>
+                    <div class="MultiImgGrid">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_herm.Adjatha.webp" alt="Clothed" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <!-- Sydian Matriarch -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Sydian Matriarch</h2>
+                    <p>Unlocks during Azra expedition</p>
+                    <p><strong>Post Expedition Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">sydianQueenIntroRedux()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Matriarch" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_queen.Adjatha.webp"" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\sydian_queen_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Lapinara Female -->
+            <div class="enemyGrid FilterFuta">
+                <div class="halfBoxLeft">
+                    <h2>Lapinara Female</h2>
+                    <p>Removed character, can be re-enabled in Cheats Menu</p>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterALapinara()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Lapinara_Parasitic_Female" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\lapinara.Cheshire.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Gray Goo -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Gray Goo</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterDasGooGray()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gray_Goo" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00\x1\gray_goo.Jacques00.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Sex Bot -->
+            <div class="enemyGrid FilterFemale FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Sex Bot</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterASexBot()</code></pre>
+                </div>
+                <div class="halfBoxRight MultiImgGridTwoAcross">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sex_Bot" >W</a>
+                    <div class="MultiImgGrid">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Uthstar/x1/sexbot_female.Uthstar.webp" alt="Clothed" loading="lazy">
+                    </div>
+                    <div class="MultiImgGrid">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sexbot_male.Adjatha.webp" alt="Clothed" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <!-- Nym-Foe -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Nym-Foe</h2>
+                    <p><strong>Quest Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">nymfoeSetup()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Nym-Foe" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\nymfoe.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Double-Goo -->
+            <div class="enemyGrid FilterSceneBimbo FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Double-Goo</h2>
+                    <p>Appears during Azra expedition</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Double-Goo" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\double_goo.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Raskvel Traps -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Raskvel Traps</h2>
+                    <p>Appears during Azra expedition</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Traps" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\azaphel.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\azaphel_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Raskvel Broodmother -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Raskvel Broodmother</h2>
+                    <p>Appears during Azra expedition</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Broodmother" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\broodmother.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
         </div>
     </div>
     <div class="areaContainer">
@@ -1909,7 +2116,11 @@
                     <Details>
                         <summary class="IconMaps">Zone Maps</summary>
                         <div class="areaZoneMaps">
-            
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/b/b4/Myrellion_-_The_Embassy.png" loading="lazy" alt="Myrellion - The Embassy">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/5/50/Myrellion_-_Gildenmere.png" loading="lazy" alt="Myrellion - Gildenmere">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/a/a1/Myrellion_-_Kressia_City.png" loading="lazy" alt="Myrellion - Kressia City">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/9/9d/Myrellion_-_No_Myr%27s_Land.png" loading="lazy" alt="Myrellion - No Myr's Land">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/7/78/Myrellion_-_Deep_Caverns.png" loading="lazy" alt="Myrellion - Deep Caverns">
                         </div>
                     </Details>
                 </div>
@@ -2068,12 +2279,12 @@
                 <div class="halfBoxRight MultiImgGridTwoAcross">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cyberpunk_Security_Operatives" >W</a>
                     <div class="MultiImgGrid">
-                        <img class="sideimg imgoffset1" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer imgoffset1" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Nude">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female_nude.Adjatha.webp" alt="Nude">
                     </div>
                     <div class="MultiImgGrid">
-                        <img class="sideimg imgoffset2" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer imgoffset2" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Nude"loading="lazy">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Nude"loading="lazy">
                     </div>
                 </div>
             </div>
@@ -2192,7 +2403,7 @@
                     <Details>
                         <summary class="IconMaps">Zone Maps</summary>
                         <div class="areaZoneMaps">
-            
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/6/6f/Dhaal.png" loading="lazy" alt="Dhaal">
                         </div>
                     </Details>
                 </div>
@@ -2236,7 +2447,7 @@
                     <Details>
                         <summary class="IconMaps">Zone Maps</summary>
                         <div class="areaZoneMaps">
-            
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/7/7f/FIRST-14.png" loading="lazy" alt="FIRST-14">
                         </div>
                     </Details>
                 </div>
@@ -2258,7 +2469,10 @@
                     <Details>
                         <summary class="IconMaps">Zone Maps</summary>
                         <div class="areaZoneMaps">
-            
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/2/22/Uveto_-_Station.png" loading="lazy" alt="Uveto - Station">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/c/cc/Uveto_-_Irestead.png" loading="lazy" alt="Uveto - Irestead">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/9/9a/Uveto_-_Icy_Plains.png" loading="lazy" alt="Uveto - Icy Plains">
+                            <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/6/68/Uveto_-_Frozen_Tundra.png" loading="lazy" alt="Uveto - Frozen Tundra">
                         </div>
                     </Details>
                 </div>
