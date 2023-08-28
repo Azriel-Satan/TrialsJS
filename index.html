@@ -305,10 +305,58 @@
                     </div>
                 </div>
             </div>
+            <!-- Priapin -->
+            <div class="statusGrid" id="StatusPriapin">
+                <div class="halfBoxTop">
+                    <div class="statusBoxHeader">
+                        <div class="statusEffectBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_drug-vial"><path d="M23.83,23l-4.65-4.65c.36-.66,0-.88,0-.88l-1-1,1-1L8.06,4.37,11,1.46a.57.57,0,0,0-.8-.8L6.48,4.35,4.41,2.27,5.68,1a.58.58,0,0,0,0-.82.59.59,0,0,0-.83,0L.17,4.86a.59.59,0,0,0,0,.83.59.59,0,0,0,.82,0L2.27,4.41,4.34,6.48.66,10.17a.57.57,0,0,0,.81.8l2.9-2.9L15.53,19.23l1-1,.95,1s.23.35.89,0L23,23.83a.57.57,0,0,0,.82,0A.58.58,0,0,0,23.83,23ZM10.57,12.73,5.14,7.3,7.3,5.14l5.43,5.43Z"></path></g></svg> 
+                        </div>
+                        <div>
+                            <p class="statusEffectHeaderText">Priapin</p>
+                        </div>
+                    </div>
+                    <div class="statusEffectDescription">
+                        <p>A refinement on the side effect-plagued Throbb and Semen’s Friend lines, Priapin offers users a short term boost to their male libido, fertility and erectile function. Particularly popular among hermaphrodites seeking to increase their chances of inseminating partners without necessarily increasing their female fertility.</p>
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div>   
+                        <p class="codePadding"><strong>Inject Priapin</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">clearOutput();addButton(0,"Next",mainGameMenu);if(!pc.hasCock()){output("It is probably not a good idea to take this without a penis first...")}output("You take the medipen out of its packaging and press it to your arm. It releases its payload into your veins with a small hiss. Woof! Hot liquid arousal sinks into your [pc.groin], settling itself heavily in "+(pc.balls>0?"your [pc.balls]":"[pc.eachCock]")+". An instant spring of masculine urge unfurls its leaves in your mind, flickering giddy light over your every thought. Somebody nearby with a tight and willing hole definitely needs to find out about you.");pc.createStatusEffect("Priapin",1,1,1.75,30,!1,"Icon_DrugVial",("PlayerCharacter"===pc.getClassName()?"Your masculine":"Masculine")+" virility has been piqued temporarily.",!1,1440,GLOBAL.STATUS_LOW_PRIORITY);</code></pre>
+                        <p class="codePadding"><strong>Apply Priapin Status</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Priapin",1,1,1.75,30,!1,"Icon_DrugVial",("PlayerCharacter"===pc.getClassName()?"Your masculine":"Masculine")+" virility has been piqued temporarily.",!1,1440,GLOBAL.STATUS_LOW_PRIORITY)</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- Anal Lubricant -->
+            <div class="statusGrid" id="StatusAnalLubricant">
+                <div class="halfBoxTop">
+                    <div class="statusBoxHeader">
+                        <div class="statusEffectBlock">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_splatter svgWhite"><path d="M23.73,12a1.29,1.29,0,0,0-.88-.55,1.86,1.86,0,0,0-1.62.69c-.39.36-.92.94-1.49,1L19.67,13c-.58-.84.53-1.4,1.4-1.6.53-.12,1.67-.24,1.8-.91a1,1,0,0,0-.49-1c-.39-.16-.77.16-1,.34a5.9,5.9,0,0,0-.86.71c-.41.37-.62.75-1.17.64-.78-.15-.21-1.45-.11-1.94-1.22-1.19-1.11.29-1.88.21C17.06,9,18.87,6.19,19.2,5.74c.65-.88,2.13-2.23,2.31-3.21.1-.52-.07-.82-.35-.95l-.36-.06a1.41,1.41,0,0,0-.8.26c-.85.58-1.51,3.62-2.36,5.21C16.17,9.77,15.91,8.1,16,7.63c.13-.73,1.67-2.8.33-3-1-.19-1.16-.2-1.36.86-.13.7.4,1.29.28,1.89-.19,1-1.64,2.05-1.54-2.51,0-.64.56-3.43-.41-3.61-.46-.09-.71.41-.79.81a3.33,3.33,0,0,0,.17,1.23c.2.87,1,3.7.17,4.39s-.81-1-.94-1.45-.27-1-.76-1c-1.07,0-.25,1.26-1,1.67S8.58,6.53,8.6,5.35c0-.87.39-1.92-.55-2.1C6.2,2.9,7.26,5.42,7.61,6.16s.7,1.63-.26,2.08c-.71.34-1.87-.89-2-1.47-.27-1.11,0-3.07-1.47-3.36-.93-.18-1.52,2.51-.95,3.67,1,2.08,2.46.77,3.61,1.9a.77.77,0,0,1,.21.8c-.09.48-1,.37-1.19,1.21s.86.92.75,1.5c-.14.73-1.13.82-1.7,1-2.18.52-2.17,0-3.92-.35-.23,0-.51.31-.62.75L0,14A1,1,0,0,0,.9,15.22c1.84.35,2.53-.1,4-.82a5.94,5.94,0,0,1,1.55-.69c1.33-.18,2.08,1.07.49,1.31-.93.14-2,.58-1.71,1.75.07.26.17.34.49.4.77.15,1.21-1,2-.82a.94.94,0,0,1,.69,1c-.22,1.14-1.7,2.29-1.12,3.25A1.33,1.33,0,0,0,8.82,21a2.68,2.68,0,0,0,1-1.41c.08-.45-.18-1-.13-1.32a1,1,0,0,1,1-.6c.53.1.34.54,1.07.68s.86-1,1.91-.83c.54.1.41,4.1.24,4.67-.33,1.14,1.18.32,1-.3a6.75,6.75,0,0,0-.24-.72c-.43-1.23.3-1.44.5-2.48h0c.1-.54-.24-1.56.58-1.41.27.05.64.8.73,1.05a10.9,10.9,0,0,1,.09,3c.09,1.58,1.58,1.4,1.89-.28a3.32,3.32,0,0,0-.13-1.72c-.39-1-1.31-1.32-1.71-2.46a1.58,1.58,0,0,1-.14-.82.67.67,0,0,1,.69-.36c.61.12,1.95,1.9,2.47,1,.71-1.29-2.22-1-2.07-1.85s4.57-.23,5.13-.35a1.58,1.58,0,0,0,1.19-1L24,13A1.76,1.76,0,0,0,23.73,12Z"></path></g></svg>
+                        </div>
+                        <div>
+                            <p class="statusEffectHeaderText">Anal Lubricant</p>
+                        </div>
+                    </div>
+                    <div class="statusEffectDescription">
+                        <p>Thanks to some YTR Lube, your anus is particularly slippery! ...at least for a while.</p>
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div>   
+                        <p class="codePadding"><strong>Apply YTR Lube</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">{let wetBonus=2;let wetness=pc.ass.wetness();if(wetness>5){clearOutput();output(textify `\n	You push the small, green capsule into your rear, expecting a quick, lubricating effect. Instead, you're surprised to feel a strange, twitching tightness from your slippery hole.\n	\n	You frown, shifting uncomfortably, wondering if you put it in wrong. Then again, how many ways are there to insert a suppository? You briefly consider if there's still time to remove the small, green pill. As you reach between your [pc.butts], you immediately freeze.\n		\n	Something's moving!\n	\n	The twitching isn't coming from your own [pc.asshole] but rather, from the spherical application of Yibb-Tstll’s Reflexive Lube. It's moving on its own inside your rectum, and you can't help but bite down on your lip, some alien thing writhing deeper and deeper inside you. \n\n	[var0|You shouldn't be enjoying this as much as you are, especially not with people watching, but you can't help but squeeze your [pc.thighs] together as whatever it is massages itself against your slick, inner walls. \n	\n	In fact, it's getting harder and harder to hold yourself up. The pulsing, twisting motions from the suppository are making it harder and harder to focus on anything besides the shameful sensations radiating out from your [pc.ass]. You let out a little moan, nearly dropping to your [pc.knees], instead clutching at the nearest solid support.\n	\n	It's clearly not a pill anymore. You can feel it twisting a sort of sinuous length deep along your slippery chute, and it feels absolutely delicious. Your body responds in kind, your [pc.nipples] stiffening, and your breath coming short and fast. [pc.hasCock|Your [pc.cockNoun] stiffens and strains[pc.isCrotchExposed|| against your [pc.crotchCoverUnder], twitching and begging for release.]|[pc.hasVagina|Your [pc.pussyNoun] quivers, already damp with your arousal, begging for a touch.]]\n	\n	<i>Maybe it wouldn't be so bad</i>, you think. <i>Just a quick touch. No one would notice.</i> This wriggling thing inside you just feels too good, and you're not sure how much more you can take.\n	\n	You can't fight it anymore, and you fall to your knees, mewling piteously, your hands thrust [pc.isNude|against your aching body.|down your kit.] It doesn't matter who might be watching--you absolutely need to get off now!\n	\n	As if sensing your plight, the thing inside you redoubles its movements, sending pulses of delight quaking through your body with every sinister slither. You howl in eagerness, practically drooling as you [pc.hasCock|wrap your hands around your [pc.cocksLight], jerking yourself off [pc.isCrotchExposed|regardless of people watching|through your gear]. It doesn't matter if people are staring--you <i>need</i> to get off right now.|[pc.hasVagina|shove your fingers into your dripping slit, desperately frigging yourself on the floor. It's possible people might think you've collapsed for some other reason, but your hungry panting makes your intent clear to any onlooker.|push your fingers into your [pc.asshole], desperate for some kind of release, driving your digits deeper and deeper into your spasming hole. Your tongue lolls out as you do, giving you the clear appearance of some deranged buttslut to any onlooker.]]\n	\n	The thing inside you twists madly, swelling and pulsing, working its way back and forth, every pulse rocking your whole body with debased delight. You work your fingers to the same erratic pace, whimpering desperately for release.\n	\n	When your ecstasy finally peaks, it does so with a shuddering wave of pleasure that radiates up from your depths. [pc.hasGenitals|[pc.hasCock\n		|[pc.isCrotchExposed\n			|The pressure feels like it's milking you from the inside as you can feel cum oozing from your [pc.cock], [pc.cumVol 0 10 300\n				|puddling on your [pc.stomach].\n				|spurting a heavy load across your [pc.chest].\n				|jetting a gaspingly-heavy load into your face and painting your [pc.chest] with [pc.cum].\n			]\n			|You let out a gush of cum inside your clothes, [pc.cumVol 0 10 300\n				|leaving a wet, obvious stain.\n				|soaking your [pc.crotchCoverUnder].\n				|flooding the insides of your [pc.crotchCoverUnder] and pouring out onto the ground around you.\n			]\n		]\n		|[pc.isCrotchExposed\n			|Your bite your lip and moan in depraved pleasure as your [pc.vaginas] repl[pc.hasVaginas\n				|y\n				|ies\n			] gush[pc.hasVaginas\n				|\n				|es\n			] with pleasure soaking through your [pc.clothes] and drenching your thighs\n			|Your breath catches in your throat as your [pc.vaginas] repl[pc.hasVaginas\n				|y\n				|ies\n			] with [pc.hasVaginas\n				|their\n				|its\n			] own shivering gush[pc.hasVaginas\n				|es\n			] of pleasure, soaking your fingers in your wetness\n		]\n	]|Your [pc.asshole] clenches tight around your fingers, practically sucking them in as your whole body alights with electric bliss.]\n	\n	The writhing mass inside you reaches a fever pitch as you climax, overwhelmingly tight against your insides before shivering to a tremulous standstill. Before you can prepare yourself, an answering gush of something warm and thick pours from your ass. You try to halt it, but the slipperiness of your asshole makes it impossible. Instead, you ride a wave of simultaneous shame and orgasm, unable to stop the flow of green, viscous slime as it gurgles out of your trembling [pc.asshole], pooling around you in a translucent puddle of neon viridian.\n	\n	You kneel there, panting in shock, shame, and post-orgasmic bliss, trying to catch your breath. When you finally have control over yourself again, you climb to your [pc.footOrFeet] try to ignore any stares, but it's a bit difficult with your [pc.skinFurScales] flushed and your nethers soaked with dissolved lubricant.|You're not sure what's happening, and you decide to [pc.isNude|adjust yourself|strip down] to get a better look at what's going on. It takes a while to get positioned for adequate self-inspection. It doesn't help, however, that the suppository continues working its way deeper and deeper inside you.\n	\n	By the time you find yourself lying on your back, your [pc.knees] lifted high, you're red in the face from exertion and arousal, unable to ignore the squirming pressure from the lubricant pill. You can't see your [pc.asshole] but you can slide your [pc.fingers] against it, probe yourself and try to make sense of what's going on.\n	\n	Whatever's happening inside you, it's clearly not just a pill. It's long, thick, and rubbing itself against your wet, inner walls. You groan, reflexively clutching at your [pc.butts], spreading them wider for this unseen intruder. You can't seem to help it, and your body responds in kind, your [pc.nipples] tightening and your hot breath panting against your [pc.chest].[pc.hasCock| Your [pc.cock] flops against your stomach, then raises up, twitching and leaking pre.][pc.hasVagina| Your [pc.vaginaNoun] trembles, slick and aching for release.]\n	\n	You lie there, relishing in the feeling of whatever it is as it works its way in and out of your recesses, bringing you closer and closer to some kind of invasive orgasm.\n	\n	You're brought out of your trance by the touch of something against your wrist. You instinctively jerk your arm back from the slimy coil, only to groan as a new wave of writhing shoves at you from the inside. You glance down, noting with shock some kind of green, translucent tentacle wrapped around your wrist.\n	\n	You pull your arm up, meeting resistance, and a fresh pulse of pleasure from your slippery chute. You drool in wanton delight, hazily making the connection--this is what became of the lubricant pill, and it's working its way deeper and deeper inside you. You don't want that (probably), so it's best to keep pulling at it.\n	\n	Every tug of the tentacle results in a thick, pulsing wriggle from the rest of its length, burrowed in your rectum. You spend the next few minutes in a sort of debased tug-of-war with the slithering limb, pulling it out and letting it writhe its way back into you, over and over until you lose yourself in unadulterated anal pleasure. When you feel your orgasm building, it's almost a secondary concern. What matters is the back and forth pleasure of this tentacle rubbing against your [pc.asshole] and working its wiggling length inside your body. \n	\n	You can't hold out forever, though, and when you do climax, you gurgle in base delight, your eyes rolling back in your head as you squeeze your innards down on the slimy invader.[pc.hasCock| Your [pc.cocks] spurt[pc.hasCocks||s] against you, curiously letting out more of a steady stream of cum down against your body. You let out a ragged gasp as you work the tentacle, milking out your cum against your lurid form.][pc.hasVagina| Your [pc.pussiesLight] tremble[pc.hasVaginas||s], letting out squirt after squirt of your juices. You barely register it, though, lost as you are in the cloudy heaven of anal euphoria.][pc.hasGenitals|| Your [pc.asshole] twitches uncontrollably, your hips bucking in time to the tugs against the tentacle.]\n	\n	And still, the tentacle continues to wriggle against you. You pull mindlessly against it, lost in sensation, only wanting more.\n	\n	When your arm finally gives out, so, too, does the tentacle, dissolving into a thin, slime between your fingers. You're too tired to do more than flop your hands and your hips to the ground as the green slime pools around your [pc.hips]. You feel a surge of pressure, and even then, through some combination of exhaustion and unmitigated slipperiness, the remainder of the tentacle inside you dissolves into jelly and gushes out of your still-quivering bum. \n	\n	You're far too drained to do anything about it, though, and can only stare upwards, tremors of bliss still rippling through you as you doze off.]\n	`,[()=>InPublicSpace()]);clearMenu();addButton(0,`Next`,()=>{clearAll();output(textify `\n		You wake up, dazed and somewhat ashamed at yourself, piecing together your last few moments of consciousness. You glance around, realizing that the green slime seems to have evaporated or dissolved itself. \n		`);processTime(25);if(flags.YTR_LUBE_OD===undefined){flags.YTR_LUBE_OD=GetGameTimestamp()}pc.orgasm();addButton(0,`Next`,mainGameMenu,`Next`,``)},`Next`,``)}else{clearOutput();output("You push the small, green capsule into your rear, feeling it slip surprisingly well into your bud. It dissolves instantly, bringing a slippery, lubed feeling to your asshole. That was... weird,");if(!pc.hasStatusEffect("Anal Lubricant")){output(" but it seems to have worked.");pc.createStatusEffect("Anal Lubricant",wetBonus,0,0,0,false,"Icon_Splatter","Thanks to some YTR Lube, your anus is particularly slippery! ...at least for a while.",false,4320);pc.ass.wetnessMod+=wetBonus}else{output(" though it seems your ass has been well-lubricated already.")}}}</code></pre>
+                        <p class="codePadding"><strong>Apply only Anal Lubricant Status</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">{let wetBonus=2;let wetness=pc.ass.wetness();clearOutput();output("You push the small, green capsule into your rear, feeling it slip surprisingly well into your bud. It dissolves instantly, bringing a slippery, lubed feeling to your asshole. That was... weird,");if(!pc.hasStatusEffect("Anal Lubricant")){output(" but it seems to have worked.");pc.createStatusEffect("Anal Lubricant",wetBonus,0,0,0,false,"Icon_Splatter","Thanks to some YTR Lube, your anus is particularly slippery! ...at least for a while.",false,4320);pc.ass.wetnessMod+=wetBonus}else{output(" though it seems your ass has been well-lubricated already.")}}</code></pre>
+                    </div>
+                </div>
+            </div>
         </div>
     </Details>
     <Details class="statusCategory">
-        <summary class="IconTransformation">Transformation</summary>
+        <summary class="IconTransformation">Transformative</summary>
         <div class="StatusGridFourAcross">
             <!-- The Treatment -->
             <div class="statusGrid statusGridWide" id="StatusTreatment">
@@ -343,7 +391,7 @@
                 </div>
             </div>
             <!-- Omega Oil / Omega Fever -->
-            <div class="statusGrid statusGridWide" id="StatusTreatment">
+            <div class="statusGrid statusGridWide" id="StatusOmegaOil">
                 <div class="halfBoxTop">
                     <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
@@ -607,28 +655,6 @@
                 </div>
             </div>
         </div>
-        <!-- Anal Lubricant -->
-        <div class="statusGrid" id="StatusAnalLubricant">
-            <div class="halfBoxTop">
-                <div class="statusBoxHeader">
-                    <div class="statusEffectBlock">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"></svg>
-                    </div>
-                    <div>
-                        <p class="statusEffectHeaderText">Anal Lubricant</p>
-                    </div>
-                </div>
-                <div class="statusEffectDescription">
-                    <p>Thanks to some YTR Lube, your anus is particularly slippery! ...at least for a while.</p>
-                </div>
-            </div>
-            <div class="halfBoxBottom">
-                <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong></p>
-                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
-                </div>
-            </div>
-        </div>
         <!-- Infertile -->
         <div class="statusGrid" id="StatusInfertile">
             <div class="halfBoxTop">
@@ -692,28 +718,6 @@
                 <div>   
                     <p class="codePadding"><strong>Apply nothing</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
-                </div>
-            </div>
-        </div>
-        <!-- Priapin -->
-        <div class="statusGrid" id="StatusPriapin">
-            <div class="halfBoxTop">
-                <div class="statusBoxHeader">
-                    <div class="statusEffectBlock">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g class="svg_drug-vial"><path d="M23.83,23l-4.65-4.65c.36-.66,0-.88,0-.88l-1-1,1-1L8.06,4.37,11,1.46a.57.57,0,0,0-.8-.8L6.48,4.35,4.41,2.27,5.68,1a.58.58,0,0,0,0-.82.59.59,0,0,0-.83,0L.17,4.86a.59.59,0,0,0,0,.83.59.59,0,0,0,.82,0L2.27,4.41,4.34,6.48.66,10.17a.57.57,0,0,0,.81.8l2.9-2.9L15.53,19.23l1-1,.95,1s.23.35.89,0L23,23.83a.57.57,0,0,0,.82,0A.58.58,0,0,0,23.83,23ZM10.57,12.73,5.14,7.3,7.3,5.14l5.43,5.43Z"></path></g></svg> 
-                    </div>
-                    <div>
-                        <p class="statusEffectHeaderText">Priapin</p>
-                    </div>
-                </div>
-                <div class="statusEffectDescription">
-                    <p>Your masculine virility has been piqued temporarily</p>
-                </div>
-            </div>
-            <div class="halfBoxBottom">
-                <div>   
-                    <p class="codePadding"><strong>Apply nothing</strong></p>
-                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createStatusEffect("Priapin",1,1,1.75,30,!1,"Icon_DrugVial",("PlayerCharacter"===pc.getClassName()?"Your masculine":"Masculine")+" virility has been piqued temporarily.",!1,1440,GLOBAL.STATUS_LOW_PRIORITY)</code></pre>
                 </div>
             </div>
         </div>
@@ -1448,7 +1452,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman\x1\mhenga.Crossman.webp">
+                    <img src="imgsourceurl/resources/img/Crossman/x1/mhenga.Crossman.webp" alt="Mhenga">
                 </div>
             </div>
         </div>
@@ -1463,7 +1467,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Amber" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\dryad.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/dryad.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Yoma -->
@@ -1480,8 +1484,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Yoma" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\yoma.Shou.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\yoma_nude.Shou.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/yoma.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/yoma_nude.Shou.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Prai Ellit -->
@@ -1496,8 +1500,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Prai_Ellit" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\prai.Shou.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\prai_nude.Shou.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/prai.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/prai_nude.Shou.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Cunt Snake -->
@@ -1509,7 +1513,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cunt_Snake" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\cuntsnake.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/cuntsnake.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Mimbrane -->
@@ -1521,7 +1525,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Mimbrane" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\mimbrane.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/mimbrane.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Kerokoras -->
@@ -1529,11 +1533,11 @@
                 <div class="halfBoxLeft">
                     <h2>Kerokoras</h2>
                     <p><strong>Standard Encounter</strong></p>
-                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">frogGirlsEncounter</code></pre>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">frogGirlsEncounter()</code></pre>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Frog_Girl" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\frog_4.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/frog_4.Shou.webp" alt="Clothed" loading="lazy">
                     <!-- Has 8 varients
                     <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/" alt="Nude" loading="lazy">-->
                 </div>
@@ -1549,7 +1553,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Naleen_Female" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\naleen.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/naleen.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Naleen Male -->
@@ -1561,7 +1565,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Naleen_Male" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\naleen_male.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/naleen_male.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Naleen Futa -->
@@ -1573,8 +1577,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Naleen_Futa" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\naleen_futa.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\naleen_futa_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/naleen_futa.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/naleen_futa_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Naleen Mating Ball -->
@@ -1599,7 +1603,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Vanae_Maiden" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\vanae_maiden.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/vanae_maiden.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Vanae Huntress -->
@@ -1611,7 +1615,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Vanae_Huntress" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\vanae_huntress.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/vanae_huntress.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Venus Pitcher -->
@@ -1623,7 +1627,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Venus_Pitcher_Young" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\venus_pitcher.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/venus_pitcher.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Elder Venus Pitcher -->
@@ -1635,7 +1639,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Venus_Pitcher_Elder" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\venus_pitcher_elder.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/venus_pitcher_elder.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Zil Male -->
@@ -1647,7 +1651,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Male" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\zil_male.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/zil_male.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Zil Female -->
@@ -1659,7 +1663,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Female" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\zil_female.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/zil_female.Cheshire.webp" alt="Clothed" loading="lazy">
                     <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Alder/x1/ZilTongueOut.Alder.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
@@ -1673,7 +1677,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Treated_Zil_Male" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\zil_male_treated.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/zil_male_treated.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Tarratch Slavers -->
@@ -1687,12 +1691,12 @@
                 <div class="halfBoxRight MultiImgGridTwoAcross">
                     <a class="characterWikiLink" href="" >W</a>
                     <div class="MultiImgGrid">
-                        <img class="sideimg " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_male.Shou.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_male_nude.Shou.webp" alt="Nude">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_male.Shou.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_male_nude.Shou.webp" alt="Nude">
                     </div>
                     <div class="MultiImgGrid">
-                        <img class="sideimg " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_fem.Shou.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou\x1\tarratch_slaver_fem_nude.Shou.webp" alt="Nude"loading="lazy">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_fem.Shou.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_fem_nude.Shou.webp" alt="Nude"loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1706,8 +1710,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Kane" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\kane.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\kane_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/kane.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/kane_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Zil Hornet -->
@@ -1719,7 +1723,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Hornet" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\hornet.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/hornet.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Zil Hoverfly -->
@@ -1731,8 +1735,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Hoverfly" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\hoverfly.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\hoverfly_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/hoverfly.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/hoverfly_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Zil Tribe -->
@@ -1745,10 +1749,10 @@
                 <div class="halfBoxRight MultiImgGridTwoAcross">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Tribe" >W</a>
                     <div class="MultiImgGrid">
-                        <img class="sideimg " src="imgsourceurl/resources/img/Cheshire\x1\zil_female.Cheshire.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Cheshire/x1/zil_female.Cheshire.webp" alt="Clothed" loading="lazy">
                     </div>
                     <div class="MultiImgGrid">
-                        <img class="sideimg " src="imgsourceurl/resources/img/Cheshire\x1\zil_male.Cheshire.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg " src="imgsourceurl/resources/img/Cheshire/x1/zil_male.Cheshire.webp" alt="Clothed" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1762,7 +1766,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Red_Zil_Male" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\zil_red.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/zil_red.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Venus Zil Trap -->
@@ -1773,7 +1777,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Venus_Zil_Trap" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\venus_ziltraps.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/venus_ziltraps.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Naleen Brothers -->
@@ -1785,7 +1789,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Naleen_Brothers" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\naleen_bros.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/naleen_bros.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Nine-tailed Zil -->
@@ -1796,7 +1800,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Nine-tailed_Zil" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\zil9tail.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/zil9tail.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Gryvain Agent -->
@@ -1808,8 +1812,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Selarith" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\gryvain_agent.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\gryvain_agent_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/gryvain_agent.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/gryvain_agent_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- The Pump-king -->
@@ -1822,8 +1826,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Pump-king" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\pumpking.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\pumpking_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/pumpking.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/pumpking_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Johr -->
@@ -1848,7 +1852,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Machina" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\machina.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/machina.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1867,7 +1871,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman\x1\tarkus.Crossman.webp">
+                    <img src="imgsourceurl\resources\img\Crossman/x1/tarkus.Crossman.webp">
                 </div>
             </div>
         </div>
@@ -1884,8 +1888,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Chaurmine" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\chaurmine.Shou.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\chaurmine_nude.Shou.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/chaurmine.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/chaurmine_nude.Shou.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Raskvel Gang -->
@@ -1897,8 +1901,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Gang" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\raskvel_gang.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\raskvel_gang_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/raskvel_gang.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/raskvel_gang_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Raskvel Female -->
@@ -1911,7 +1915,7 @@
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Female" >W</a>
                     <img class="sideimg" src="imgsourceurl/resources/img/JayfireGrowlithe/x1/raskvel_female.JayfireGrowlithe.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/JayfireGrowlithe\x1\raskvel_female_nude.JayfireGrowlithe.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/JayfireGrowlithe/x1/raskvel_female_nude.JayfireGrowlithe.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Lumi -->
@@ -1924,8 +1928,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Lumi" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\lumi.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\lumi_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/lumi.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/lumi_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Gabilani Vacationers -->
@@ -1938,8 +1942,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gabilani_Vacationers" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\lgbt.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\lgbt_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/lgbt.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/lgbt_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Sand Worm -->
@@ -1951,7 +1955,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sand_Worm" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\buttbug_no_goo.Shou.webp" alt="Missing" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/buttbug_no_goo.Shou.webp" alt="Missing" loading="lazy">
                 </div>
             </div>
             <!-- Sydian Male -->
@@ -1965,8 +1969,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Male" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_male.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\sydian_male_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sydian_male.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/sydian_male_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Sydian Female -->
@@ -1978,8 +1982,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Female" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00\x1\sydian_female.Jacques00.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Jacques00\x1\sydian_female_nude.Jacques00.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00/x1/sydian_female.Jacques00.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Jacques00/x1/sydian_female_nude.Jacques00.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Sydian Cuntboy/Herm -->
@@ -1996,10 +2000,10 @@
                 <div class="halfBoxRight MultiImgGridTwoAcross">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Cuntboy" >W</a>
                     <div class="MultiImgGrid">
-                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_cboy.Adjatha.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sydian_cboy.Adjatha.webp" alt="Clothed" loading="lazy">
                     </div>
                     <div class="MultiImgGrid">
-                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_herm.Adjatha.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sydian_herm.Adjatha.webp" alt="Clothed" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -2013,8 +2017,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Matriarch" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\sydian_queen.Adjatha.webp"" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\sydian_queen_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sydian_queen.Adjatha.webp"" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/sydian_queen_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Lapinara Female -->
@@ -2027,7 +2031,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Lapinara_Parasitic_Female" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire\x1\lapinara.Cheshire.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/lapinara.Cheshire.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Gray Goo -->
@@ -2039,7 +2043,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gray_Goo" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00\x1\gray_goo.Jacques00.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00/x1/gray_goo.Jacques00.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Sex Bot -->
@@ -2068,7 +2072,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Nym-Foe" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\nymfoe.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/nymfoe.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Double-Goo -->
@@ -2079,7 +2083,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Double-Goo" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\double_goo.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/double_goo.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Raskvel Traps -->
@@ -2090,8 +2094,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Traps" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\azaphel.Adjatha.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha\x1\azaphel_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/azaphel.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/azaphel_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Raskvel Broodmother -->
@@ -2102,7 +2106,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Raskvel_Broodmother" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha\x1\broodmother.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/broodmother.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
         </div>
@@ -2125,7 +2129,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman\x1\myrellion.Crossman.webp">
+                    <img src="imgsourceurl\resources\img\Crossman/x1/myrellion.Crossman.webp">
                 </div>
             </div>
         </div>
@@ -2150,7 +2154,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman\x1\zheng_shi.Crossman.webp">
+                    <img src="imgsourceurl\resources\img\Crossman/x1/zheng_shi.Crossman.webp">
                 </div>
             </div>
         </div>
@@ -2284,7 +2288,7 @@
                     </div>
                     <div class="MultiImgGrid">
                         <img class="sideimg " src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male.Adjatha.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Nude"loading="lazy">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_male_nude.Adjatha.webp" alt="Nude" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -2408,7 +2412,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman\x1\dhaal.Crossman.webp">
+                    <img src="imgsourceurl\resources\img\Crossman/x1/dhaal.Crossman.webp">
                 </div>
             </div>
         </div>
@@ -2430,7 +2434,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png">
+                    <img src="https://wiki.smutosaur.us/TiTS/images/7/75/Missing.png" alt="Pheadra II">
                 </div>
             </div>
         </div>
@@ -2452,7 +2456,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\JassBefrold\x1\pyrite_colt_xlr.JassBefrold.webp">
+                    <img src="imgsourceurl\resources\img\JassBefrold/x1/pyrite_colt_xlr.JassBefrold.webp">
                 </div>
             </div>
         </div>
@@ -2478,9 +2482,9 @@
                 </div>
                 <div class="PlanetBioBoxImg">
                     <!-- Wiki somehow has a larger version than what the game includes
-                    <img src="imgsourceurl\resources\img\Crossman\x1\uveto.Crossman.webp">
+                    <img src="imgsourceurl\resources\img\Crossman/x1/uveto.Crossman.webp">
                     -->
-                    <img src="https://wiki.smutosaur.us/TiTS/images/6/66/Uveto.png">
+                    <img src="https://wiki.smutosaur.us/TiTS/images/6/66/Uveto.png" alt="Uveto">
                 </div>
             </div>
         </div>
@@ -2489,12 +2493,10 @@
         </div>
     </div>
 </section>
-
-
 <section class="topselector" id="content5">
     <div class="CharacterGridThreeAcross">
         <!-- Breedwell -->
-        <div class="enemyGrid">
+        <div class="eventGrid">
             <div class="halfBoxLeft">
                 <h2>Breedwell</h2>
                     <p><strong>Ping</strong>: Trigger Roaming Query</p>
@@ -2534,7 +2536,7 @@
 <section class="topselector" id="content6">
     <div class="CharacterGridThreeAcross">
         <!-- Ardia Dominance -->
-        <div class="enemyGrid">
+        <div class="flagGrid">
             <div class="halfBoxLeft">
                 <h2>Ardia Dominance</h2>
                 <p><strong>Sub</strong>: 1-3 Ardia is Sub</p>
@@ -2551,7 +2553,7 @@
             </div>
         </div>
         <!-- Korgonne -->
-        <div class="enemyGrid">
+        <div class="flagGrid">
             <div class="halfBoxLeft">
                 <h2>Ula Deflowered</h2>
                 <p><strong>Virgin</strong></p>

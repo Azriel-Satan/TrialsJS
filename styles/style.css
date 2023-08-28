@@ -307,6 +307,38 @@ input:checked + label {
   background-color: var(--paleColor);
 }
 
+.eventGrid{
+  position: relative;
+  margin: 2%;
+  display:block;
+  text-align: left;;
+  background-color: var(--paleColor);
+  min-height: 300px;
+}
+
+.eventGrid h2 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  background-color: var(--paleColor);
+}
+
+.flagGrid{
+  position: relative;
+  margin: 2%;
+  display:block;
+  text-align: left;;
+  background-color: var(--paleColor);
+  min-height: 300px;
+}
+
+.flagGrid h2 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  background-color: var(--paleColor);
+}
+
 .statusBoxHeader {
   position: relative;
   background-color: var(--backgroundColor);
