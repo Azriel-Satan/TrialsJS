@@ -103,10 +103,16 @@ p {
 
 main {
   min-width: 320px;
-  max-width: 95vw;
+  max-width: 98vw;
   padding: 25px;
   margin: 0 auto;
   background: var(--backgroundColor);
+}
+
+pre {
+  padding: 0.5em !important; 
+  border-radius: 5px 5px 0 0;
+  overflow-x: scroll !important;
 }
 
 .topselector {
@@ -271,12 +277,13 @@ input:checked + label {
 
 .statusGrid{
   position: relative;
-  margin: 0.1vw;
+  margin: 3px;
   display:block;
   text-align: left;;
   background-color: var(--paleColor);
   min-height: 300px;
-  max-width: 23vw;
+  max-width: 24vw;
+  border-radius: 10px 0 0 10px;
 }
 
 .statusGrid h2 {
@@ -293,9 +300,10 @@ input:checked + label {
 
 .enemyGrid{
   position: relative;
-  margin: 2%;
+  margin: 3px;
+  border-radius: 10px 0 0 10px;
   display:block;
-  text-align: left;;
+  text-align: left;
   background-color: var(--paleColor);
   min-height: 300px;
 }
@@ -305,6 +313,16 @@ input:checked + label {
   padding: 10px;
   color: white;
   background-color: var(--paleColor);
+}
+
+.enemyGrid svg{
+  fill: var(--cautionColor);
+  bottom: 0;
+  margin: 0;
+}
+
+.enemyGrid pre{
+  max-width: 15vw;
 }
 
 .eventGrid{
@@ -343,6 +361,7 @@ input:checked + label {
   position: relative;
   background-color: var(--backgroundColor);
   display: flex;
+  border-radius: 10px 0 0 10px;
 }
 
 .statusEffectDescription {
@@ -361,6 +380,7 @@ input:checked + label {
   text-align: left;;
   background-color: var(--paleColor);
   margin: 2px;
+  max-width: 22vw;
 }
 
 .widthsideimg {
@@ -394,6 +414,17 @@ input:checked + label {
   transition: opacity 0.1s ease-in-out;
   opacity: 1;
   }
+.sideimglayerinv {
+    opacity: 100;
+    }
+.sideimglayerinv:hover {
+transition: opacity 0.1s ease-in-out;
+opacity: 0;
+}
+
+.mirror {
+  transform: scaleX(-1)
+}
 
 .halfBoxLeft {
   width:50%;
@@ -420,7 +451,8 @@ input:checked + label {
 }
 
 .codePadding {
-  padding: 5px;
+  padding-top: 5px;
+  margin-bottom: 0;
 }
 
 /* Collapsables */
@@ -599,7 +631,7 @@ details summary > * {
 
 .characterWikiLink {
   float: right;
-  right: 0;
+  right: 5px;
   object-fit: cover;
   position: absolute;
   z-index: 10;
@@ -667,7 +699,7 @@ svg{
 p {
   line-height: 1em;
   padding: 0;
-  margin: 0.5em;
+  margin: 0.25em;
 }
 
 
@@ -700,6 +732,132 @@ p {
   position: absolute;
   background-color: var(--paleColor);
   right: 0;
+}
+
+.homepageGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+}
+  .homepageLogo {
+    position: relative;
+    margin: 3px;
+    background-color: var(--paleColor);
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column: span 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    max-height: 540px;
+  }
+    .homepageLogo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+  .homepageSidebar {
+    position: relative;
+    margin: 3px;
+    display: block;
+    text-align: left;
+    background-color: var(--paleColor);
+    min-height: 300px;
+    border-radius: 10px;
+    grid-column-start: 5;
+    grid-column: span 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 5px;
+    display: grid;
+    grid-auto-rows: minmax(10px, 33%)
+  }
+    .homepageSidebarSub {
+      text-align: left;
+      background-color: var(--backgroundColor);
+      margin: 3px;
+      border-radius: 10px;
+    }
+    .homepageSidebarSubInputGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(10px, auto);
+    }
+    .homepageSidebarSubInput {
+      grid-column: span 2;
+      border-radius: 10px 0 0 0;
+    }
+    .homepageSidebarSubButton {
+      border-radius: 0 10px 0 0;
+    }
+    .homepageSidebarWarning {
+      grid-column: span 3;
+      background-color: var(--foregroundColorB);
+      margin: 3px;
+      border-radius: 10px;
+    }
+    .homepageSidebarSub h2 {
+      text-align: center;
+    }
+    .homepageSidebarSub code {
+      text-align: center;
+    }
+  .homepageImgTest {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
+
+  .homepageFooterA {
+    grid-column: span 4;
+    background-color: var(--paleColor);
+    margin: 3px;
+    border-radius: 10px;
+  }
+    .homePagePre {
+      max-width: 100%;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  .homepageFooterB {
+    grid-column: span 1;
+    background-color: var(--paleColor);
+    margin: 3px;
+    border-radius: 10px;
+  }
+
+#replacementUrl {
+  height: 130px;
+  width: 99%;
+  border-radius: 10px;
+  background-color: var(--lightBackgroundColor);
+  color: var(--textColor)
+}
+
+#replacementUrlSubmit {
+  background-color: var(--foregroundColorA);
+  border: none;
+  color: white;
+  padding: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  height: 130px;
+  width: 99%;
+  border-radius: 10px;
+}
+#replacementUrlSubmit:hover {
+  background-color: var(--foregroundColorB);
+}
+
+#replacementUrlSubmit:active {
+  background-color: var(--highlightColor);
+  transform: translateY(2px);
+}
+#replacementUrlSubmit:value {
+  background-color: var(--highlightColor);
+  transform: translateY(2px);
 }
 
 

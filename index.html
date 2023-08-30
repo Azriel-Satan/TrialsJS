@@ -30,7 +30,7 @@
     <meta name="description" content="TitsJS">
 </head>
 
-<h1 id="titleheader">Tits JS command list</h1>
+<h1 id="titleheader">Tits JS Command List</h1>
 
 <main>
 
@@ -53,70 +53,108 @@
 <label for="tab6">Flags</label>
     
 <section class="topselector" id="content1">
-    <h3>Image URL Source</h3>
-    <input type="text" id="replacementUrl">
-    <input type="button" id="replacementUrlSubmit" value="submit">
-    <p>You will need to add an image source to see character portraits, the web version or a local copy are both acceptable.</p>
-    <ul>
-        <li>https://www.fenoxo.com/play/TiTS/release</li>
-        <li>[path to exe folder]\resources\app</li>
-    </ul>
-    <script>
-        $(document).ready(function() {
-            $('#replacementUrlSubmit').click(function() {
-                var replacementUrl = $('#replacementUrl').val();
-                var textToReplace = 'imgsourceurl';
-
-                $('img').each(function() {
-                    var currentSrc = $(this).attr('src');
-                    if (currentSrc.includes(textToReplace)) {
-                        $(this).attr('src', currentSrc.replace(new RegExp(textToReplace, 'g'), replacementUrl));
-                    }
-                });
-            });
-        });
-    </script>
-    <p>&nbsp;</p>
-    <p><strong>Max Stats</strong></p>
-    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre>
+    <div class="homepageGrid">
+        <div class="homepageLogo">
+            <img id="homepageLogoImg" src="img/logo_00@2xYellow.png">
+        </div>
+        <div class="homepageSidebar">
+            <div class="homepageSidebarSub">
+                <h2>Welcome to the Tits JS Command List</h2>
+                <p>What we strive to do here is create a list containing a wide variety of commands that can be used to safely augment the playing experience outside of what the developers intended by using the Web Console to interface with the Javascript the game is built from.<br>If something you use here breaks your game, blame yourself, then Me, but not the Devs; they never intended for the game to be played in this way.</p>
+            </div>
+            <div class="homepageSidebarSub">
+                <h2>Setup</h2>
+            <p>The first thing you will need to do for the command list to be fully operational is input the location of your image pack. If you are playing online use the URL of the Playable build on the Fenoxo Website, if playing locally use the location of the game install.</p>
+            <code class="language-js line-numbers" data-prismajs-copy="Copy">https://www.fenoxo.com/play/TiTS/release</code>
+            <br>
+            <code class="language-js line-numbers" data-prismajs-copy="Copy">[path to exe folder]\resources\app</code>
+            </div>
+            <div class="homepageSidebarSub homepageSidebarSubInputGrid">
+                <div class="homepageSidebarSubInput">
+                    <input type="text" id="replacementUrl">
+                </div>
+                <div class="homepageSidebarSubButton">
+                    <input type="button" id="replacementUrlSubmit" value="submit">
+                </div>
+                <div class="homepageSidebarWarning">
+                    <p>This does not save; if you misstype reload the page or it will corrupt the data.</p>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        // When the button is clicked
+                        $("#replacementUrlSubmit").click(function() {
+                            // Replace the image source
+                            $("#homepageLogoImg").attr("src", "imgsourceurl/resources/steele_tech_emblem.svg");
+                        });
+                    });
+                    $(document).ready(function() {
+                        $('#replacementUrlSubmit').click(function() {
+                            var replacementUrl = $('#replacementUrl').val();
+                            var textToReplace = 'imgsourceurl';
+            
+                            $('img').each(function() {
+                                var currentSrc = $(this).attr('src');
+                                if (currentSrc.includes(textToReplace)) {
+                                    $(this).attr('src', currentSrc.replace(new RegExp(textToReplace, 'g'), replacementUrl));
+                                }
+                            });
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <div class="homepageFooterA">
+            <div class="homePagePre">
+                <p><strong>Max Stats</strong></p>
+                <pre ><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre>
+            </div>
+        </div>
+        <div class="homepageFooterB">
+            <div class="homePagePre">
+                <p><strong>Credits</strong></p>
+                <pre ><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.credits = x</code></pre>
+            </div>
+        </div>
+        <div class="homepageFooterB">
+            <div class="homePagePre">
+                <p><strong>Experience</strong></p>
+                <pre ><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.XPRaw = x</code></pre>
+            </div>
+        </div>
+    </div>
 </section>
-    
+<!-- Transformations -->
 <section class="topselector" id="content2">
     <h1>NOTICE</h1>
-    <p>I didn't know this when I started this project, but another similar one already exists for transformations; <a class="link" href="https://github.com/Chase-san/TiTsEdJS/tree/master" >TiTsEdJS</a> adds a side popup to the game for changing your character's stats and body.
-        The simple method for adding it is to open the console and type.</p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">(function(){var s=document.createElement("script");s.src="https://chase-san.github.io/TiTsEdJS/titsed.js";document.head.appendChild(s)})()</code></pre>
-    <ul>
-        <li class="">
-            <details>
-                <summary>Form</summary>
-                <p><strong>Biped</strong> Plantigrade (Humanoid feet)</p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 2, pc.legFlags = [16], pc.genitalSpot = 0</code></pre>
-                <p><strong>Taur</strong> Digitigrade (Bestial feet)</p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
-                <p><strong>Taur 6leg</strong> Digitigrade (Bestial feet)</p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
-                <p><strong>Naga</strong></p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [2, 7, 6, 18, 21], pc.genitalSpot = 0, pc.legType = 13</code></pre>
-                <p><strong>Shark</strong></p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [16, 21], pc.genitalSpot = 0, pc.legType = 19</code></pre>
-                <p>Warning, Naga and Shark change leg type (species)</p>
-            </details>
-        </li>
-        <!--
-        <li>
-            <details>
-                <summary>Presets</summary>
-                <p><strong>Remove Vags</strong></p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.removeVaginas()</code></pre>
-                <p><strong>Return Vags</strong></p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createVagina(), pc.createVagina(), pc.createVagina(), pc.vaginas[0].neverSerialize = false, pc.vaginas[0].version = 3, pc.vaginas[0].hymen = false, pc.vaginas[0].clits = 1, pc.vaginas[0].vaginaColor = "pale", pc.vaginas[0].wetnessRaw = 5, pc.vaginas[0].wetnessMod = 0, pc.vaginas[0].loosenessRaw = 1, pc.vaginas[0].loosenessMod = 0, pc.vaginas[0].minLooseness = 1, pc.vaginas[0].bonusCapacity = 60, pc.vaginas[0].shrinkCounter = 0, pc.vaginas[0].flags = [30,3,37], pc.vaginas[0].fullness = 0, pc.vaginas[0].piercing = null, pc.vaginas[0].clitPiercing = null, pc.vaginas[1].neverSerialize = false, pc.vaginas[1].version = 3, pc.vaginas[1].hymen = false, pc.vaginas[1].clits = 1, pc.vaginas[1].vaginaColor = "pale", pc.vaginas[1].wetnessRaw = 5, pc.vaginas[1].wetnessMod = 0, pc.vaginas[1].loosenessRaw = 1, pc.vaginas[1].loosenessMod = 0, pc.vaginas[1].minLooseness = 1, pc.vaginas[1].bonusCapacity = 60, pc.vaginas[1].shrinkCounter = 0, pc.vaginas[1].flags = [30,3,37], pc.vaginas[1].fullness = 0, pc.vaginas[1].piercing = null, pc.vaginas[1].clitPiercing = null, pc.vaginas[2].neverSerialize = false, pc.vaginas[2].version = 3, pc.vaginas[2].hymen = false, pc.vaginas[2].clits = 1, pc.vaginas[2].vaginaColor = "pale", pc.vaginas[2].wetnessRaw = 5, pc.vaginas[2].wetnessMod = 0, pc.vaginas[2].loosenessRaw = 1, pc.vaginas[2].loosenessMod = 0, pc.vaginas[2].minLooseness = 1, pc.vaginas[2].bonusCapacity = 60, pc.vaginas[2].shrinkCounter = 0, pc.vaginas[2].flags = [30,3,37], pc.vaginas[2].fullness = 0, pc.vaginas[2].piercing = null,pc.vaginas[2].clitPiercing = null, pc.vaginas</code></pre>
-            </details>
-        </li>
-        -->
-    </ul>
+    <p>I didn't know this when I started this project, but another similar one already exists for transformations; <a class="link" href="https://github.com/Chase-san/TiTsEdJS/tree/master" >TiTsEdJS</a> adds a side popup to the game for changing your character's stats and body. The simple method for adding it is to open the console and type.</p>
+    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">(function(){var s=document.createElement("script");s.src="https://chase-san.github.io/TiTsEdJS/titsed.js";document.head.appendChild(s)})()</code></pre>
+    <details>
+        <summary>Form</summary>
+        <p><strong>Biped</strong> Plantigrade (Humanoid feet)</p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 2, pc.legFlags = [16], pc.genitalSpot = 0</code></pre>
+        <p><strong>Taur</strong> Digitigrade (Bestial feet)</p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
+        <p><strong>Taur 6leg</strong> Digitigrade (Bestial feet)</p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
+        <p><strong>Naga</strong></p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [2, 7, 6, 18, 21], pc.genitalSpot = 0, pc.legType = 13</code></pre>
+        <p><strong>Shark</strong></p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [16, 21], pc.genitalSpot = 0, pc.legType = 19</code></pre>
+        <p>Warning, Naga and Shark change leg type (species)</p>
+    </details>
+    <!--
+    <details>
+        <summary>Presets</summary>
+        <p><strong>Remove Vags</strong></p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.removeVaginas()</code></pre>
+        <p><strong>Return Vags</strong></p>
+        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createVagina(), pc.createVagina(), pc.createVagina(), pc.vaginas[0].neverSerialize = false, pc.vaginas[0].version = 3, pc.vaginas[0].hymen = false, pc.vaginas[0].clits = 1, pc.vaginas[0].vaginaColor = "pale", pc.vaginas[0].wetnessRaw = 5, pc.vaginas[0].wetnessMod = 0, pc.vaginas[0].loosenessRaw = 1, pc.vaginas[0].loosenessMod = 0, pc.vaginas[0].minLooseness = 1, pc.vaginas[0].bonusCapacity = 60, pc.vaginas[0].shrinkCounter = 0, pc.vaginas[0].flags = [30,3,37], pc.vaginas[0].fullness = 0, pc.vaginas[0].piercing = null, pc.vaginas[0].clitPiercing = null, pc.vaginas[1].neverSerialize = false, pc.vaginas[1].version = 3, pc.vaginas[1].hymen = false, pc.vaginas[1].clits = 1, pc.vaginas[1].vaginaColor = "pale", pc.vaginas[1].wetnessRaw = 5, pc.vaginas[1].wetnessMod = 0, pc.vaginas[1].loosenessRaw = 1, pc.vaginas[1].loosenessMod = 0, pc.vaginas[1].minLooseness = 1, pc.vaginas[1].bonusCapacity = 60, pc.vaginas[1].shrinkCounter = 0, pc.vaginas[1].flags = [30,3,37], pc.vaginas[1].fullness = 0, pc.vaginas[1].piercing = null, pc.vaginas[1].clitPiercing = null, pc.vaginas[2].neverSerialize = false, pc.vaginas[2].version = 3, pc.vaginas[2].hymen = false, pc.vaginas[2].clits = 1, pc.vaginas[2].vaginaColor = "pale", pc.vaginas[2].wetnessRaw = 5, pc.vaginas[2].wetnessMod = 0, pc.vaginas[2].loosenessRaw = 1, pc.vaginas[2].loosenessMod = 0, pc.vaginas[2].minLooseness = 1, pc.vaginas[2].bonusCapacity = 60, pc.vaginas[2].shrinkCounter = 0, pc.vaginas[2].flags = [30,3,37], pc.vaginas[2].fullness = 0, pc.vaginas[2].piercing = null,pc.vaginas[2].clitPiercing = null, pc.vaginas</code></pre>
+    </details>
+    -->
+    <p>Set all pregnancies to immediately end</p>
+    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">{for(let i=0;i&lt;pc.pregnancyData.length;i+=1){if(pc.pregnancyData[i].pregnancyIncubation&gt;=100){if(pc.pregnancyData[i].pregnancyType==&quot;EggTrainerFauxPreg&quot;){}else{pc.pregnancyData[i].pregnancyIncubation=100}}}}</code></pre>
 </section>
-    
+<!-- Status Effects -->
 <section class="topselector" id="content3">
     <Details class="statusCategory">
         <summary class="IconStatus">General</summary>
@@ -167,6 +205,8 @@
                     <div>   
                         <p class="codePadding"><strong>Apply Breeders Bliss Rut Status</strong></p>
                         <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if (!pc.inRut()){ output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your [pc.cocks] begin");if (pc.cockTotal() === 1) output("s");output(" to harden slightly and bead pre-cum. It’s not a full erection; it’s more like you’re just constantly prepared to impregnate any fertile mates you meet. Your idle thoughts are replaced with fantasies of giving every woman you meet as many thick, virile creampies as her pussy can handle, immediately moving on to your next partner, using your slick seed for lube until you fill her to the brim as well. Yeah, you could really go for knocking somebody up right now.");output("\n\nThen the idea occurs to you that your potential partners might find mates of their own if you don’t drive any rivals off. No, you won’t stand for that! You will brook no competition from anything with a penis! Before the thought is even out of your head you begin searching for a fertile female. Wait, none of this seems right to you!\n\nThe aching, swelling sensation of increased productivity in your [pc.balls] tips you off at the same time as your Codex that <b>you are now in rut.</b>");pc.createStatusEffect("Rut", 5, 25, 1000, 4, false, "LustUp", "Your body is driven for aggressive breeding, increasing your libido and virility, as well as boosting your minimum cum output.\n\n+5 Libido\n+25 Minimum Lust Rating\n+1000mLs Minimum Cum\n+400% Virility", false, 28800, GLOBAL.STATUS_LOW_PRIORITY);}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given the intensity of your rut, but after several moments pass your [pc.cocks] harden"); if (pc.cockTotal() === 1) output("s"); output(" slightly and begin");if (pc.cockTotal() === 1) output("s");output(" to leak more pre-cum.");if (pc.rutMinutes() < 22 * 24 * 60){output(" You groan as you realize instinctively that <b>your rut has been extended.</b>");pc.extendRut(7 * 24 * 60);}else{output(" You groan as you realize that <b>you cannot go any deeper into rut.</b>");}}</code></pre>
+                        <p class="codePadding"><strong>Remove Rut</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.clearRut()</code></pre>
                     </div>
                 </div>
             </div>
@@ -209,10 +249,16 @@
                     </div>
                 </div>
                 <div class="halfBoxBottom">
-                    <div>   
-                        <p class="codePadding"><strong>Apply Breeders Bliss Heat Status</strong></p>
-                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if(!pc.inHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your nethers flush warmly with blood as heat blooms in ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("each of ")}output("your ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("unoccupied ")}output("womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(". Suddenly your posture feels inexplicably wrong, so you shift to a more comfortable stance, unconsciously adjusting your ");if(!pc.hasLegs()){output("[pc.lowerBody]")}else{output("[pc.legs]")}output(" slightly and lifting your [pc.ass]");if(pc.tailCount>0){output(" and [pc.tails]")}output(" to better present your sex to those around you. Wait, what? That’s not how you’re supposed to stand! The thought is suddenly wiped from your mind as you begin to daydream vividly about ");if(pc.isTaur()){output("lying down")}else{output("bending over")}output(" and letting a train of horny studs creampie your twat");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" until your womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" swell");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("s")}output(" with offspring. You’ve got a nursery ready for any future children already! Why aren’t you using it to its fullest capabilities?");output("\n\nThe ");if(pc.hasPheromones()){output("scent of fertile pheromones wafting from")}else{output("heat and moisture blossoming in")}output(" [pc.eachVagina] clues you in on what’s happening at the same time as your Codex beeping to alert you that <b>you have gone into heat!</b>");pc.createStatusEffect("Heat",5,25,10,3,false,"LustUp","Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",false,28800,GLOBAL.STATUS_LOW_PRIORITY);pc.libido(1)}else if(!pc.inDeepHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel feverishly <i>hot</i>. Your already breed-hungry womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s cry")}else{output(" cries")}output(" out in frustration. Before swallowing this pill you were horny; now you’re positively juicing yourself at the mere thought of a cock to fill your achingly empty puss");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("y")}else{output("ies")}output(". You’re desperate to be filled with hot cum, to have your breasts swell with milk to feed the young growing in your equally swollen belly! As your mind glazes over with daydreams of being thoroughly bred by endless hordes of virile mates, your posture becomes even more wantonly slutty, ");if(!pc.hasLegs()){output("ass thrust outwards")}else{output("legs spread wide")}if(pc.tailCount>0){output(", [pc.tails] waving and held as high as possible")}output(" to display your flushed, dripping sex to anyone who might be present.");output("\n\nThe unmistakable scent of a fertile, needy breeding bitch fills the area. ");if(pc.hasPheromones()){output("You realize immediately")}else{output("Even your untrained nose can detect")}output(" that the smell is coming from ");if(isSillyModeEnabled()){output("INSIDE THE HOUSE!!!")}else{output("[pc.eachVagina].")}output(" Clouds of potent pheromones advertising your ability and readiness to bear children waft up from [pc.eachVagina] like an organic smokestack");if(!pc.isCrotchExposed()){output(", even in spite of your [pc.lowerGarment]")}output(". Anyone that even comes close to you now is going to be able to tell how badly your body wants a baby, and you’re not sure you won’t just stick your [pc.ass] out and beg them for one.");output("\n\nIt’s painfully apparent to you now that <b>you are in a deep heat.</b> If you don’t plan on taking an endless string of creampies as deep as possible in your randy [pc.cunts] you should probably avoid other people for a few weeks. Given how fertile you are in your current state just a drop of cum could knock you up.");pc.setStatusValue("Heat",1,10);pc.setStatusValue("Heat",2,35);pc.setStatusValue("Heat",3,25);pc.setStatusValue("Heat",4,5);pc.setStatusTooltip("Heat","<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+"+pc.statusEffectv1("Heat")*100+"% Fertility\n+"+pc.statusEffectv2("Heat")+" Minimum Lust Rating\n+"+pc.statusEffectv3("Heat")+" Libido\n+"+pc.statusEffectv4("Heat")+" Tease Damage");pc.extendHeat(7*24*60)}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given how extreme your heat is already, but after several moments you feel your [pc.cunts] growing warmer. You groan as you realize instinctively that ");if(pc.heatMinutes()<22*24*60){pc.extendHeat(7*24*60);output("<b>your heat has been extended.</b>")}else{output("<b>you are as deep into heat as you can possibly go.</b>")}}</code></pre>
-                        <p>Use multiple times to extend/enter Deep Heat</p>
+                    <div class="StatusApplyGridTwoAcross">
+                        <div class="substatusgrid">   
+                            <p class="codePadding"><strong>Apply Breeders Bliss Heat Status</strong></p>
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if(!pc.inHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your nethers flush warmly with blood as heat blooms in ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("each of ")}output("your ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("unoccupied ")}output("womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(". Suddenly your posture feels inexplicably wrong, so you shift to a more comfortable stance, unconsciously adjusting your ");if(!pc.hasLegs()){output("[pc.lowerBody]")}else{output("[pc.legs]")}output(" slightly and lifting your [pc.ass]");if(pc.tailCount>0){output(" and [pc.tails]")}output(" to better present your sex to those around you. Wait, what? That’s not how you’re supposed to stand! The thought is suddenly wiped from your mind as you begin to daydream vividly about ");if(pc.isTaur()){output("lying down")}else{output("bending over")}output(" and letting a train of horny studs creampie your twat");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" until your womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" swell");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("s")}output(" with offspring. You’ve got a nursery ready for any future children already! Why aren’t you using it to its fullest capabilities?");output("\n\nThe ");if(pc.hasPheromones()){output("scent of fertile pheromones wafting from")}else{output("heat and moisture blossoming in")}output(" [pc.eachVagina] clues you in on what’s happening at the same time as your Codex beeping to alert you that <b>you have gone into heat!</b>");pc.createStatusEffect("Heat",5,25,10,3,false,"LustUp","Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",false,28800,GLOBAL.STATUS_LOW_PRIORITY);pc.libido(1)}else if(!pc.inDeepHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel feverishly <i>hot</i>. Your already breed-hungry womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s cry")}else{output(" cries")}output(" out in frustration. Before swallowing this pill you were horny; now you’re positively juicing yourself at the mere thought of a cock to fill your achingly empty puss");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("y")}else{output("ies")}output(". You’re desperate to be filled with hot cum, to have your breasts swell with milk to feed the young growing in your equally swollen belly! As your mind glazes over with daydreams of being thoroughly bred by endless hordes of virile mates, your posture becomes even more wantonly slutty, ");if(!pc.hasLegs()){output("ass thrust outwards")}else{output("legs spread wide")}if(pc.tailCount>0){output(", [pc.tails] waving and held as high as possible")}output(" to display your flushed, dripping sex to anyone who might be present.");output("\n\nThe unmistakable scent of a fertile, needy breeding bitch fills the area. ");if(pc.hasPheromones()){output("You realize immediately")}else{output("Even your untrained nose can detect")}output(" that the smell is coming from ");if(isSillyModeEnabled()){output("INSIDE THE HOUSE!!!")}else{output("[pc.eachVagina].")}output(" Clouds of potent pheromones advertising your ability and readiness to bear children waft up from [pc.eachVagina] like an organic smokestack");if(!pc.isCrotchExposed()){output(", even in spite of your [pc.lowerGarment]")}output(". Anyone that even comes close to you now is going to be able to tell how badly your body wants a baby, and you’re not sure you won’t just stick your [pc.ass] out and beg them for one.");output("\n\nIt’s painfully apparent to you now that <b>you are in a deep heat.</b> If you don’t plan on taking an endless string of creampies as deep as possible in your randy [pc.cunts] you should probably avoid other people for a few weeks. Given how fertile you are in your current state just a drop of cum could knock you up.");pc.setStatusValue("Heat",1,10);pc.setStatusValue("Heat",2,35);pc.setStatusValue("Heat",3,25);pc.setStatusValue("Heat",4,5);pc.setStatusTooltip("Heat","<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+"+pc.statusEffectv1("Heat")*100+"% Fertility\n+"+pc.statusEffectv2("Heat")+" Minimum Lust Rating\n+"+pc.statusEffectv3("Heat")+" Libido\n+"+pc.statusEffectv4("Heat")+" Tease Damage");pc.extendHeat(7*24*60)}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given how extreme your heat is already, but after several moments you feel your [pc.cunts] growing warmer. You groan as you realize instinctively that ");if(pc.heatMinutes()<22*24*60){pc.extendHeat(7*24*60);output("<b>your heat has been extended.</b>")}else{output("<b>you are as deep into heat as you can possibly go.</b>")}}</code></pre>
+                            <p>Use multiple times to extend/enter Deep Heat</p>
+                        </div>
+                        <div class="substatusgrid">
+                            <p class="codePadding"><strong>Remove Rut</strong></p>
+                            <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.clearRut()</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -372,11 +418,10 @@
                     <div class="statusEffectDescription">
                         <div class="StatusApplyGridTwoAcross">
                             <div class="substatusgrid">
-                                <p>The treatment comes in a variety of flavors, including Cowgirl, Bull, CumCow, Amazon and Fauxcow. If you want the Mikazon status/Treated Milk Perk you need to perform the Amazon varient.</p>
                                 <p>You are currently under the effects of the Treatment. Who knows what havoc it will wreak upon your system.</p>
                             </div>
                             <div class="substatusgrid">
-                                <p></p>
+                                <p>The treatment comes in a variety of flavors, including Cowgirl, Bull, CumCow, Amazon and Fauxcow. If you want the Mikazon status/Treated Milk Perk you need to perform the Amazon varient.</p>
                             </div>
                         </div>
                     </div>
@@ -1307,7 +1352,7 @@
         </div>
     </div>
 </section>
-    
+<!-- Roaming Encounters -->
 <section class="topselector" id="content4">
     <div id="EnemyFilter">
         <button class="btn active" onclick="filterSelection('all')">Show all</button>
@@ -1317,10 +1362,11 @@
         <button class="btn" onclick="filterSelection('FilterPregNPC')">NPC Pregnancy</button>
         <button class="btn" onclick="filterSelection('FilterPregPlayerTail')">Can Impregnate Player Tail</button>
         <button class="btn" onclick="filterSelection('FilterPregNPCTail')">NPC Tail Pregnancy</button>
-        <P>Enemy State</P>
+        <p><strong>Enemy Body Type</strong> (sex is based on genitals)</p>
         <button class="btn" onclick="filterSelection('FilterMale')">Male</button>
         <button class="btn" onclick="filterSelection('FilterFemale')">Female</button>
         <button class="btn" onclick="filterSelection('FilterFuta')">Futa</button>
+        <button class="btn" onclick="filterSelection('FilterShemale')">Shemale</button>
         <button class="btn" onclick="filterSelection('FilterUnusualSex')">Unusual Sex</button>
         <button class="btn" onclick="filterSelection('FilterTaur')">Taur</button>
         <button class="btn" onclick="filterSelection('FilterNaga')">Naga</button>
@@ -1634,7 +1680,7 @@
             <div class="enemyGrid FilterFuta FilterPregPlayer">
                 <div class="halfBoxLeft">
                     <h2>Elder Venus Pitcher</h2>
-                    <p><strong>Encounter</strong></p>
+                    <p><strong>Standard Encounter</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">elderVenusPitcherEncounter()</code></pre>
                 </div>
                 <div class="halfBoxRight">
@@ -2116,7 +2162,7 @@
             <h1 class="areaHeader">Myrellion</h1>
             <div class="PlanetBioGrid">
                 <div class="PlanetBioBoxText">
-                    <p class="areaDescription">A heat-blasted red rock planet that has a mostly barren surface, with a variety of sentient life living in caves, crevices, and especially, underground cities. This planet is chiefly the home planet of the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Myr" >Myr</a> peoples, or more properly, the Myrmedions. Technologically and culturally, the Myr seem to be roughly as developed as early 20th century <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Terra" >Terra</a>, comparatively dated or even ancient by galactic standards. The <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Red_Myr" >Red Myr</a> and the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Gold_Myr" >Gold Myr</a>, the dominant species on the planet, have been locked in a world war for seven years before First Contact, following generations of uneasy peace and short-lived conflicts.<br>The planet's first extraterrestrial discovery was by an <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Ausar" >ausar</a> expedition, which eventually lead to a <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Joint_Ausar_Federation" >Joint Ausar Fleet</a> spaceport opening on top of Gildenmere, the Gold Myr capital. With the recent involvement of the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/United_Galactic_Confederacy" >U.G.C.</a>, <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Xenogen_Biotech" >Xenogen Biotech</a>, and members of the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Kui-tan" >Kui-tan</a> civilization, a cease fire has currently been issued between the two warring sides. The U.G.C. and its confederates are struggling to cement a major peace treaty between the myr factions in order to tap the planet's natural resources safely and efficiently. Until then, the "Sword of Damocles" hangs over the planet as the Confederate fleet has warned that it will bombard the planet if its ambassadors -- who are currently based on the front lines of the conflict -- are threatened.<br>The <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Gilden_Republic" >Gilden Republic</a> is the main governing body of the Gold Myr and the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Scarlet_Federation" >Scarlet Federation</a> is the main governing body of the Red Myr.<br>"It's an ugly planet; a Bug planet! A planet hostile to life as we know it."</p>
+                    <p class="areaDescription">A heat-blasted red rock planet that has a mostly barren surface, with a variety of sentient life living in caves, crevices, and especially, underground cities. This planet is chiefly the home planet of the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Myr" >Myr</a> peoples, or more properly, the Myrmedions. Technologically and culturally, the Myr seem to be roughly as developed as early 20th century <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Terra" >Terra</a>, comparatively dated or even ancient by galactic standards. The <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Red_Myr" >Red Myr</a> and the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Gold_Myr" >Gold Myr</a>, the dominant species on the planet, have been locked in a world war for seven years before First Contact, following generations of uneasy peace and short-lived conflicts.<br>The planet's first extraterrestrial discovery was by an <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Ausar" >ausar</a> expedition, which eventually lead to a <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Joint_Ausar_Federation" >Joint Ausar Fleet</a> spaceport opening on top of Gildenmere, the Gold Myr capital. With the recent involvement of the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/United_Galactic_Confederacy" >U.G.C.</a>, <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Xenogen_Biotech" >Xenogen Biotech</a>, and members of the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Kui-tan" >Kui-tan</a> civilization, a cease fire has currently been issued between the two warring sides. The U.G.C. and its confederates are struggling to cement a major peace treaty between the myr factions in order to tap the planet's natural resources safely and efficiently. Until then, the "Sword of Damocles" hangs over the planet as the Confederate fleet has warned that it will bombard the planet if its ambassadors -- who are currently based on the front lines of the conflict -- are threatened.<br>The <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Gilden_Republic" >Gilden Republic</a> is the main governing body of the Gold Myr and the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Scarlet_Federation" >Scarlet Federation</a> is the main governing body of the Red Myr. "It's an ugly planet; a Bug planet! A planet hostile to life as we know it."</p>
                     <Details>
                         <summary class="IconMaps">Zone Maps</summary>
                         <div class="areaZoneMaps">
@@ -2134,7 +2180,344 @@
             </div>
         </div>
         <div class="CharacterGridThreeAcross">
-            
+            <!-- Cockvine Adult -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Cockvine Adult</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">adultCockvineEncounter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cockvine_Adult" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/cockvine.Shou.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Cockvine Seedling -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Cockvine Seedling</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">cockvineSeedlingEncounter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cockvine_Seedling" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/cockvine_single.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Gold Myr Deserter | Lys -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Gold Myr Deserter | Lys</h2>
+                    <p><strong>Standard Encounter</strong>: Lya and Briha share an encounter proc</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">approachMyrDeserters()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Lys" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/lys.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/lys_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Red Myr Deserter | Briha -->
+            <div class="enemyGrid FilterFemale FilterPregNPC">
+                <div class="halfBoxLeft">
+                    <h2>Red Myr Deserter | Briha</h2>
+                    <p><strong>Standard Encounter</strong>: Lya and Briha share an encounter proc</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">approachMyrDeserters()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Briha" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/briha.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/briha_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Gold Remnant Soldier -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Gold Remnant Soldier</h2>
+                    <p>Only appears during quest encounter</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gold_Remnant_Soldier" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/gold_remnant_fighter.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Gold Remnant Brute -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Gold Remnant Brute</h2>
+                    <p>Only appears during quest encounter</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gold_Remnant_Brute" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/gold_remnant_brute.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Gold Squad -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Gold Squad</h2>
+                    <p><strong>Quest Encounter</strong> Must lust win for sex scene</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fedQuestSquadFight()</code></pre>
+                    <p><strong>Quest Orgy PC Male</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fedQuestOrgyCock()</code></pre>
+                    <p><strong>Quest Orgy PC Female</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fedQuestOrgyCooter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gold_Squad" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/gold_remnant_fighter.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Gold Remnant Officer | Ellira -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Ellira</h2>
+                    <p><strong>Quest Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fedQuestOfficerFight()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gold_Squad" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/gold_remnant_si_officer.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/gold_remnant_si_officer_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Queen Estallia -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Queen Estallia</h2>
+                    <p><strong>Quest Boss Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fedQuestQueen()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Estallia" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/estallia.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/estallia_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Alpha Nyrea Huntress -->
+            <div class="enemyGrid FilterShemale">
+                <div class="halfBoxLeft">
+                    <h2>Alpha Nyrea Huntress</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterNyreaAlpha()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Nyrean_Huntress" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/nyrea_alpha.Shou.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Beta Nyrea Huntress -->
+            <div class="enemyGrid FilterShemale">
+                <div class="halfBoxLeft">
+                    <h2>Beta Nyrea Huntress</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterNyreaBeta()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Nyrean_Huntress" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/nyrea_beta.Shou.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Nyrean Praetorian Guards -->
+            <div class="enemyGrid FilterShemale">
+                <div class="halfBoxLeft">
+                    <h2>Nyrean Praetorian Guards</h2>
+                    <p>Is too buried for direct console execution with current knowledge.</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                    <strong>Reset Flags</strong>: Backup First, running this will break your save. Visit them in person to access defeat scene</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.FOUGHT_PRAETORIANS=null;pc.removePerk("Nyrean Royal");flags.KING_NYREA=null;flags.BEAT_TAIVRA_TIMESTAMP=null;flags.PRAETORIAN_RESPAWN=null;</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Nyrean_Praetorian" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/praetorian.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/praetorian_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Nyrean Princess Taivris -->
+            <div class="enemyGrid FilterShemale">
+                <div class="halfBoxLeft">
+                    <h2>Nyrean Princess Taivris</h2>
+                    <p><strong>Join Orgy</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">haremChamberBonusFunc()</code></pre>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                    <strong>Reset Flags</strong>: Backup First, running this will break your save. You will need to wait some time before the fight will trigger.</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.PRINCESS_DEFEATED=null;pc.removePerk("Nyrean Royal");</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Nyrean_Princess" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/princess_bandoleer.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/princess.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Queen Taivra -->
+            <div class="enemyGrid FilterShemale">
+                <div class="halfBoxLeft">
+                    <h2>Queen Taivra</h2>
+                    <p><strong>Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Queen_Taivra" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/taivra.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/taivra_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Wetra Hound -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Wetra Hound</h2>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Wetra_Hound" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/wetra_hound.Shou.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Wetraxxel Brawler -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Wetraxxel Brawler</h2>
+                    <p><strong>Cave Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">wetraxxelCaveEncounters()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Wetraxxel_Brawler" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/wetraxxel.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/wetraxxel_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Ganraen Knight -->
+            <div class="enemyGrid FilterFemale FilterSillyMode">
+                <div class="halfBoxLeft">
+                    <h2>Ganraen Knight</h2>
+                    <p><strong>Silly Mode Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">crystalGooFenBurps()</code></pre>
+                </div>
+                <div class="halfBoxRight MultiImgGridTwoAcross">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ganraen_Knight" >W</a>
+                    <div class="MultiImgGrid">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Jay_Echo/x1/goo_knight_blue.Jay_Echo.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Jay_Echo/x1/goo_knight_blue_nude.Jay_Echo.webp" alt="Nude" loading="lazy">
+                    </div>
+                    <div class="MultiImgGrid">
+                        <img class="sideimg" src="imgsourceurl/resources/img/Jay_Echo/x1/goo_knight_green.Jay_Echo.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Jay_Echo/x1/goo_knight_green_nude.Jay_Echo.webp" alt="Nude" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <!-- Ganrael Ambusher -->
+            <div class="enemyGrid FilterMale FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Ganrael Ambusher</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">crystalGooEncounterType1()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ganrael_Ambusher" >W</a>
+                    <div class="MultiImgGridTwoAcross">
+                        <div class="MultiImgGrid">
+                            <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue.Shou.webp" alt="Clothed" loading="lazy">
+                            <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue_bimbo.Shou.webp" alt="Nude" loading="lazy">
+                        </div>
+                        <div class="MultiImgGrid">
+                            <img class="sideimg mirror" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue.Shou.webp" alt="Clothed" loading="lazy">
+                            <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue_bro.Shou.webp" alt="Nude" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ganrael DeadEye -->
+            <div class="enemyGrid FilterMale FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Ganrael DeadEye</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">crystalGooEncounterType2()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ganrael_DeadEye" >W</a>
+                    <div class="MultiImgGridTwoAcross">
+                        <div class="MultiImgGrid">
+                            <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/ganrael_2_blue.Shou.webp" alt="Clothed" loading="lazy">
+                            <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue_bimbo.Shou.webp" alt="Nude" loading="lazy">
+                        </div>
+                        <div class="MultiImgGrid">
+                            <img class="sideimg mirror" src="imgsourceurl/resources/img/Shou/x1/ganrael_2_blue.Shou.webp" alt="Clothed" loading="lazy">
+                            <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue_bro.Shou.webp" alt="Nude" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Infected Myr Female -->
+            <div class="enemyGrid FilterFuta">
+                <div class="halfBoxLeft">
+                    <h2>Infected Myr Female</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">infectedMyrmedionShit()</code></pre>
+                    <p>Fun fact, pre-fight text for a Male varient exists, but it was never completed.</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Myr_Infected_Female" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\myr_infected_female.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\myr_infected_female_spores.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Fungal Queen -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Fungal Queen</h2>
+                    <p><strong>One Time Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fungusQueenRoomBonus()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bothrioc_Pidemme" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\myr_infected_queen.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\myr_infected_queen_spores.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Bothrioc Pidemme -->
+            <div class="enemyGrid FilterUnusualSex">
+                <div class="halfBoxLeft">
+                    <h2>Bothrioc Pidemme</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPidemmeBothrioc()</code></pre>
+                    <p><strong>Addiction Flag</strong> 0 to 100</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.BOTHRIOC_ADDICTION = x</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bothrioc_Quadomme" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\bothrioc_pidemme.Shou.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Bothrioc Quadomme -->
+            <div class="enemyGrid FilterUnusualSex">
+                <div class="halfBoxLeft">
+                    <h2>Bothrioc Quadomme</h2>
+                    <p><strong>Sex Menu</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">bothriocQuadommeSexMenu()</code></pre>
+                    <p><strong>Loss Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">bothriocQuadommePCLoss()</code></pre>
+                    <p><strong>Maid Training</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">bothriocQuadommeMaidTraining()</code></pre>
+                    <p><strong>Addiction Flag</strong> 0 to 100</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.BOTHRIOC_ADDICTION = x</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/fubMistress/x1/quadomme.fubMistress.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Queen of the Deep -->
+            <div class="enemyGrid FilterFuta FilterPregPlayer">
+                <div class="halfBoxLeft">
+                    <h2>Queen of the Deep</h2>
+                    <p>Not happening</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Queen_of_the_Deep" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00\x1\deep_lake_queen.Jacques00.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
         </div>
     </div>
     <div class="areaContainer">
@@ -2537,6 +2920,7 @@
         </div>
     </div>
 </section>
+<!-- Events -->
 <section class="topselector" id="content5">
     <div class="CharacterGridThreeAcross">
         <!-- Breedwell -->
@@ -2577,6 +2961,7 @@
     </div>
 
 </section>
+<!-- Flags -->
 <section class="topselector" id="content6">
     <div class="CharacterGridThreeAcross">
         <!-- Ardia Dominance -->
@@ -2617,5 +3002,5 @@
         </div>
     </div>
 </section>
-    
 </main>
+    
