@@ -191,53 +191,53 @@ input:checked + label {
 /* Grid */
 .CharacterGridFourAcross {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 25%);
   grid-auto-rows: minmax(100px, auto);
 }
 .CharacterGridThreeAcross {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 33.33%);
   grid-auto-rows: minmax(100px, auto);
 }
 .CharacterGridTwoAcross {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
   grid-auto-rows: minmax(100px, auto);
 }
 .StatusGridFourAcross {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(4, 25%);
+  grid-auto-rows: minmax(20px, auto);
 }
 .StatusGridThreeAcross {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(3, 33.33%);
+  grid-auto-rows: minmax(20px, auto);
 }
 .StatusGridTwoAcross {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: minmax(20px, auto);
 }
 .StatusApplyGridFourAcross {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(4,25%);
+  grid-auto-rows: minmax(20px, auto);
 }
 .StatusApplyGridThreeAcross {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(3, 33.33%);
+  grid-auto-rows: minmax(20px, auto);
 }
 .StatusApplyGridTwoAcross {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: minmax(20px, auto);
 }
 
 .MultiImgGridTwoAcross {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
   grid-auto-rows: minmax(100px, auto);
 }
 .MultiImgGrid {
@@ -277,12 +277,12 @@ input:checked + label {
 
 .statusGrid{
   position: relative;
-  margin: 3px;
+  padding: 3px;
+  background-clip: content-box;
   display:block;
   text-align: left;;
   background-color: var(--paleColor);
-  min-height: 300px;
-  max-width: 24vw;
+  min-height: 200px;
   border-radius: 10px 0 0 10px;
 }
 
@@ -294,7 +294,6 @@ input:checked + label {
 }
 
 .statusGridWide {
-  max-width: 47vw;
   grid-column: span 2;
 }
 
@@ -332,6 +331,7 @@ input:checked + label {
   text-align: left;;
   background-color: var(--paleColor);
   min-height: 300px;
+  border-radius: 10px 0 0 10px;
 }
 
 .eventGrid h2 {
@@ -387,7 +387,7 @@ input:checked + label {
   float: right;
   width: 100%;
   max-width: 50%;
-  max-height: 120%;
+  max-height: 100%;
   object-fit: cover;
   position: absolute;
   right: 0;
@@ -465,8 +465,8 @@ summary:hover {
   background-color: color-mix(in srgb, var(--backgroundColor), white 20%);
 }
 .statusCategory {
-  padding: 5px;
   border-radius: 5px;
+  margin: 5px;
 }
 details {
   position: relative;
@@ -736,7 +736,7 @@ p {
 
 .homepageGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 16.66%);
   grid-auto-rows: minmax(10px, auto);
 }
   .homepageLogo {
@@ -749,6 +749,7 @@ p {
     grid-row-start: 1;
     grid-row-end: 2;
     max-height: 540px;
+    height: 540px;
   }
     .homepageLogo img {
       width: 100%;
@@ -861,6 +862,24 @@ p {
 }
 
 
+@media screen and (min-width: 2300px) {
+  .CharacterGridThreeAcross {
+    grid-template-columns: repeat(4, 25%);
+  }
+  .StatusGridFourAcross {
+    grid-template-columns: repeat(5, 20%);
+  }
+}
+
+@media screen and (min-width: 3400px) {
+  .CharacterGridThreeAcross {
+    grid-template-columns: repeat(5, 20%);
+  }
+  .StatusGridFourAcross {
+    grid-template-columns: repeat(6, 16.66%);
+  }
+}
+
 @media screen and (max-width: 1500px) {
   label {
     font-size: 0;
@@ -872,17 +891,17 @@ p {
   }
   .flexgrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-auto-rows: minmax(100px, auto);
   }
   .StatusApplyGridFourAcross {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-auto-rows: minmax(100px, auto);
   }
   .StatusApplyGridTwoAcross {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-auto-rows: minmax(100px, auto);
   }
 }
@@ -890,7 +909,7 @@ p {
 @media screen and (max-width: 1100px) {
   .flexgrid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100%);
     grid-auto-rows: minmax(100px, auto);
   }
   label {
@@ -900,35 +919,28 @@ p {
 
   .CharacterGridFourAcross {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 33.33%);
     grid-auto-rows: minmax(100px, auto);
   }
   .CharacterGridThreeAcross {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-auto-rows: minmax(100px, auto);
   }
   .CharacterGridTwoAcross {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100%);
     grid-auto-rows: minmax(100px, auto);
   }
   .StatusGridFourAcross {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-auto-rows: minmax(100px, auto);
   }
   .StatusApplyGridFourAcross {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 25%);
     grid-auto-rows: minmax(100px, auto);
-  }
-  .statusGrid {
-    max-width: 45vw;
-    min-width: 45vw;
-  }
-  .statusGridWide {
-    max-width: 90vw;
   }
 } 
 
@@ -947,12 +959,12 @@ p {
   }
   .CharacterGridThreeAcross {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100%);
     grid-auto-rows: minmax(100px, auto);
   }
   .StatusApplyGridFourAcross {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     grid-auto-rows: minmax(100px, auto);
   }
 }
