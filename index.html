@@ -38,10 +38,10 @@
 <label for="tab1">Main</label>
     
 <input class="HeaderTabs" id="tab2" type="radio" name="tabs">
-<label for="tab2">Transformations</label>
+<label for="tab2">Status Effects</label>
     
 <input class="HeaderTabs" id="tab3" type="radio" name="tabs">
-<label for="tab3">Status Effects</label>
+<label for="tab3">NPC's</label>
     
 <input class="HeaderTabs" id="tab4" type="radio" name="tabs">
 <label for="tab4">Enemies</label>
@@ -55,7 +55,7 @@
 <section class="topselector" id="content1">
     <div class="homepageGrid">
         <div class="homepageLogo">
-            <img id="homepageLogoImg" src="img/logo_00@2xYellow.png">
+            <img id="homepageLogoImg" src="img/logo_00@2xYellow.png" alt="logo">
         </div>
         <div class="homepageSidebar">
             <div class="homepageSidebarSub">
@@ -109,6 +109,13 @@
                 <pre ><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.shieldsRaw = 1000, pc.HPRaw = 1000, pc.lustRaw = 0, pc.energyRaw = 1000</code></pre>
             </div>
         </div>
+        <div class="homepageFooterC">
+            <div class="homePagePre">
+                <p id="TiTsEdJSHomepage"><a class="link" href="https://github.com/Chase-san/TiTsEdJS" >TiTsEdJS</a></p>
+                <p>TiTsEdJS is a javascript based state editor for the H-game TiTs. It is loaded into the same runtime enivornment as the game itself and edits the variables of the game in real time developed by Chase-san.</p><p>You can find the project at <a class="link" href="https://github.com/Chase-san/TiTsEdJS" >https://github.com/Chase-san/TiTsEdJS</a>.</p><p>Running the following command will add it to the game, but it is also available as a browser extension for firefox.</p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">(function(){var s=document.createElement("script");s.src="https://chase-san.github.io/TiTsEdJS/titsed.js";document.head.appendChild(s)})()</code></pre>
+            </div>
+        </div>
         <div class="homepageFooterB">
             <div class="homePagePre">
                 <p><strong>Credits</strong></p>
@@ -121,41 +128,43 @@
                 <pre ><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.XPRaw = x</code></pre>
             </div>
         </div>
+        <div class="homepageFooterE">
+            <div class="homePagePre">
+                <p><strong>End Pregnancies</strong></p>
+                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">{for(let i=0;i&lt;pc.pregnancyData.length;i+=1){if(pc.pregnancyData[i].pregnancyIncubation&gt;=100){if(pc.pregnancyData[i].pregnancyType==&quot;EggTrainerFauxPreg&quot;){}else{pc.pregnancyData[i].pregnancyIncubation=100}}}}</code></pre>
+            </div>
+        </div>
+        <div class="homepageFooterD">
+            <div class="halfBoxBottom">
+                <div class="StatusApplyGridFourAcross">
+                    <div class="substatusgrid">
+                        <p><strong>Biped</strong> Plantigrade</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 2, pc.legFlags = [16], pc.genitalSpot = 0</code></pre>
+                    </div>
+                    <div class="substatusgrid">
+                        <p><strong>Taur</strong> Digitigrade</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 4, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
+                    </div>
+                    <div class="substatusgrid">
+                        <p><strong>Naga</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [2, 7, 6, 18, 21], pc.genitalSpot = 0, pc.legType = 13</code></pre>
+                    </div>
+                    <div class="substatusgrid">
+                        <p><strong>Shark</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [16, 21], pc.genitalSpot = 0, pc.legType = 19</code></pre>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="homepageFooterDisclaimer">
+            <p><strong>Fenoxo, Savin, the TiTs Develops and TiTsEdJS are not involved with this project in any manner</strong></p>
+        </div>
+
     </div>
 </section>
-<!-- Transformations -->
-<section class="topselector" id="content2">
-    <h1>NOTICE</h1>
-    <p>I didn't know this when I started this project, but another similar one already exists for transformations; <a class="link" href="https://github.com/Chase-san/TiTsEdJS/tree/master" >TiTsEdJS</a> adds a side popup to the game for changing your character's stats and body. The simple method for adding it is to open the console and type.</p>
-    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">(function(){var s=document.createElement("script");s.src="https://chase-san.github.io/TiTsEdJS/titsed.js";document.head.appendChild(s)})()</code></pre>
-    <details>
-        <summary>Form</summary>
-        <p><strong>Biped</strong> Plantigrade (Humanoid feet)</p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 2, pc.legFlags = [16], pc.genitalSpot = 0</code></pre>
-        <p><strong>Taur</strong> Digitigrade (Bestial feet)</p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
-        <p><strong>Taur 6leg</strong> Digitigrade (Bestial feet)</p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"> pc.legCount = 6, pc.legFlags = [17], pc.genitalSpot = 2</code></pre>
-        <p><strong>Naga</strong></p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [2, 7, 6, 18, 21], pc.genitalSpot = 0, pc.legType = 13</code></pre>
-        <p><strong>Shark</strong></p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 1, pc.legFlags = [16, 21], pc.genitalSpot = 0, pc.legType = 19</code></pre>
-        <p>Warning, Naga and Shark change leg type (species)</p>
-    </details>
-    <!--
-    <details>
-        <summary>Presets</summary>
-        <p><strong>Remove Vags</strong></p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.removeVaginas()</code></pre>
-        <p><strong>Return Vags</strong></p>
-        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.createVagina(), pc.createVagina(), pc.createVagina(), pc.vaginas[0].neverSerialize = false, pc.vaginas[0].version = 3, pc.vaginas[0].hymen = false, pc.vaginas[0].clits = 1, pc.vaginas[0].vaginaColor = "pale", pc.vaginas[0].wetnessRaw = 5, pc.vaginas[0].wetnessMod = 0, pc.vaginas[0].loosenessRaw = 1, pc.vaginas[0].loosenessMod = 0, pc.vaginas[0].minLooseness = 1, pc.vaginas[0].bonusCapacity = 60, pc.vaginas[0].shrinkCounter = 0, pc.vaginas[0].flags = [30,3,37], pc.vaginas[0].fullness = 0, pc.vaginas[0].piercing = null, pc.vaginas[0].clitPiercing = null, pc.vaginas[1].neverSerialize = false, pc.vaginas[1].version = 3, pc.vaginas[1].hymen = false, pc.vaginas[1].clits = 1, pc.vaginas[1].vaginaColor = "pale", pc.vaginas[1].wetnessRaw = 5, pc.vaginas[1].wetnessMod = 0, pc.vaginas[1].loosenessRaw = 1, pc.vaginas[1].loosenessMod = 0, pc.vaginas[1].minLooseness = 1, pc.vaginas[1].bonusCapacity = 60, pc.vaginas[1].shrinkCounter = 0, pc.vaginas[1].flags = [30,3,37], pc.vaginas[1].fullness = 0, pc.vaginas[1].piercing = null, pc.vaginas[1].clitPiercing = null, pc.vaginas[2].neverSerialize = false, pc.vaginas[2].version = 3, pc.vaginas[2].hymen = false, pc.vaginas[2].clits = 1, pc.vaginas[2].vaginaColor = "pale", pc.vaginas[2].wetnessRaw = 5, pc.vaginas[2].wetnessMod = 0, pc.vaginas[2].loosenessRaw = 1, pc.vaginas[2].loosenessMod = 0, pc.vaginas[2].minLooseness = 1, pc.vaginas[2].bonusCapacity = 60, pc.vaginas[2].shrinkCounter = 0, pc.vaginas[2].flags = [30,3,37], pc.vaginas[2].fullness = 0, pc.vaginas[2].piercing = null,pc.vaginas[2].clitPiercing = null, pc.vaginas</code></pre>
-    </details>
-    -->
-    <p>Set all pregnancies to immediately end</p>
-    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">{for(let i=0;i&lt;pc.pregnancyData.length;i+=1){if(pc.pregnancyData[i].pregnancyIncubation&gt;=100){if(pc.pregnancyData[i].pregnancyType==&quot;EggTrainerFauxPreg&quot;){}else{pc.pregnancyData[i].pregnancyIncubation=100}}}}</code></pre>
-</section>
 <!-- Status Effects -->
-<section class="topselector" id="content3">
+<section class="topselector" id="content2">
     <Details class="statusCategory">
         <summary class="IconStatus">General</summary>
         <div class="StatusGridFourAcross">
@@ -1352,6 +1361,175 @@
         </div>
     </div>
 </section>
+<!-- NPC's -->
+<section class="topselector" id="content3">
+    <h1 class="areaHeader">Crew</h1>
+        <div class="CharacterGridTwoAcross">
+            <!-- Amber -->
+            <div class="enemyGrid">
+                <div class="halfBoxTop enemyGrid">
+                    <div class="halfBoxLeft">
+                        <h2>Amber</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Amber" >W</a>
+                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/dryad.Adjatha.webp" alt="Clothed" loading="lazy">
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div class="halfBoxLeft">
+                        <h2>Major Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Flag.</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <h2>Minor Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Flag.</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- Anno 
+            ANNOS_SHOP_CLOSED: 1
+            ANNO_ANALSEXED: 1
+            ANNO_AWAY: 60
+            : 1
+            ANNO_GIFT_WRAPPED: undefined
+            ANNO_KASE_THREESOME: 3
+            ANNO_MAID_SEX: 5
+            ANNO_MISSION_OFFER: 3
+            ANNO_NOVA_UPDATE: 3
+            ANNO_OWNS_LIGHT_STRAPON: 1
+            ANNO_SCRITCHES_HAPPENED: 1
+            ANNO_SHOT_WITH: 1
+            : 1
+            ANNO_SLEEPWITH_INTRODUCED: 1
+            ANNO_SNUGGLED_AFTER_SHOOTOFF: 1
+            ANNO_STRAPON_MODS_ENABLED: 1
+            ANNO_SYRI_GAME: 1
+            ANNO_TALKED_ABOUT_THE_MEMO: 1
+            ANNO_TALKED_ABOUT_YOUR_DAD: 1
+            ANNO_TRAVEL_MAID_TS: 1200271
+            ANNO_X_ERRA_INTRODUCED: 24
+            ANNO_X_ERRA_JOINED: 15
+            ANNO_X_ERRA_WATCHED: 4
+            ANNO_X_KAEDE_THREESOMED: 4
+            -->
+            <div class="enemyGrid">
+                <div class="halfBoxTop enemyGrid">
+                    <div class="halfBoxLeft">
+                        <h2>Anno</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <a class="characterWikiLink" href="" >W</a>
+                        <img class="sideimg" src="imgsourceurl/resources/img/Cheshire/x1/anno.Cheshire.webp" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Cheshire/x1/anno_nude.Cheshire.webp" alt="Nude" loading="lazy">
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div class="halfBoxLeft">
+                        <h2>Major Flags</h2>
+                        <p><strong>Crew</strong> 1 = Not recruited, 2 Crewmember, 3 Kicked off ship</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ANNO_CREWMEMBER</code></pre>
+                        <p><strong>Has Maid Outfit</strong> null = Doesent have it, 1 = Bought on Tarvos, 2 = Bought on Uveto</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ANNO_MAID_OUTFIT</code></pre>
+                        <p><strong>Crew</strong> 1 = Not recruited, 2 Crewmember, 3 Kicked off ship</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ANNO_CREWMEMBER</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <h2>Minor Flags</h2>
+                        <p><strong>Initial Recruitment</strong> null = unseen, 1 = Seen</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ANNO_CREWMEMBER_INITIALSCENE</code></pre>
+                        <p><strong>Sex Count</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ANNO_SEXED</code></pre>
+                        <p><strong>Shower Sex Count</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ANNO_SHOWER_SEX</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- Ardia -->
+            <div class="enemyGrid">
+                <div class="halfBoxTop enemyGrid">
+                    <div class="halfBoxLeft">
+                        <h2>Ardia</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ardia" >W</a>
+                        <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/ardia_sub.Adjatha.webp" alt="Adria" loading="lazy">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/ardia_dom.Adjatha.webp" alt="Ardia Dom Face" loading="lazy">
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div class="halfBoxLeft">
+                        <h2>Major Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Flag.</code></pre>
+                        <h3>Ardia Dominance</h3>
+                        <p><strong>Sub</strong>: 1-3 Ardia is Sub</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 1</code></pre>
+                        <p><strong>Dom</strong>: 4-6 Ardia is Dom</p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 5</code></pre>
+                        <p><strong>Alpha</strong>: 7-10 Ardia is Alpha</p> 
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 10</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <h2>Minor Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Flag.</code></pre>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="enemyGrid">
+                <div class="halfBoxTop enemyGrid">
+                    <div class="halfBoxLeft">
+                        <h2>CrewName</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <a class="characterWikiLink" href="" >W</a>
+                        <img class="sideimg" src="imgsourceurl/resources/img/" alt="Clothed" loading="lazy">
+                        <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/" alt="Nude" loading="lazy">
+                    </div>
+                </div>
+                <div class="halfBoxBottom">
+                    <div class="halfBoxLeft">
+                        <h2>Major Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Flag.</code></pre>
+                    </div>
+                    <div class="halfBoxRight">
+                        <h2>Minor Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Flag.</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <h1 class="areaHeader">Mhen'ga</h1>
+    <div class="PlanetBioGrid">
+        <div class="PlanetBioBoxText">
+            <p class="areaDescription">Mhen'ga is a planet discovered during the 14th planet rush. Currently colonized by the <a class="WikiLink" href="https://wiki.smutosaur.us/TiTS/United_Galactic_Confederacy" >U.G.C</a>, the planet's extra-terrestrial capital is Esbeth. Populated areas are lined with dirt roads, leaving a very primal feel to the overall environment. Covered in lush flora, the planet is sometimes referred to as "The Jungle Planet". Sometimes spelled as "Mhen'gha" or "M'henga".</p>
+            <Details>
+                <summary class="IconMaps">Zone Maps</summary>
+                <div class="areaZoneMaps">
+                    <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/e/e5/Mhen%27ga_-_Esbeth.png" loading="lazy" alt="Mhen'ga - Esbeth">
+                    <img class="areaZoneMapImg" src="https://wiki.smutosaur.us/TiTS/images/1/12/Mhen%27ga_-_Jungles.png" loading="lazy" alt="Mhen'ga - Jungles">
+                </div>
+            </Details>
+        </div>
+        <div class="PlanetBioBoxImg">
+            <img src="imgsourceurl/resources/img/Crossman/x1/mhenga.Crossman.webp" alt="Mhenga">
+        </div>
+    </div>
+</section>
 <!-- Roaming Encounters -->
 <section class="topselector" id="content4">
     <div id="EnemyFilter">
@@ -1393,6 +1571,7 @@
             <button class="btn" onclick="filterSelection('FilterSceneTone')">Tone</button>
             <button class="btn" onclick="filterSelection('FilterSceneThickness')">Thickness</button>
             <button class="btn" onclick="filterSelection('FilterSceneFemininity')">Femininity</button>
+            <button class="btn" onclick="filterSelection('FilterSceneHeight')">Height</button>
             <p>Player Head/Tail</p>
             <button class="btn" onclick="filterSelection('FilterSceneDeepthroat')">Deepthroat</button>
             <button class="btn" onclick="filterSelection('FilterSceneSnakeByte')">SnakeByte</button>
@@ -1742,7 +1921,7 @@
                     </div>
                     <div class="MultiImgGrid">
                         <img class="sideimg " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_fem.Shou.webp" alt="Clothed" loading="lazy">
-                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_fem_nude.Shou.webp" alt="Nude"loading="lazy">
+                        <img class="sideimg sideimglayer " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_fem_nude.Shou.webp" alt="Nude" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1917,7 +2096,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman/x1/tarkus.Crossman.webp">
+                    <img src="imgsourceurl/resources/img/Crossman/x1/tarkus.Crossman.webp" alt="Tarkus">
                 </div>
             </div>
         </div>
@@ -2063,7 +2242,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Matriarch" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sydian_queen.Adjatha.webp"" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sydian_queen.Adjatha.webp" alt="Clothed" loading="lazy">
                     <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/sydian_queen_nude.Adjatha.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
@@ -2113,7 +2292,8 @@
             <div class="enemyGrid FilterFemale">
                 <div class="halfBoxLeft">
                     <h2>Nym-Foe</h2>
-                    <p><strong>Quest Encounter</strong></p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningMid" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><strong>Quest Encounter</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">nymfoeSetup()</code></pre>
                 </div>
                 <div class="halfBoxRight">
@@ -2175,7 +2355,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman/x1/myrellion.Crossman.webp">
+                    <img src="imgsourceurl/resources/img/Crossman/x1/myrellion.Crossman.webp" alt="Myrellion">
                 </div>
             </div>
         </div>
@@ -2323,7 +2503,7 @@
                 <div class="halfBoxLeft">
                     <h2>Nyrean Praetorian Guards</h2>
                     <p>Is too buried for direct console execution with current knowledge.</p>
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningHigh" viewBox="0 0 16 16">
                         <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
                     <strong>Reset Flags</strong>: Backup First, running this will break your save. Visit them in person to access defeat scene</p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.FOUGHT_PRAETORIANS=null;pc.removePerk("Nyrean Royal");flags.KING_NYREA=null;flags.BEAT_TAIVRA_TIMESTAMP=null;flags.PRAETORIAN_RESPAWN=null;</code></pre>
@@ -2340,7 +2520,7 @@
                     <h2>Nyrean Princess Taivris</h2>
                     <p><strong>Join Orgy</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">haremChamberBonusFunc()</code></pre>
-                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningHigh" viewBox="0 0 16 16">
                         <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
                     <strong>Reset Flags</strong>: Backup First, running this will break your save. You will need to wait some time before the fight will trigger.</p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.PRINCESS_DEFEATED=null;pc.removePerk("Nyrean Royal");</code></pre>
@@ -2458,8 +2638,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Myr_Infected_Female" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\myr_infected_female.Shou.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\myr_infected_female_spores.Shou.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/myr_infected_female.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/myr_infected_female_spores.Shou.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Fungal Queen -->
@@ -2471,8 +2651,8 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bothrioc_Pidemme" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\myr_infected_queen.Shou.webp" alt="Clothed" loading="lazy">
-                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou\x1\myr_infected_queen_spores.Shou.webp" alt="Nude" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/myr_infected_queen.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/myr_infected_queen_spores.Shou.webp" alt="Nude" loading="lazy">
                 </div>
             </div>
             <!-- Bothrioc Pidemme -->
@@ -2486,7 +2666,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Bothrioc_Quadomme" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Shou\x1\bothrioc_pidemme.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/bothrioc_pidemme.Shou.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
             <!-- Bothrioc Quadomme -->
@@ -2515,7 +2695,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Queen_of_the_Deep" >W</a>
-                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00\x1\deep_lake_queen.Jacques00.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg" src="imgsourceurl/resources/img/Jacques00/x1/deep_lake_queen.Jacques00.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
         </div>
@@ -2537,7 +2717,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman/x1/zheng_shi.Crossman.webp">
+                    <img src="imgsourceurl/resources/img/Crossman/x1/zheng_shi.Crossman.webp" alt="Zheng Shi">
                 </div>
             </div>
         </div>
@@ -2694,7 +2874,8 @@
                     <h2>Dr. Teyaal</h2>
                     <p><strong>Post-Quest Encounter</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">teyaalRepeatShitstompins()</code></pre>
-                    <p><strong>Quest Encounter</strong>: Doesent work post quest, not sure why yet.</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningMid" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><strong>Quest Encounter</strong>: Doesent work post quest, not sure why yet.</p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">docTeyaaaaaaalsOffice()</code></pre>
                 </div>
                 <div class="halfBoxRight">
@@ -2795,22 +2976,120 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\Crossman/x1/dhaal.Crossman.webp">
+                    <img src="imgsourceurl/resources/img/Crossman/x1/dhaal.Crossman.webp" alt="Dhaal">
                 </div>
             </div>
         </div>
         <div class="CharacterGridThreeAcross">
-            <!--  -->
+            <!-- Gabilani Chemist / Nusha -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Gabilani Chemist / Nusha</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterGabiChemist()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gabilani_Chemist" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/gabilani_chemist.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/gabilani_chemist_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Gabilani Cyborg -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Gabilani Cyborg</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterGabCyborg()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gabilani_Cyborg" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/gabilani_cyborg.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/gabilani_cyborg_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Leyak -->
+            <div class="enemyGrid FilterUnusualSex">
+                <div class="halfBoxLeft">
+                    <h2>Leyak</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">leyakEncounterStart()</code></pre>
+                    <p>No Wiki page</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/leyak_1.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Milk Thief -->
             <div class="enemyGrid">
                 <div class="halfBoxLeft">
-                    <h2>EnemyName</h2>
-                    <p><strong>Encounter</strong></p>
-                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                    <h2>Milk Thief</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterMilkThief()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Milk_Thief" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/milk_thief_small.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/milk_thief_small_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Zaika Gangers -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Zaika Gangers</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterZaikaGangersRouter()</code></pre>
+                    <p>No Wiki page</p>
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="" >W</a>
                     <img class="sideimg" src="imgsourceurl/resources/img/" alt="Clothed" loading="lazy">
                     <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/" alt="Nude" loading="lazy">
+                    <!--
+                        "\Adjatha/x1/zaika_gang_techie_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_bruiser.Adjatha.webp"
+                        "\Adjatha/x1/zaika_bruiser_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_chainer.Adjatha.webp"
+                        "\Adjatha/x1/zaika_chainer_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_doll_a.Adjatha.webp"
+                        "\Adjatha/x1/zaika_doll_b.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_bangtail.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_bangtail_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_grenadier.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_grenadier_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_gunner.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_gunner_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_heavy.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_heavy_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_rioter.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_rioter_nude.Adjatha.webp"
+                        "\Adjatha/x1/zaika_gang_techie.Adjatha.webp"
+                    -->
+                </div>
+            </div>
+            <!-- Zaika Hydra -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Zaika Hydra</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">zaikaHydraIntroz()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zaika_Hydra" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/zaika_hydra.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/zaika_hydra_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Easter Zaika -->
+            <div class="enemyGrid">
+                <div class="halfBoxLeft">
+                    <h2>Easter Zaika</h2>
+                    <p><strong>Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">meetEasterZaika()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Easter_Zaika" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/kellah.Adjatha.webp" alt="Clothed" loading="lazy">
                 </div>
             </div>
         </div>
@@ -2851,7 +3130,7 @@
                     </Details>
                 </div>
                 <div class="PlanetBioBoxImg">
-                    <img src="imgsourceurl\resources\img\JassBefrold/x1/pyrite_colt_xlr.JassBefrold.webp">
+                    <img src="imgsourceurl/resources/img/JassBefrold/x1/pyrite_colt_xlr.JassBefrold.webp" alt="FIRST-14">
                 </div>
             </div>
         </div>
@@ -2870,7 +3149,7 @@
                 </div>
             </div>
             <!-- Salvager -->
-            <div class="enemyGrid FilterMale FilterTaur FilterNaga FilterSceneCockSizeVarients FilterSceneCockSheath FilterSceneCockNoBalls FilterSceneDeepthroat FilterScenePregnant">
+            <div class="enemyGrid FilterMale FilterSceneTaur FilterSceneNaga FilterSceneCockSizeVarients FilterSceneCockSheath FilterSceneCockNoBalls FilterSceneDeepthroat FilterScenePregnant">
                 <div class="halfBoxLeft">
                     <h2>Salvager</h2>
                     <p><strong>Standard Encounter</strong></p>
@@ -2889,7 +3168,7 @@
                 </div>
             </div>
             <!-- Overqueen -->
-            <div class="enemyGrid FilterFemale FilterNaga FilterTaur FilterSceneLongTounge FilterSceneCockKnot FilterSceneCockFlare FilterSceneCockEjaculationVarients FilterSceneCockNoBalls FilterSceneUnclothed FilterSceneCockSheath">
+            <div class="enemyGrid FilterFemale FilterNaga FilterSceneTaur FilterSceneLongTounge FilterSceneCockKnot FilterSceneCockFlare FilterSceneCockEjaculationVarients FilterSceneCockNoBalls FilterSceneUnclothed FilterSceneCockSheath">
                 <div class="halfBoxLeft">
                     <h2>Overqueen</h2>
                     <p><strong>Boss Encounter</strong></p>
@@ -2928,7 +3207,228 @@
             </div>
         </div>
         <div class="CharacterGridThreeAcross">
-            
+            <!-- Korgonne Barbarian Female -->
+            <div class="enemyGrid FilterFemale FilterSceneStrapon FilterSceneCocHyper FilterSceneTaur">
+                <div class="halfBoxLeft">
+                    <h2>Korgonne Barbarian Female</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterAKorgonneFemaleHostile()</code></pre>
+                    <p><strong>Drugged Encounter</strong> Appears during Siege of the Korg’ii Hold</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">dosedKorgEncounter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Korgonne_Barbarian_Female" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/korgonne_female.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/korgonne_female_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Korgonne Raider Male -->
+            <div class="enemyGrid FilterMale FilterSceneTailCunt FilterSceneTailCock FilterPregPlayer">
+                <div class="halfBoxLeft">
+                    <h2>Korgonne Raider Male</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">korgMaleEncounter()</code></pre>
+                    <p><strong>Drugged Encounter</strong> Appears during Siege of the Korg’ii Hold</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">dosedKorgiMaleEncounter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Korgonne_Raider_Male" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/korgonne_male_tawny.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/korgonne_male_tawny_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan Male -->
+            <div class="enemyGrid FilterMale FilterSceneTaur FilterPregPlayer">
+                <div class="halfBoxLeft">
+                    <h2>Milodan Male</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterAMilodan()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Milodan_Male" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/milodan_male.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/milodan_male_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan Futazon -->
+            <div class="enemyGrid FilterFuta">
+                <div class="halfBoxLeft">
+                    <h2>Milodan Futazon</h2>
+                    <p><strong>Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterMilodanFutazon()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Milodan_Amazon" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/milodan_futazon.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan Bruiser -->
+            <div class="enemyGrid FilterFuta FilterSceneDeepthroat">
+                <div class="halfBoxLeft">
+                    <h2>Milodan Bruiser</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterMilodanBruiser()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Milodan_Bruiser" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/milodan_futazon_bruiser.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan Fertility Priestess -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Milodan Fertility Priestess</h2>
+                    <p><strong>Roaming Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soloFertilityPriestessFight()</code></pre>
+                    <p><strong>Player Succumb to Cold</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fertilityPriestessRescueFemDom()</code></pre>
+                    <p><strong>Ambush Player in Cave</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">fertilityPriestessCaveAmbush()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Milodan_Priestess" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/milodan_priestess.Adjatha.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan Infiltrator -->
+            <div class="enemyGrid FilterMale FilterSceneAphrodisiacTounge FilterSceneCockEjaculationVarients FilterSceneCockSizeVarients FilterSceneAlignment FilterSceneCockMulti">
+                <div class="halfBoxLeft">
+                    <h2>Milodan Infiltrator</h2>
+                    <p>Only appears during the Siege of the Korg’ii Hold</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningLow" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><strong>Quest Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">milodanInfiltratorEncounter()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/milodan_infiltrator.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/milodan_infiltrator_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan Temptress -->
+            <div class="enemyGrid FilterFemale FilterSceneAphrodisiacTounge FilterSceneVaginalWetness FilterSceneBimbo FilterSceneHimbo FilterSceneAlignment FilterSceneCockSizeVarients FilterSceneCockEjaculationVarients FilterSceneLibido FilterSceneCockMulti FilterSceneBreastSizeVarients">
+                <div class="halfBoxLeft">
+                    <h2>Milodan Temptress</h2>
+                    <p>Only appears during the Siege of the Korg’ii Hold</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningLow" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><strong>Quest Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterMiloTemptress()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Milodan_Temptress" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/milodan_temptress.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/milodan_temptress_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan War Lion -->
+            <div class="enemyGrid FilterMale FilterSceneTaur FilterSceneHeight FilterSceneBimbo FilterSceneCockNoBalls FilterSceneVaginalWetness FilterSceneCockSizeVarients FilterSceneVaginalLooseness">
+                <div class="halfBoxLeft">
+                    <h2>Milodan War Lion</h2>
+                    <p>Only appears during the Siege of the Korg’ii Hold</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningLow" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><strong>Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">warLionFightGoooo()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Milodan_War_Lion" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/war_lion.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/war_lion_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Milodan War Alpha Eitan -->
+            <div class="enemyGrid FilterMale">
+                <div class="halfBoxLeft">
+                    <h2>Milodan War Alpha Eitan</h2>
+                    <p>Only lists Siege of the Korg’ii Hold events, crew and NPC pages for additional scenes.</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="SVGWarningMid" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg><strong>Quest Encounter</strong> Winning will start the quest epilogue, giving you the decision of how to handle captives again, the rewards, and reseting the time since quest completion</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterWarAlpha()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Eitan" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/war_alpha.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/war_alpha_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Storm Lancer / Gel Zon -->
+            <div class="enemyGrid FilterMale FilterSceneHeat">
+                <div class="halfBoxLeft">
+                    <h2>Storm Lancer / Gel Zon</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">stormguardIntro() </code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Storm_Lancer" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/stormguard_male.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/stormguard_male_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Krym -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Krym</h2>
+                    <p>It seems to be impossible to trigger via console</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Krym" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/krym.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/krym_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Frostwyrm -->
+            <div class="enemyGrid FilterFuta FilterSceneCockMulti FilterPregNPC FilterPregPlayer">
+                <div class="halfBoxLeft">
+                    <h2>Frostwyrm</h2>
+                    <p><strong>Talk Dialogue</strong> The cliffs fight cannot be triggered; this is after you befriend the frostwyrm</p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">frostwyrmMainMenu()</code></pre>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Frostwyrm" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/frostwyrm.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/frostwyrm_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Essyra Marion -->
+            <div class="enemyGrid FilterFemale FilterFuta">
+                <div class="halfBoxLeft">
+                    <h2>Essyra Marion</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">marionEncounter()</code></pre>
+                    <p>Marion has various states, many of which include her as different futa; she operates as the psionic enslaved lure for of the Lureling, an Anglerfish like creature</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Essyra_Marion" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/marion.Adjatha.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/marion_nude.Adjatha.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
+            <!-- Alvella -->
+            <div class="enemyGrid FilterFemale">
+                <div class="halfBoxLeft">
+                    <h2>Alvella</h2>
+                    <p><strong>Bad End</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">wargiiBadEnds()</code></pre>
+                    <p>Only appears in Bad End</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Alvella" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/alvella.Shou.webp" alt="Clothed" loading="lazy">
+                </div>
+            </div>
+            <!-- Zaalt -->
+            <div class="enemyGrid FilterMale FilterPregPlayer">
+                <div class="halfBoxLeft">
+                    <h2>Zaalt</h2>
+                    <p><strong>Standard Encounter</strong></p>
+                    <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">iceQueenMessageHelp()</code></pre>
+                    <p>Encountered flying to Uveto</p>
+                </div>
+                <div class="halfBoxRight">
+                    <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zaalt" >W</a>
+                    <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/zaalt.Shou.webp" alt="Clothed" loading="lazy">
+                    <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/zaalt_nude.Shou.webp" alt="Nude" loading="lazy">
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -2976,23 +3476,6 @@
 <!-- Flags -->
 <section class="topselector" id="content6">
     <div class="CharacterGridThreeAcross">
-        <!-- Ardia Dominance -->
-        <div class="flagGrid">
-            <div class="halfBoxLeft">
-                <h2>Ardia Dominance</h2>
-                <p><strong>Sub</strong>: 1-3 Ardia is Sub</p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 1</code></pre>
-                <p><strong>Dom</strong>: 4-6 Ardia is Dom</p>
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 5</code></pre>
-                <p><strong>Alpha</strong>: 7-10 Ardia is Alpha</p> 
-                <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.ARDIA_DOMME_LEVEL = 10</code></pre>
-            </div>
-            <div class="halfBoxRight">
-                <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ardia" >W</a>
-                <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/ardia_sub.Adjatha.webp" alt="Adria" loading="lazy">
-                <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Adjatha/x1/ardia_dom.Adjatha.webp" alt="Ardia Dom Face" loading="lazy">
-            </div>
-        </div>
         <!-- Korgonne -->
         <div class="flagGrid">
             <div class="halfBoxLeft">
@@ -3015,4 +3498,3 @@
     </div>
 </section>
 </main>
-    

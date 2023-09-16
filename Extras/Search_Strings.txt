@@ -1,0 +1,205 @@
+#Main
+    #SillyModeVarients
+        isSillyModeEnabled
+    #SeasonalEvent
+    #ImpregnatePlayer
+    #NPCImpregnatabel
+    #Impregnate Player Tail
+    #NPC Tail Impregnate
+#Enemy State
+    #Male
+    #Female
+    #Futa
+    #Shemale
+    #Unusual Sex
+    #Taur
+    #Naga
+    #Tail Cock
+    #Tail Cunt
+
+#Player Stats/Perks
+    #Bimbo
+        pc.isBimbo
+    #Himbo
+        pc.isBro
+    #Treated
+        pc.isTreated
+        pc.isTreatedFemale
+        pc.isTreatedMale
+        pc.isTreatedCow
+        pc.isTreatedBull
+        pc.isAmazon
+        pc.isCumCow
+        pc.isFauxCow
+    #Painslut
+        pc.isPainslut
+    #Buttslut
+        pc.hasPerk("Buttslut")
+        pc.isButtslut
+    #Alignment
+        pc.isNice
+        pc.isMischievous
+    #Libido
+        pc.libido
+    #Knowledge
+    #Unclothed
+        pc.exposureLevel
+        pc.isCrotchGarbed
+        pc.isCrotchExposed
+        pc.isCrotchExposedByArmor
+        pc.isCrotchExposedByLowerUndergarment
+        pc.isCrotchVisible
+        pc.isAssExposed
+        pc.isAssExposedByArmor
+        pc.isAssExposedByLowerUndergarment
+        pc.isAssVisible
+        pc.isChestGarbed
+        pc.isChestExposed
+        pc.isChestExposedByArmor
+        pc.isChestExposedByUpperUndergarment
+        pc.isChestVisible
+        pc.isExposed
+        pc.isNude
+        pc.isCoveredUp
+        pc.isFullyExposed
+        pc.inSwimwear
+    #Exhibitionism
+        pc.Exhibitionism
+
+#Player Body
+    #Taur
+        pc.isTaur
+    #Naga
+        pc.isNaga
+    #Heat
+        pc.inHeat
+    #Rut
+        pc.inRut
+    #Pregnant
+        pc.isPregnant
+    #Tone
+        pc.tone
+    #Thickness
+        pc.thickness
+        pc.bellyRating
+        pc.hipRatingRaw         
+    #Femininity/Masculinity
+        pc.femininity
+    #height
+        pc.tallness
+#Player Head/Tail
+    #Deepthroat
+        pc.canDeepthroat
+    #SnakeByte
+        pc.hasSnakeByte
+        flags["USED_SNAKEBYTE"]
+    #Long Tounge
+        pc.hasLongTongue
+        pc.hasTongueFlag(GLOBAL.FLAG_LONG)
+    #Aphrodisiac Tounge
+        pc.hasAphroTongue
+        pc.hasTongueFlag(GLOBAL.FLAG_APHRODISIAC_LACED)
+    #Myr Aphrodisiac Tounge
+        hasPerk("Myr Venom")
+    #Tail
+        pc.hasTail
+        pc.hasTails
+    #Tail Cock
+        pc.hasTailCock()
+    #Tail Cunt
+        pc.hasTailCunt
+    #Parasitic Tail Cock    #Parasitic Tail Cunt
+        pc.hasTailFlag(GLOBAL.FLAG_PARASITIC)
+
+#Player Peni variations
+    #Hyper
+        pc.biggestCockLength() >= 42
+        pc.biggestCockLength() >= 48
+        pc.biggestCockLength() < 42
+    #Micro
+        pc.biggestCockLength() <= 1
+        pc.biggestCockLength() <= 2
+        pc.biggestCockLength() <= 3
+        pc.biggestCockLength() <= 4
+    #Penis Size Varients
+        pc.cLength
+        pc.biggestCockLength()
+    #Multiple Peni
+        pc.hasCocks 2
+        pc.hasCocks 3
+        pc.hasCocks 4
+        pc.cockTotal() >= 2
+        pc.cockTotal() >= 3
+    #Knot
+        pc.hasKnot
+    #Sheath
+        pc.hasSheath
+    #Flare
+        pc.hasFlare
+    #Ejaculation Size Varients
+        pc.cumQ
+    #No Balls
+        pc.hasBalls
+#Player Breasts/Vaginal/Ass variations
+    #Breasts Size Varients
+    #Breast Lactation
+        pc.isLactating
+    #Vaginal Wetness
+        pc.highestWetness
+        pc.highestWetnessIndex
+        pc.wetestVaginaIndexes
+        pc.wettestVaginalWetness
+        pc.wettestVaginaIndex
+        pc.driestVaginalWetness
+        pc.driestVaginaIndex
+        pc.isSquirter
+    #Vaginal Looseness
+        pc.looseness
+        pc.vaginas[x].looseness
+        pc.gapestVaginaLooseness
+        pc.gapestVaginaIndexes
+        pc.gapestVaginaIndex
+        pc.tightestVaginalLooseness
+        pc.tightestVaginaIndex
+    #Butt Rating
+        pc.buttRating()
+    #Bubble Butt
+        pc.hasPerk("Bubble Butt")
+    #Butt Loseness
+        pc.ass.looseness
+    #Stuff
+#Player Possession
+    #Strapon
+        pc.hasHardLightStrapOn
+        pc.hasHardLightAvailable
+        pc.hasHardLightEquipped
+        pc.hasHardLightUpgraded
+    #Throbb
+        pc.inventory.hasItem(Throbb
+    #Breeders Bliss
+        pc.inventory.hasItem(BreedersBliss
+#Player Race
+    #Has Fur
+        pc.skinType === GLOBAL.SKIN_TYPE_FUR
+    #Inhuman Tounge
+    #Kaithrit
+    #Feline
+    #Asaur
+    #Canid
+    #Bovine
+    #Laquine
+    #Gryvain
+    #Rodian
+
+pc.intelligence
+pc.hasVaginaFlag(GLOBAL.FLAG_STINGER_BASED, x)
+pc.hasPerk("Pheromone Sweat")
+pc.hasCockFlag(GLOBAL.FLAG_NUBBY, x)
+pc.cocks[x].cType === GLOBAL.TYPE_EQUINE
+pc.cocks[x].hasFlag(GLOBAL.FLAG_STINGER_TIPPED)
+pc.cocks[x].cType === GLOBAL.TYPE_SUULA
+pc.cocks[x].hasFlag(GLOBAL.FLAG_STINGER_BASED)
+pc.hasCockFlag(GLOBAL.FLAG_FORESKINNED, x)
+pc.scrotumType() === GLOBAL.FLAG_FURRED
+pc.scrotumType() === GLOBAL.FLAG_SCALED
+pc.inAnalHeat

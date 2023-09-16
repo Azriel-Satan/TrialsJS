@@ -2714,7 +2714,7 @@
     "majaSexMenu",
     "GlacialRiftO44",
     "GlacialRiftM44",
-    "soloFertilityPriestessFight",
+    "soloFertilityPriestessFight",    //Milodan Fertility Priestess Roaming Encounter
     "fertilityPriestessRescueFemDom",
     "fertilityPriestessCaveAmbushCheck",
     "fertilityPriestessCaveAmbush",
@@ -3270,14 +3270,14 @@
     "insideImplantHutBonus",
     "implantStationApproaches",
     "sabraeSexCount",
-    "leyakEncounterStart",
+    "leyakEncounterStart",  //Leyak Encounter
     "outsideMilkBarBonusText",
     "enterTheMilkbar",
     "talkToHarru",
     "applyMilkBarDrugs",
     "milkThief",
     "specialFenTreat",
-    "encounterMilkThief",
+    "encounterMilkThief",   //Milk Thief Encounter
     "narcBonusStuff",
     "approachNarcRepeat",
     "canFindNarcsUnit",
