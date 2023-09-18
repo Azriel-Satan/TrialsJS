@@ -136,7 +136,7 @@
         </div>
         <div class="homepageFooterD">
             <div class="halfBoxBottom">
-                <div class="StatusApplyGridFourAcross">
+                <div class="GridFour ApplyStatusGrid">
                     <div class="substatusgrid">
                         <p><strong>Biped</strong> Plantigrade</p>
                         <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">pc.legCount = 2, pc.legFlags = [16], pc.genitalSpot = 0</code></pre>
@@ -167,7 +167,7 @@
 <section class="topselector" id="content2">
     <Details class="statusCategory">
         <summary class="IconStatus">General</summary>
-        <div class="StatusGridFourAcross">
+        <div class="GridFour">
             <!-- Blue-balls -->
             <div class="statusGrid" id="StatusBlueBalls">
                 <div class="halfBoxTop">
@@ -220,7 +220,7 @@
                 </div>
             </div>
             <!-- Heat/Deep Heat -->
-            <div class="statusGrid statusGridWide" id="StatusHeat">
+            <div class="statusGrid Grid2Wide" id="StatusHeat">
                 <div class="halfBoxTop">
                     <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
@@ -234,7 +234,7 @@
                         </div>
                     </div>
                     <div class="statusEffectDescription">
-                        <div class="StatusApplyGridTwoAcross">
+                        <div class="GridTwo ApplyStatusGrid">
                             <div class="substatusgrid">
                                 <p>Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.
                                     <br><br>
@@ -258,7 +258,7 @@
                     </div>
                 </div>
                 <div class="halfBoxBottom">
-                    <div class="StatusApplyGridTwoAcross">
+                    <div class="GridTwo ApplyStatusGrid">
                         <div class="substatusgrid">   
                             <p class="codePadding"><strong>Apply Breeders Bliss Heat Status</strong></p>
                             <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">if(!pc.inHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel <i>hot</i>. Your nethers flush warmly with blood as heat blooms in ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("each of ")}output("your ");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("unoccupied ")}output("womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(". Suddenly your posture feels inexplicably wrong, so you shift to a more comfortable stance, unconsciously adjusting your ");if(!pc.hasLegs()){output("[pc.lowerBody]")}else{output("[pc.legs]")}output(" slightly and lifting your [pc.ass]");if(pc.tailCount>0){output(" and [pc.tails]")}output(" to better present your sex to those around you. Wait, what? That’s not how you’re supposed to stand! The thought is suddenly wiped from your mind as you begin to daydream vividly about ");if(pc.isTaur()){output("lying down")}else{output("bending over")}output(" and letting a train of horny studs creampie your twat");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" until your womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s")}output(" swell");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("s")}output(" with offspring. You’ve got a nursery ready for any future children already! Why aren’t you using it to its fullest capabilities?");output("\n\nThe ");if(pc.hasPheromones()){output("scent of fertile pheromones wafting from")}else{output("heat and moisture blossoming in")}output(" [pc.eachVagina] clues you in on what’s happening at the same time as your Codex beeping to alert you that <b>you have gone into heat!</b>");pc.createStatusEffect("Heat",5,25,10,3,false,"LustUp","Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+500% Fertility\n+25 Minimum Lust Rating\n+10 Libido\n+3 Tease Damage",false,28800,GLOBAL.STATUS_LOW_PRIORITY);pc.libido(1)}else if(!pc.inDeepHeat()){output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. At first nothing happens, but soon you begin to feel feverishly <i>hot</i>. Your already breed-hungry womb");if((t.vaginaTotal()-t.totalWombPregnancies())>1){output("s cry")}else{output(" cries")}output(" out in frustration. Before swallowing this pill you were horny; now you’re positively juicing yourself at the mere thought of a cock to fill your achingly empty puss");if((t.vaginaTotal()-t.totalWombPregnancies())===1){output("y")}else{output("ies")}output(". You’re desperate to be filled with hot cum, to have your breasts swell with milk to feed the young growing in your equally swollen belly! As your mind glazes over with daydreams of being thoroughly bred by endless hordes of virile mates, your posture becomes even more wantonly slutty, ");if(!pc.hasLegs()){output("ass thrust outwards")}else{output("legs spread wide")}if(pc.tailCount>0){output(", [pc.tails] waving and held as high as possible")}output(" to display your flushed, dripping sex to anyone who might be present.");output("\n\nThe unmistakable scent of a fertile, needy breeding bitch fills the area. ");if(pc.hasPheromones()){output("You realize immediately")}else{output("Even your untrained nose can detect")}output(" that the smell is coming from ");if(isSillyModeEnabled()){output("INSIDE THE HOUSE!!!")}else{output("[pc.eachVagina].")}output(" Clouds of potent pheromones advertising your ability and readiness to bear children waft up from [pc.eachVagina] like an organic smokestack");if(!pc.isCrotchExposed()){output(", even in spite of your [pc.lowerGarment]")}output(". Anyone that even comes close to you now is going to be able to tell how badly your body wants a baby, and you’re not sure you won’t just stick your [pc.ass] out and beg them for one.");output("\n\nIt’s painfully apparent to you now that <b>you are in a deep heat.</b> If you don’t plan on taking an endless string of creampies as deep as possible in your randy [pc.cunts] you should probably avoid other people for a few weeks. Given how fertile you are in your current state just a drop of cum could knock you up.");pc.setStatusValue("Heat",1,10);pc.setStatusValue("Heat",2,35);pc.setStatusValue("Heat",3,25);pc.setStatusValue("Heat",4,5);pc.setStatusTooltip("Heat","<b>You are in a deep heat!</b> Your body is begging for impregnation, increasing your libido and fertility but also your ability to tease.\n\n+"+pc.statusEffectv1("Heat")*100+"% Fertility\n+"+pc.statusEffectv2("Heat")+" Minimum Lust Rating\n+"+pc.statusEffectv3("Heat")+" Libido\n+"+pc.statusEffectv4("Heat")+" Tease Damage");pc.extendHeat(7*24*60)}else{output("You pop the pill into your mouth and swallow it with a bit of water from your canteen. It’s hard to discern any changes given how extreme your heat is already, but after several moments you feel your [pc.cunts] growing warmer. You groan as you realize instinctively that ");if(pc.heatMinutes()<22*24*60){pc.extendHeat(7*24*60);output("<b>your heat has been extended.</b>")}else{output("<b>you are as deep into heat as you can possibly go.</b>")}}</code></pre>
@@ -316,7 +316,7 @@
                 </div>
             </div>
             <!-- Sore/Very sore/Worn Out -->
-            <div class="statusGrid statusGridWide"  id="StatusSore">
+            <div class="statusGrid Grid2Wide"  id="StatusSore">
                 <div class="halfBoxTop">
                     <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
@@ -340,7 +340,7 @@
                     </div>
                 </div>
                 <div class="halfBoxBottom">
-                    <div class="StatusApplyGridFourAcross">
+                    <div class="GridFour ApplyStatusGrid">
                         <div class="substatusgrid">
                             <p class="codePadding"><strong>Apply Sore</strong></p>
                             <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre>
@@ -412,9 +412,9 @@
     </Details>
     <Details class="statusCategory">
         <summary class="IconTransformation">Transformative</summary>
-        <div class="StatusGridFourAcross">
+        <div class="GridFour">
             <!-- The Treatment -->
-            <div class="statusGrid statusGridWide" id="StatusTreatment">
+            <div class="statusGrid Grid2Wide" id="StatusTreatment">
                 <div class="halfBoxTop">
                     <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
@@ -425,7 +425,7 @@
                         </div>
                     </div>
                     <div class="statusEffectDescription">
-                        <div class="StatusApplyGridTwoAcross">
+                        <div class="GridTwo ApplyStatusGrid">
                             <div class="substatusgrid">
                                 <p>You are currently under the effects of the Treatment. Who knows what havoc it will wreak upon your system.</p>
                             </div>
@@ -445,7 +445,7 @@
                 </div>
             </div>
             <!-- Omega Oil / Omega Fever -->
-            <div class="statusGrid statusGridWide" id="StatusOmegaOil">
+            <div class="statusGrid Grid2Wide" id="StatusOmegaOil">
                 <div class="halfBoxTop">
                     <div class="statusBoxHeader">
                         <div class="statusEffectBlock">
@@ -463,7 +463,7 @@
                     </div>
                 </div>
                 <div class="halfBoxBottom">
-                    <div class="StatusApplyGridFourAcross">
+                    <div class="GridFour ApplyStatusGrid">
                         <div class="substatusgrid">
                             <p class="codePadding"><strong>Apply Strangely Warm</strong><br>You are more passively lusty than before.<br><br>(+15 minimum lust)</p>
                         </div>
@@ -477,7 +477,7 @@
                             <p class="codePadding"><strong>Give Omega Fever</strong><br>Your body will cycle through the stages of heat whenever your ass is not incubating.</p>
                         </div>
                     </div>
-                    <div class="StatusApplyGridFourAcross">
+                    <div class="GridFour ApplyStatusGrid">
                         <div class="substatusgrid">
                             <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">soreChange(3)</code></pre>
                         </div>
@@ -563,7 +563,7 @@
     </Details>
     <Details class="statusCategory">
         <summary class="IconBody">Body Dependent</summary>
-        <div class="StatusGridFourAcross">
+        <div class="GridFour">
             <!-- Bulky Belly -->
             <div class="statusGrid" id="StatusBulkyBelly">
                 <div class="halfBoxTop">
@@ -587,18 +587,18 @@
     </Details>
     <Details class="statusCategory">
         <summary class="Iconclothing">Clothing</summary>
-        <div class="StatusGridFourAcross">
+        <div class="GridFour">
 
         </div>
     </Details>
     <Details class="statusCategory ">
         <summary class="Iconhidden">Hidden</summary>
-        <div class="StatusGridFourAcross">
+        <div class="GridFour">
 
         </div>
     </Details>
 
-    <div class="StatusGridFourAcross">
+    <div class="GridFour">
         <!-- Anally-Filled -->
         <div class="statusGrid" id="StatusAnallyFIlled">
             <div class="halfBoxTop">
@@ -1364,9 +1364,9 @@
 <!-- NPC's -->
 <section class="topselector" id="content3">
     <h1 class="areaHeader">Crew</h1>
-        <div class="CharacterGridTwoAcross">
+        <div class="NPCGrid">
             <!-- Amber -->
-            <div class="NPCGridContainer">
+            <div class="NPCGridContainer Grid2Tall">
                 <div class="SubGrid">
                     <div>
                         <h2>Amber</h2>
@@ -1417,7 +1417,7 @@
             ANNO_X_ERRA_JOINED: 15
             ANNO_X_ERRA_WATCHED: 4
             ANNO_X_KAEDE_THREESOMED: 4   -->
-            <div class="NPCGridContainer">
+            <div class="NPCGridContainer Grid2Tall">
                 <div class="SubGrid">
                     <div>
                         <h2>Anno</h2>
@@ -1452,7 +1452,7 @@
                 </div>
             </div>
             <!-- Ardia -->
-            <div class="NPCGridContainer">
+            <div class="NPCGridContainer Grid2Tall">
                 <div class="SubGrid">
                     <div>
                         <h2>Ardia</h2>
@@ -1486,7 +1486,7 @@
                 </div>
             </div>
             <!--  -->
-            <div class="NPCGridContainer">
+            <div class="NPCGridContainer Grid2Tall">
                 <div class="SubGrid">
                     <div>
                         <h2>NPC</h2>
@@ -1509,6 +1509,21 @@
                         <h2>Minor Flags</h2>
                         <p><strong>Flag</strong></p>
                         <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="NPCGridContainer">
+                <div class="SubGrid">
+                    <div>
+                        <h2>NPC</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="CharImg">
+                        <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Amber" >W</a>
+                        <img src="imgsourceurl/resources/img/" alt="Clothed" loading="lazy">
+                        <img class="ImgB" src="imgsourceurl/resources/img/" alt="Clothed" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1681,7 +1696,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             <!-- Dryad / Amber -->
             <div class="enemyGrid FilterFuta FilterTaur FilterSceneCockSizeVarients FilterSceneTailCunt FilterSceneTaur FilterPregPlayer FilterScenePregnant">
                 <div class="halfBoxLeft">
@@ -1913,7 +1928,7 @@
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">tarratchEncounter()</code></pre>
                     <p>Character does not have a wiki page</p>
                 </div>
-                <div class="halfBoxRight MultiImgGridTwoAcross">
+                <div class="halfBoxRight GridTwoLocked">
                     <a class="characterWikiLink" href="" >W</a>
                     <div class="MultiImgGrid">
                         <img class="sideimg " src="imgsourceurl/resources/img/Shou/x1/tarratch_slaver_male.Shou.webp" alt="Clothed" loading="lazy">
@@ -1971,7 +1986,7 @@
                     <p>Appears during Plantation Quest</p>
                     <p>no sex scenes</p>
                 </div>
-                <div class="halfBoxRight MultiImgGridTwoAcross">
+                <div class="halfBoxRight GridTwoLocked">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Zil_Tribe" >W</a>
                     <div class="MultiImgGrid">
                         <img class="sideimg " src="imgsourceurl/resources/img/Cheshire/x1/zil_female.Cheshire.webp" alt="Clothed" loading="lazy">
@@ -2100,7 +2115,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             <!-- Chaurmine -->
             <div class="enemyGrid FilterMale">
                 <div class="halfBoxLeft">
@@ -2222,7 +2237,7 @@
                     <p><code class="language-js">null</code> for Cuntboy, <code class="language-js">1</code> for Herm</p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">flags.SYD_CBOY_GREW_COCK = null</code></pre>
                 </div>
-                <div class="halfBoxRight MultiImgGridTwoAcross">
+                <div class="halfBoxRight GridTwoLocked">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sydian_Cuntboy" >W</a>
                     <div class="MultiImgGrid">
                         <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/sydian_cboy.Adjatha.webp" alt="Clothed" loading="lazy">
@@ -2278,7 +2293,7 @@
                     <p><strong>Standard Encounter</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterASexBot()</code></pre>
                 </div>
-                <div class="halfBoxRight MultiImgGridTwoAcross">
+                <div class="halfBoxRight GridTwoLocked">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sex_Bot" >W</a>
                     <div class="MultiImgGrid">
                         <img class="sideimg" src="imgsourceurl/resources/img/Uthstar/x1/sexbot_female.Uthstar.webp" alt="Clothed" loading="lazy">
@@ -2359,7 +2374,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             <!-- Cockvine Adult -->
             <div class="enemyGrid FilterMale">
                 <div class="halfBoxLeft">
@@ -2574,7 +2589,7 @@
                     <p><strong>Silly Mode Encounter</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">crystalGooFenBurps()</code></pre>
                 </div>
-                <div class="halfBoxRight MultiImgGridTwoAcross">
+                <div class="halfBoxRight GridTwoLocked">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ganraen_Knight" >W</a>
                     <div class="MultiImgGrid">
                         <img class="sideimg" src="imgsourceurl/resources/img/Jay_Echo/x1/goo_knight_blue.Jay_Echo.webp" alt="Clothed" loading="lazy">
@@ -2595,7 +2610,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ganrael_Ambusher" >W</a>
-                    <div class="MultiImgGridTwoAcross">
+                    <div class="GridTwoLocked">
                         <div class="MultiImgGrid">
                             <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue.Shou.webp" alt="Clothed" loading="lazy">
                             <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue_bimbo.Shou.webp" alt="Nude" loading="lazy">
@@ -2616,7 +2631,7 @@
                 </div>
                 <div class="halfBoxRight">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Ganrael_DeadEye" >W</a>
-                    <div class="MultiImgGridTwoAcross">
+                    <div class="GridTwoLocked">
                         <div class="MultiImgGrid">
                             <img class="sideimg" src="imgsourceurl/resources/img/Shou/x1/ganrael_2_blue.Shou.webp" alt="Clothed" loading="lazy">
                             <img class="sideimg sideimglayer" src="imgsourceurl/resources/img/Shou/x1/ganrael_0_blue_bimbo.Shou.webp" alt="Nude" loading="lazy">
@@ -2721,7 +2736,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             <!--Bored Jumpers-->
             <div class="enemyGrid FilterFuta FilterSceneHeat FilterSceneBreedersBliss FilterSceneTaur FilterSceneRut FilterPregPlayer FilterPregNPC">
                 <div class="halfBoxLeft">
@@ -2843,7 +2858,7 @@
                     <p><strong>Standard Encounter</strong>: Will ignore you if wearing prisoner outfit</p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterPunkSecOp()</code></pre>
                 </div>
-                <div class="halfBoxRight MultiImgGridTwoAcross">
+                <div class="halfBoxRight GridTwoLocked">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Cyberpunk_Security_Operatives" >W</a>
                     <div class="MultiImgGrid">
                         <img class="sideimg " src="imgsourceurl/resources/img/Adjatha/x1/punk_secop_female.Adjatha.webp" alt="Clothed" loading="lazy">
@@ -2980,7 +2995,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             <!-- Gabilani Chemist / Nusha -->
             <div class="enemyGrid FilterFemale">
                 <div class="halfBoxLeft">
@@ -3112,7 +3127,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             
         </div>
     </div>
@@ -3134,7 +3149,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             <!-- Gryvain Techie -->
             <div class="enemyGrid FilterFuta FilterSceneCockKnot FilterSceneCockSizeVarients FilterSceneCockEjaculationVarients FilterSceneVaginalWetness FilterSceneTaur FilterSceneLibido FilterSceneLongTounge FilterSceneAphrodisiacTounge FilterSceneDeepthroat FilterSceneSnakeByte FilterScenePregnant FilterPregPlayer FilterSceneCockNoBalls">
                 <div class="halfBoxLeft">
@@ -3155,7 +3170,7 @@
                     <p><strong>Standard Encounter</strong></p>
                     <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">encounterTigerLionBroForFuns()</code></pre>
                 </div>
-                <div class="halfBoxRight MultiImgGridTwoAcross">
+                <div class="halfBoxRight GridTwoLocked">
                     <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Salvager" >W</a>
                     <div class="MultiImgGrid">
                         <img class="sideimg" src="imgsourceurl/resources/img/Adjatha/x1/scavs_salvager_lion.Adjatha.webp" alt="Clothed" loading="lazy">
@@ -3206,7 +3221,7 @@
                 </div>
             </div>
         </div>
-        <div class="CharacterGridThreeAcross">
+        <div class="GridThree">
             <!-- Korgonne Barbarian Female -->
             <div class="enemyGrid FilterFemale FilterSceneStrapon FilterSceneCocHyper FilterSceneTaur">
                 <div class="halfBoxLeft">
@@ -3434,7 +3449,7 @@
 </section>
 <!-- Events -->
 <section class="topselector" id="content5">
-    <div class="CharacterGridThreeAcross">
+    <div class="GridThree">
         <!-- Breedwell -->
         <div class="eventGrid">
             <div class="halfBoxLeft">
@@ -3475,7 +3490,7 @@
 </section>
 <!-- Flags -->
 <section class="topselector" id="content6">
-    <div class="CharacterGridThreeAcross">
+    <div class="GridThree">
         <!-- Korgonne -->
         <div class="flagGrid">
             <div class="halfBoxLeft">
