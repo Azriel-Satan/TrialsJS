@@ -498,8 +498,46 @@ details[open] summary{
     background-color: color-mix(in srgb, var(--paleColor), white 10%);
     border-radius: 35px 35px 0 35px;
   }
+  5% {
+    background-color: color-mix(in srgb, var(--paleColor), white 9.5%);}
+  10% {
+    background-color: color-mix(in srgb, var(--paleColor), white 9%)}
+  15% {
+    background-color: color-mix(in srgb, var(--paleColor), white 8.5%)}
+  20% {
+    background-color: color-mix(in srgb, var(--paleColor), white 8%)}
+  25% {
+    background-color: color-mix(in srgb, var(--paleColor), white 7.5%)}
+  30% {
+    background-color: color-mix(in srgb, var(--paleColor), white 7%)}
+  35% {
+    background-color: color-mix(in srgb, var(--paleColor), white 6.5%)}
+  40% {
+    background-color: color-mix(in srgb, var(--paleColor), white 6%)}
+  45% {
+    background-color: color-mix(in srgb, var(--paleColor), white 5.5%)}
+  50% {
+    background-color: color-mix(in srgb, var(--paleColor), white 5%)}
+  55% {
+    background-color: color-mix(in srgb, var(--paleColor), white 4.5%)}
+  60% {
+    background-color: color-mix(in srgb, var(--paleColor), white 4%)}
+  65% {
+    background-color: color-mix(in srgb, var(--paleColor), white 3.5%)}
+  70% {
+    background-color: color-mix(in srgb, var(--paleColor), white 3%)}
+  75% {
+    background-color: color-mix(in srgb, var(--paleColor), white 2.5%)}
+  80% {
+    background-color: color-mix(in srgb, var(--paleColor), white 2%)}
+  85% {
+    background-color: color-mix(in srgb, var(--paleColor), white 1.5%)}
+  90% {
+    background-color: color-mix(in srgb, var(--paleColor), white 1%)}
+  95% {
+    background-color: color-mix(in srgb, var(--paleColor), white 0.5%)}
   100% {
-    background-color: var(--paleColor);
+    background-color: color-mix(in srgb, var(--paleColor), white 0%);
     border-radius: 5px 5px 0 5px;
   }
   
