@@ -230,7 +230,6 @@ input:checked + label {
   text-align: left;;
   background-color: var(--paleColor);
   min-height: 300px;
-  max-width: 23vw;
 }
 .MultiImgGrid img{
   height: 100%;
@@ -285,25 +284,144 @@ input:checked + label {
   grid-row: span 2;
 }
 
-.enemyGrid {
-  position: relative;
+/* Enemies Page */
+.enemyGridContainer {
   margin: 3px;
   border-radius: 10px 0 0 10px;
-  display:block;
   text-align: left;
   background-color: var(--paleColor);
   min-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-auto-rows: minmax(100px, auto);
 
+  & .code-toolbar, p {
+    border-radius: 10px 0 0 10px;
+    padding-left: 3px;
+  }
   & h2 {
     margin: 0;
     padding: 10px;
     color: white;
-    background-color: var(--paleColor);
   }
   & pre{
     max-width: 15vw;
   }
+
+  & .CharImg {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    background-color: var(--paleColor);
+    border-radius: 10px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: minmax(100px, auto);
+    place-items: center;
+
+    & img:last-child:not(:first-of-type) {
+      display:none;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    &:hover img:first-of-type:not(:last-of-type) {
+      display:none;
+    }
+    &:hover img:last-of-type {
+      
+      display:block;
+    }
+
+    &:hover {
+      color: var(--paleColor);
+    }
+    & img {
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      background-color: var(--paleColor);
+      position: absolute;
+    }
+  }
+
+    
+    /* Saved incase floats are ever used for Multi-grid images
+    & .left img, .right img{
+      position: absolute;
+      width: 50%;
+    }
+    & .left img{
+      top: 0;
+      left: 0;
+    }
+    & .right img{
+      top: 0;
+      right: 0;
+    }
+    */
+  }
+  & .DoubleCharImg {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    background-color: var(--paleColor);
+    border-radius: 10px 10px 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: minmax(100px, auto);
+    place-items: normal;
+
+    & img {
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      background-color: var(--paleColor);
+      position: absolute;
+    }
+    
+    & div {
+      background-color: var(--paleColor);
+      min-height: 300px;
+      display: grid;
+      grid-template-columns: repeat(2, 100%);
+      padding: 0;
+  
+      &:hover {
+        color: var(--paleColor);
+      }
+      & div {
+        position: relative;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        background-color: var(--paleColor);
+        border-radius: 10px 10px 10px 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-auto-rows: minmax(100px, auto);
+        place-items: center;
+
+        & img:last-child:not(:first-of-type) {
+          display:none;
+          transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+    
+        &:hover img:first-of-type:not(:last-of-type) {
+          display:none;
+        }
+        &:hover img:last-of-type {
+          
+          display:block;
+        }
+      }
+  }
 }
+
+
 
 /* NPC Page */
 .NPCGrid {
@@ -454,7 +572,6 @@ input:checked + label {
   text-align: left;;
   background-color: var(--paleColor);
   margin: 2px;
-  max-width: 22vw;
 }
 
 .widthsideimg {
@@ -469,25 +586,6 @@ input:checked + label {
   background-color: var(--paleColor);
 }
 
-.sideimg {
-  float: right;
-  height: 100%;
-  max-width: 50%;
-  max-height: 100%;
-  object-fit: cover;
-  position: absolute;
-  right: 0;
-  top: 0;
-  background-color: var(--paleColor);
-}
-
-.sideimglayer {
-  opacity: 0;
-  }
-  .sideimglayer:hover {
-  transition: opacity 0.1s ease-in-out;
-  opacity: 1;
-  }
 .sideimglayerinv {
     opacity: 100;
     }
@@ -709,12 +807,12 @@ details summary > * {
 }
 
 /*<style> */
-.enemyGrid {
+.enemyGridContainer {
   display: none;
 }
 
 .show {
-  display: block;
+  display: grid;
 }
 
 .areaContainer {
