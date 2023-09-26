@@ -51,7 +51,31 @@
 
 <input class="HeaderTabs" id="tab6" type="radio" name="tabs">
 <label for="tab6">Flags</label>
-    
+
+<!-- Remember Last tab -->
+<script>
+    const tabs = document.querySelectorAll(".HeaderTabs");
+    const storageKey = "activeTab";
+
+    // Function to save the active tab to localStorage
+    const saveActiveTab = () => localStorage.setItem(storageKey, [...tabs].find(tab => tab.checked)?.id || "");
+
+    // Function to retrieve the active tab from localStorage and set it
+    const setActiveTab = () => {
+        const activeTabId = localStorage.getItem(storageKey);
+        if (activeTabId) {
+        const activeTab = document.getElementById(activeTabId);
+        if (activeTab) activeTab.checked = true;
+        }
+    };
+
+    // Add event listeners to save and set the active tab
+    tabs.forEach(tab => tab.addEventListener("change", saveActiveTab));
+
+    // Set the active tab when the page loads
+    window.addEventListener("load", setActiveTab);
+</script>
+
 <section class="topselector" id="content1">
     <div class="homepageGrid">
         <div class="homepageLogo">
@@ -84,23 +108,38 @@
                 </div>
                 <script>
                     $(document).ready(function() {
+                        // Function to replace image sources
+                        function replaceImageSources(replacementUrl) {
+                            var textToReplace = 'imgsourceurl';
+
+                            $('img').each(function() {
+                            var currentSrc = $(this).attr('src');
+                            if (currentSrc.includes(textToReplace)) {
+                                $(this).attr('src', currentSrc.replace(new RegExp(textToReplace, 'g'), replacementUrl));
+                            }
+                            });
+                        }
+
+                        // Load the saved replacementUrl from localStorage
+                        var savedReplacementUrl = localStorage.getItem('replacementUrl');
+                        if (savedReplacementUrl) {
+                            $('#replacementUrl').val(savedReplacementUrl);
+                            replaceImageSources(savedReplacementUrl); // Replace images with the saved URL on page load
+                        }
+
                         // When the button is clicked
                         $("#replacementUrlSubmit").click(function() {
                             // Replace the image source
                             $("#homepageLogoImg").attr("src", "imgsourceurl/resources/steele_tech_emblem.svg");
-                        });
-                    });
-                    $(document).ready(function() {
-                        $('#replacementUrlSubmit').click(function() {
-                            var replacementUrl = $('#replacementUrl').val();
-                            var textToReplace = 'imgsourceurl';
-            
-                            $('img').each(function() {
-                                var currentSrc = $(this).attr('src');
-                                if (currentSrc.includes(textToReplace)) {
-                                    $(this).attr('src', currentSrc.replace(new RegExp(textToReplace, 'g'), replacementUrl));
-                                }
-                            });
+
+                            // Get and trim the input value
+                            var replacementUrl = $('#replacementUrl').val().trim();
+
+                            // Save the trimmed input value to localStorage
+                            localStorage.setItem('replacementUrl', replacementUrl);
+
+                            // Replace image sources
+                            replaceImageSources(replacementUrl);
                         });
                     });
                 </script>
@@ -2086,91 +2125,176 @@
     </div>
 </section>
 <!-- Roaming Encounters -->
-<section class="topselector" id="content4">
+<section class="topselector" id="content4"> 
     <div id="EnemyFilter">
-        <button class="btn active" onclick="filterSelection('all')">Show all</button>
-        <button class="btn" onclick="filterSelection('FilterSillyMode')">Silly Mode Varients</button>
-        <button class="btn" onclick="filterSelection('FilterSeasonal')">Seasonal Event</button>
-        <button class="btn" onclick="filterSelection('FilterPregPlayer')">Can Impregnate Player</button>
-        <button class="btn" onclick="filterSelection('FilterPregNPC')">NPC Pregnancy</button>
-        <button class="btn" onclick="filterSelection('FilterPregPlayerTail')">Can Impregnate Player Tail</button>
-        <button class="btn" onclick="filterSelection('FilterPregNPCTail')">NPC Tail Pregnancy</button>
-        <p><strong>Enemy Body Type</strong> (sex is based on genitals)</p>
-        <button class="btn" onclick="filterSelection('FilterMale')">Male</button>
-        <button class="btn" onclick="filterSelection('FilterFemale')">Female</button>
-        <button class="btn" onclick="filterSelection('FilterFuta')">Futa</button>
-        <button class="btn" onclick="filterSelection('FilterShemale')">Shemale</button>
-        <button class="btn" onclick="filterSelection('FilterUnusualSex')">Unusual Sex</button>
-        <button class="btn" onclick="filterSelection('FilterTaur')">Taur</button>
-        <button class="btn" onclick="filterSelection('FilterNaga')">Naga</button>
-        <button class="btn" onclick="filterSelection('FilterTailCock')">Tail Cock</button>
-        <button class="btn" onclick="filterSelection('FilterTailCunt')">Tail Cunt</button>
+        <div id="MainFilters">
+            <div><!-- Show All -->
+                <button class="btn active FirstItem" onclick="filterSelection('all')">Show all</button>
+            </div>
+            <div>
+                <button class="btn" onclick="filterSelection('FilterSillyMode')">Silly Mode Varients</button>
+                <button class="btn" onclick="filterSelection('FilterSeasonal')">Seasonal Event</button>
+                <button class="btn" onclick="filterSelection('FilterPregPlayer')">Can Impregnate Player</button>
+                <button class="btn" onclick="filterSelection('FilterPregNPC')">NPC Pregnancy</button>
+                <button class="btn" onclick="filterSelection('FilterPregPlayerTail')">Can Impregnate Player Tail</button>
+                <button class="btn" onclick="filterSelection('FilterPregNPCTail')">NPC Tail Pregnancy</button>
+            </div>
+        </div>
+        
+        <div id="Enemy">
+            <p class="FirstItem">Enemy</p>
+            <div>
+                <div><!-- NPC Sex -->
+                    <p>Sex</p>
+                    <button class="btn" onclick="filterSelection('FilterMale')">Male</button>
+                    <button class="btn" onclick="filterSelection('FilterFemale')">Female</button>
+                    <button class="btn" onclick="filterSelection('FilterFuta')">Futa</button>
+                    <button class="btn" onclick="filterSelection('FilterShemale')">Shemale</button>
+                    <button class="btn" onclick="filterSelection('FilterUnusualSex')">Unusual Sex</button>
+                </div>
+                <div><!-- NPC Bodyshape -->
+                    <p>Body</p>
+                    <button class="btn" onclick="filterSelection('FilterTaur')">Taur</button>
+                    <button class="btn" onclick="filterSelection('FilterNaga')">Naga</button>
+                    <!-- Plant -->
+                    <!-- Animal -->
+                    <!-- Robot -->
+                </div>
+                <div><!-- NPC Extra Parts -->
+                    <p>Tail</p>
+                    <button class="btn" onclick="filterSelection('FilterTailCock')">Tail Cock</button>
+                    <button class="btn" onclick="filterSelection('FilterTailCunt')">Tail Cunt</button>
+                </div>
+            </div>
+        </div>
+        <div id="Player">
+            <p class="FirstItem">Player</p>
+            <div>
+                <div><!-- Body Shape -->
+                    <p>Shape</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneTaur')">Taur</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneNaga')">Naga</button>
+                </div>
+                <div><!-- Body Stats -->
+                    <p>Body</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneTone')">Tone</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneThickness')">Thickness</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneFemininity')">Femininity</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneHeight')">Height</button>
+                </div>
+                <div><!-- Perks -->
+                    <p>Perks</p>
+                        <button class="btn" onclick="filterSelection('FilterSceneBimbo')">Bimbo</button>
+                        <button class="btn" onclick="filterSelection('FilterSceneHimbo')">Himbo</button>
+                        <button class="btn" onclick="filterSelection('FilterScenePainslut')">Painslut</button>
+                        <button class="btn" onclick="filterSelection('FilterSceneButtslut')">Buttslut</button>
+                </div>
+                <div><!-- Status -->
+                    <p>Status</p>
+                        <button class="btn" onclick="filterSelection('FilterSceneHeat')">Heat</button>
+                        <button class="btn" onclick="filterSelection('FilterSceneRut')">Rut</button>
+                        <button class="btn" onclick="filterSelection('FilterScenePregnant')">Pregnant</button>
+                </div>
+                    <div><!-- Stats -->
+                    <p>Stats</p>
+                        <button class="btn" onclick="filterSelection('FilterSceneAlignment')">Alignment</button>
+                        <button class="btn" onclick="filterSelection('FilterSceneLibido')">Libido</button>
+                        <button class="btn" onclick="filterSelection('FilterSceneKnowledge')">Knowledge</button>
+                        <button class="btn" onclick="filterSelection('FilterSceneUnclothed')">Unclothed</button>
+                        <button class="btn" onclick="filterSelection('FilterSceneExhibitionism')">Exhibitionism</button>
+                </div>
+                <div><!-- Mouth -->
+                    <p>Mouth</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneDeepthroat')">Deepthroat</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneSnakeByte')">SnakeByte</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneLongTounge')">Long Tounge</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneAphrodisiacTounge')">Aphrodisiac Tounge</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneMyrTounge')">Myr Aphrodisiac Tounge</button>
+                </div>
+                
+                <div><!-- Breasts -->
+                    <p>Breasts</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneBreastSizeVarients')">Size Varients</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneBreastLactation')">Lactation</button>
+                </div>
+                <div><!-- Vagina -->
+                    <p>Vagina</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneVaginalWetness')">Wetness</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneVaginalLooseness')">Looseness</button>
+                </div>
+                <div><!-- Penis -->
+                    <p>Penis</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneCocHyper')">Hyper Cocks</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockMicro')">Small Penis</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockSizeVarients')">Penis Size Varients</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockMulti')">Multiple Peni</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockKnot')">Knot</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockSheath')">Sheath</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockFlare')">Flare</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockEjaculationVarients')">Ejaculation Size Varients</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneCockNoBalls')">No Balls</button>
+                </div>
+                <div><!-- Ass -->
+                    <p>Ass</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneButtRating')">Butt Rating</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneBubbleButt')">Bubble Butt</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneButtWetness')">Wetness</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneButtLooseness')">Looseness</button>
+                </div>
+                <div><!-- Tail -->
+                    <p>Tail</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneTail')">Tail</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneTailCock')">Tail Cock</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneTailCunt')">Tail Cunt</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneParasiticTailCock')">Parasitic Tail Cock</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneParasiticTailCunt')">Parasitic Tail Cunt</button>
+                </div>
+                <div><!-- Possesion -->
+                    <p>Possesion</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneStrapon')">Strapon</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneThrobb')">Throbb</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneBreedersBliss')">Breeders Bliss</button>
+                </div>
+                <div><!-- Race -->
+                    <p>Race</p>
+                    <button class="btn" onclick="filterSelection('FilterSceneFurVarient')">Has Fur</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneHorns')">Horns</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneInhumanTounge')">Inhuman Tounge</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneKaithritSpecific')">Kaithrit</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneFelineSpecific')">Feline</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneAsaurSpecific')">Asaur</button>
+                    <button class="btn" onclick="filterSelection('FilterScenCanidSpecific')">Canid</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneBovineSpecific')">Bovine</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneLaquineSpecific')">Laquine</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneGryvainSpecific')">Gryvain</button>
+                    <button class="btn" onclick="filterSelection('FilterSceneRodianSpecific')">Rodian</button>
+                </div>
+            </div>
+        </div>
         <Details>
             <summary class="Iconfilters">Incomplete Filters</summary>
             <p>Player Stats/Perks</p>
-            <button class="btn" onclick="filterSelection('FilterSceneBimbo')">Bimbo</button>
-            <button class="btn" onclick="filterSelection('FilterSceneHimbo')">Himbo</button>
-            <button class="btn" onclick="filterSelection('FilterScenePainslut')">Painslut</button>
-            <button class="btn" onclick="filterSelection('FilterSceneButtslut')">Buttslut</button>
-            <button class="btn" onclick="filterSelection('FilterSceneAlignment')">Alignment</button>
-            <button class="btn" onclick="filterSelection('FilterSceneLibido')">Libido Varients</button>
-            <button class="btn" onclick="filterSelection('FilterSceneKnowledge')">Knowledge Varients</button>
-            <button class="btn" onclick="filterSelection('FilterSceneUnclothed')">Unclothed Varients</button>
-            <button class="btn" onclick="filterSelection('FilterSceneExhibitionism')">Exhibitionism Varients</button>
+            
+            
+            
             <P>Player Body</P>
-            <button class="btn" onclick="filterSelection('FilterSceneTaur')">Taur</button>
-            <button class="btn" onclick="filterSelection('FilterSceneNaga')">Naga</button>
-            <button class="btn" onclick="filterSelection('FilterSceneHeat')">Heat</button>
-            <button class="btn" onclick="filterSelection('FilterSceneRut')">Rut</button>
-            <button class="btn" onclick="filterSelection('FilterScenePregnant')">Pregnant</button>
-            <button class="btn" onclick="filterSelection('FilterSceneTone')">Tone</button>
-            <button class="btn" onclick="filterSelection('FilterSceneThickness')">Thickness</button>
-            <button class="btn" onclick="filterSelection('FilterSceneFemininity')">Femininity</button>
-            <button class="btn" onclick="filterSelection('FilterSceneHeight')">Height</button>
+            
+            
+            
             <p>Player Head/Tail</p>
-            <button class="btn" onclick="filterSelection('FilterSceneDeepthroat')">Deepthroat</button>
-            <button class="btn" onclick="filterSelection('FilterSceneSnakeByte')">SnakeByte</button>
-            <button class="btn" onclick="filterSelection('FilterSceneLongTounge')">Long Tounge</button>
-            <button class="btn" onclick="filterSelection('FilterSceneAphrodisiacTounge')">Aphrodisiac Tounge</button>
-            <button class="btn" onclick="filterSelection('FilterSceneMyrTounge')">Myr Aphrodisiac Tounge</button>
-            <button class="btn" onclick="filterSelection('FilterSceneTail')">Tail</button>
-            <button class="btn" onclick="filterSelection('FilterSceneTailCock')">Tail Cock</button>
-            <button class="btn" onclick="filterSelection('FilterSceneTailCunt')">Tail Cunt</button>
-            <button class="btn" onclick="filterSelection('FilterSceneParasiticTailCock')">Parasitic Tail Cock</button>
-            <button class="btn" onclick="filterSelection('FilterSceneParasiticTailCunt')">Parasitic Tail Cunt</button>
-            <button class="btn" onclick="filterSelection('FilterSceneHorns')">Horns</button>
+            
+            
+            
             <P>Player Peni variations</P>
-            <button class="btn" onclick="filterSelection('FilterSceneCocHyper')">Hyper Cocks</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockMicro')">Small Penis</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockSizeVarients')">Penis Size Varients</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockMulti')">Multiple Peni</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockKnot')">Knot</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockSheath')">Sheath</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockFlare')">Flare</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockEjaculationVarients')">Ejaculation Size Varients</button>
-            <button class="btn" onclick="filterSelection('FilterSceneCockNoBalls')">No Balls</button>
+            
             <p>Player Breasts/Vaginal/Ass variations</p>
-            <button class="btn" onclick="filterSelection('FilterSceneBreastSizeVarients')">Breast Size Varients</button>
-            <button class="btn" onclick="filterSelection('FilterSceneBreastLactation')">Breast Lactation</button>
-            <button class="btn" onclick="filterSelection('FilterSceneVaginalWetness')">Vaginal Wetness</button>
-            <button class="btn" onclick="filterSelection('FilterSceneVaginalLooseness')">Vaginal Looseness</button>
-            <button class="btn" onclick="filterSelection('FilterSceneButtRating')">Butt Rating</button>
-            <button class="btn" onclick="filterSelection('FilterSceneBubbleButt')">Bubble Butt</button>
+            
+            
+            
             <P>Player Possesion</P>
-            <button class="btn" onclick="filterSelection('FilterSceneStrapon')">Strapon</button>
-            <button class="btn" onclick="filterSelection('FilterSceneThrobb')">Throbb</button>
-            <button class="btn" onclick="filterSelection('FilterSceneBreedersBliss')">Breeders Bliss</button>
+            
             <p>Player Race</p>
-            <button class="btn" onclick="filterSelection('FilterSceneFurVarient')">Has Fur</button>
-            <button class="btn" onclick="filterSelection('FilterSceneInhumanTounge')">Inhuman Tounge</button>
-            <button class="btn" onclick="filterSelection('FilterSceneKaithritSpecific')">Kaithrit</button>
-            <button class="btn" onclick="filterSelection('FilterSceneFelineSpecific')">Feline</button>
-            <button class="btn" onclick="filterSelection('FilterSceneAsaurSpecific')">Asaur</button>
-            <button class="btn" onclick="filterSelection('FilterScenCanidSpecific')">Canid</button>
-            <button class="btn" onclick="filterSelection('FilterSceneBovineSpecific')">Bovine</button>
-            <button class="btn" onclick="filterSelection('FilterSceneLaquineSpecific')">Laquine</button>
-            <button class="btn" onclick="filterSelection('FilterSceneGryvainSpecific')">Gryvain</button>
-            <button class="btn" onclick="filterSelection('FilterSceneRodianSpecific')">Rodian</button>
+            
         </Details>
     </div>
     <script>

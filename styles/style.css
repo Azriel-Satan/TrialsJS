@@ -414,8 +414,6 @@ input:checked + label {
   */
 }
 
-
-
 /* NPC Page */
 .NPCGrid {
   display: grid;
@@ -875,7 +873,7 @@ details summary > * {
 .btn {
   border: none;
   outline: none;
-  padding: 8px 10px;
+  padding: 8px;
   background-color: var(--paleColor);
   cursor: pointer;
   font: 14px/1 'Open Sans', sans-serif;
@@ -891,6 +889,105 @@ details summary > * {
 .btn.active {
   background-color: var(--paleFocusColor);
   color: white;
+}
+
+/* Enemy Tags Filter */
+#EnemyFilter {
+  gap: 5px;
+  flex-wrap: wrap;
+  
+  .FirstItem{
+    width: 100px;
+  }
+
+  & div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    gap: 5px;
+  }
+
+  & #MainFilters {
+    background-color: color-mix(in srgb, var(--paleFocusColor), blue 10%);
+    
+    & div:nth-child(1) {
+      padding: 10px;
+      background-color: var(--backgroundColor);
+      border-radius: 5px;
+      margin-left: 5px;
+  
+      & button {
+        font-size: 18px;
+      }
+    }
+    & div:nth-child(2) {
+      padding: 10px;
+      background-color: var(--backgroundColor);
+      border-radius: 5px;
+      display: flex;
+      & button {
+        font-size: 14px;
+      }
+    }
+  }
+
+& #Enemy {
+  background-color: color-mix(in srgb, var(--paleFocusColor), black 10%);
+  padding: 2px;
+  border-radius: 5px;
+
+  & p {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+  
+  & div {
+    display: flex;
+    flex-wrap: wrap;
+
+    & p {
+      font-size: large;
+    }
+
+
+    & div {
+      margin: 0;
+      padding: 10px;
+      background-color: var(--backgroundColor);
+      border-radius: 5px;
+    }
+  }
+}
+& #Player {
+  background-color: color-mix(in srgb, var(--paleFocusColor), white 10%);
+  padding: 2px;
+  border-radius: 5px;
+
+  & p {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+  
+  & div {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 0;
+
+    & p {
+      font-size: large;
+    }
+
+
+    & div {
+      padding: 10px;
+      background-color: var(--backgroundColor);
+      border-radius: 5px;
+    }
+  }
+}
+
+
 }
 
 /* Links */
