@@ -133,7 +133,7 @@
                             $("#homepageLogoImg").attr("src", "imgsourceurl/resources/steele_tech_emblem.svg");
 
                             // Get and trim the input value
-                            var replacementUrl = $('#replacementUrl').val().trim();
+                            var replacementUrl = $('#replacementUrl').val().trim().replace(/['"‘’“”]/g, '');
 
                             // Save the trimmed input value to localStorage
                             localStorage.setItem('replacementUrl', replacementUrl);
