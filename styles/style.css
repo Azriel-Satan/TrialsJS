@@ -1239,6 +1239,10 @@ svg{
       text-align: left;
       border: none;
       border-radius: 5px;
+
+      &:hover {
+        background-color: color-mix(in srgb, var(--paleColor), white 10%);
+      }
     }
 
     & #Changelog {
