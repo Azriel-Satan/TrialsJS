@@ -1508,8 +1508,8 @@
                 <div class="SubGrid">
                     <div>
                         <h2>Anno</h2>
-                        <p><strong>Encounter</strong></p>
-                        <pre><code class="language-js " data-prismajs-copy="Copy">Encounter()</code></pre>
+                        <p><strong>Recruitment Instructions</strong></p>
+                        <p>Anno can be found on Tarkus, to recruit her complete the <a  class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Ghost_Deck" >Ghost Deck</a> quest, alternatively if Tarkus is destroyed during the <a  class="WikiLink" href="https://wiki.smutosaur.us/TiTS/Stellar_Tether" >Stellar Tether</a> quest, she will ask to join. </p>
                     </div>
                     <div class="CharImg">
                         <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Anno" >W</a>
@@ -1524,19 +1524,113 @@
                         <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_CREWMEMBER</code></pre>
                         <p><strong>Has Maid Outfit</strong> null = Doesent have it, 1 = Bought on Tarvos, 2 = Bought on Uveto</p>
                         <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_MAID_OUTFIT</code></pre>
-                        <p><strong>Crew</strong> 1 = Not recruited, 2 Crewmember, 3 Kicked off ship</p>
-                        <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_CREWMEMBER</code></pre>
+                        <div>
+                            <p><strong>Owns Strapon</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_OWNS_LIGHT_STRAPON</code></pre>
+                        </div>
                     </div>
                     <div>
-                        <h2>Minor Flags</h2>
-                        <p><strong>Initial Recruitment</strong> null = unseen, 1 = Seen</p>
-                        <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_CREWMEMBER_INITIALSCENE</code></pre>
-                        <p><strong>Sex Count</strong></p>
-                        <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SEXED</code></pre>
-                        <p><strong>Shower Sex Count</strong></p>
-                        <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SHOWER_SEX</code></pre>
+                        <h2> Flags</h2>
+                        <div>
+                            <p><strong>Initial Recruitment</strong> Values: <code class="language-js " data-prismajs-copy="Copy">undefined</code>, <code class="language-js " data-prismajs-copy="Copy">1</code></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_CREWMEMBER_INITIALSCENE</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Sleepwith Introduced</strong> Values: <code class="language-js " data-prismajs-copy="Copy">undefined</code>, <code class="language-js " data-prismajs-copy="Copy">1</code></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SLEEPWITH_INTRODUCED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Gift Wrapped Event Happened</strong> Values: <code class="language-js " data-prismajs-copy="Copy">undefined</code>, <code class="language-js " data-prismajs-copy="Copy">1</code></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_GIFT_WRAPPED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Scritches Event Happened</strong> Values: <code class="language-js " data-prismajs-copy="Copy">undefined</code>, <code class="language-js " data-prismajs-copy="Copy">1</code></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SCRITCHES_HAPPENED</code></pre>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
+                <Details>
+                    <summary class="">Minor Flags</summary>
+                    <div class="MinorGrid">
+                        <div>
+                            <p><strong>Sex Count</strong> <code class="language-js " data-prismajs-copy="Copy">undefined</code> to <code class="language-js " data-prismajs-copy="Copy">99999999</code></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SEXED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Shower Sex Count</strong> <code class="language-js " data-prismajs-copy="Copy">undefined</code> to <code class="language-js " data-prismajs-copy="Copy">99999999</code></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SHOWER_SEX</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Shop Closed</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNOS_SHOP_CLOSED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Away</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.AANNO_AWAY</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Anno X Case Threesome Count</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_KASE_THREESOME</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Maid Sex Count</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_MAID_SEX</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Offered Mission</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_MISSION_OFFER</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Nove Update</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_NOVA_UPDATE</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Shot With</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SHOT_WITH</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Snuggled after Shooting</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SNUGGLED_AFTER_SHOOTOFF</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Strapon Mods available</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_STRAPON_MODS_ENABLED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Syri Game</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_SYRI_GAME</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Talked About Memo</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_TALKED_ABOUT_THE_MEMO</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Talked About Dad</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_TALKED_ABOUT_YOUR_DAD</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Time till next Maid encounter</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_TRAVEL_MAID_TS</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Anno X Erra Count</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_X_ERRA_INTRODUCED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Anno X Erra Joined Count</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_X_ERRA_JOINED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Anno X Erra Watched Count</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_X_ERRA_WATCHED</code></pre>
+                        </div>
+                        <div>
+                            <p><strong>Anno X Kaede Threesome Count</strong></p>
+                            <pre><code class="language-js " data-prismajs-copy="Copy">flags.ANNO_X_KAEDE_THREESOMED</code></pre>
+                        </div>
+                    </div>
+                </Details>
             </div>
             <!-- Ardia -->
             <div class="NPCGridContainer Grid2Tall">

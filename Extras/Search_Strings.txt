@@ -191,7 +191,14 @@
     #Gryvain
     #Rodian
 
+pc.physique
+pc.PQ
+pc.reflexes
+pc.aim
 pc.intelligence
+pc.willpower
+pc.libido
+pc.refractory
 pc.hasVaginaFlag(GLOBAL.FLAG_STINGER_BASED, x)
 pc.hasPerk("Pheromone Sweat")
 pc.hasCockFlag(GLOBAL.FLAG_NUBBY, x)
