@@ -89,11 +89,9 @@
             <div class="homepageSidebarSub">
                 <h2>Setup</h2>
             <p>The first thing you will need to do for the command list to be fully operational is input the location of your image pack. If you are playing online use the URL of the Playable build on the Fenoxo Website, if playing locally use the location of the game install.</p>
+            <br>
             <code class="language-js " data-prismajs-copy="Copy">https://www.fenoxo.com/play/TiTS/release</code>
-            <br>
-            <code class="language-js " data-prismajs-copy="Copy">[path to exe folder]\resources\app</code>
-            <br>
-            <code class="language-js " data-prismajs-copy="Copy">[path to ImagePack]\resources\app</code>
+            <br><br>
             <p style="font-size: 0.7em; text-align: center;">Thanks to inconsistencies in how the imagepack is generated, some images may be missing on the web source.<br> The local version requires the x2 and x4 for some characters.</p>
             </div>
             <div class="homepageSidebarSub homepageSidebarSubInputGrid">
@@ -172,7 +170,7 @@
         </div>
         <div class="homepageFooterE">
             <div class="homePagePre">
-                <p><strong>End Pregnancies</strong></p>
+                <p><strong>Trigger Birth on Player Pregnancies</strong></p>
                 <pre><code class="language-js " data-prismajs-copy="Copy">{for(let i=0;i&lt;pc.pregnancyData.length;i+=1){if(pc.pregnancyData[i].pregnancyIncubation&gt;=100){if(pc.pregnancyData[i].pregnancyType==&quot;EggTrainerFauxPreg&quot;){}else{pc.pregnancyData[i].pregnancyIncubation=100}}}}</code></pre>
             </div>
         </div>
@@ -202,15 +200,13 @@
         
         <div class="homepageFooterChangelog">
             <ul>
+                <li><strong>2024-11-05</strong> Add new crew (Dizzy, Sam, Tika) & link to the Github</li>
+                <li><strong>2024-11-04</strong> Add Anno flags & Update Homepage</li>
                 <li><strong>2023-10-01</strong> Add Changelog, Resolution Pack & Offline Web Patch</li>
                 <li><strong>2023-09-27</strong> Add Quotes to the Setup trim</li>
                 <li><strong>2023-09-26</strong> Add Cookies to save last Tab and Image URL. Image URL is trimmed of ending and preceeding spaces</li>
                 <li><strong>2023-09-20</strong> Add Crew to NPC Page</li>
                 <li><strong>2023-09-19</strong> Re-wrote enemies page to center Images. Replacing CSS and reformating HTML</li>
-                <li><strong>2023-09-18</strong> Add NPC's Page</li>
-                <li><strong>2023-09-17</strong> Fix Hover Fade</li>
-                <li><strong>2023-09-16</strong> Add Dhaal</li>
-                <li><strong>2023-09-12</strong> 2K/4K Scaling</li>
             </ul>
             <dialog id="Changelog">
                 <form method="dialog">
@@ -247,7 +243,7 @@
                 <p>Replaces image under 500px with new downscales from the High-Res Pack <a class="link" href="https://workupload.com/file/wzGWfPPVb6g">Download Zip from WorkUpload</a> 33MB</p>
         </div>
         <div class="homepageFooterDisclaimer">
-            <p><strong>Fenoxo, Savin, the TiTs Develops and TiTsEdJS are not involved with this project in any manner</strong></p>
+            <p><strong>Fenoxo, Savin, the TiTs Develops and TiTsEdJS are not involved with this project in any manner - Contribute at <a class="WikiLink" href="https://github.com/Azriel-Satan/TrialsJS">github.com/Azriel-Satan/TrialsJS</a></strong></p>
         </div>
     </div>
 </section>
@@ -1751,6 +1747,33 @@
                     </div>
                 </div>
             </div>
+            <!-- Dizzy -->
+            <div class="NPCGridContainer Grid2Tall">
+                <div class="SubGrid">
+                    <div>
+                        <h2>Dizzy</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js " data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="CharImg">
+                        <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Dizzy" >W</a>
+                        <img src="imgsourceurl/resources/img/Adjatha\x1\dizzy.Adjatha.webp" alt="Clothed" loading="lazy">
+                        <img src="imgsourceurl/resources/img/Adjatha\x1\dizzy_nude.Adjatha.webp" alt="Clothed" loading="lazy">
+                    </div>
+                </div>
+                <div class="SubGrid">
+                    <div>
+                        <h2>Major Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js " data-prismajs-copy="Copy"></code></pre>
+                    </div>
+                    <div>
+                        <h2>Minor Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js " data-prismajs-copy="Copy"></code></pre>
+                    </div>
+                </div>
+            </div>
             <!-- Eitan -->
             <div class="NPCGridContainer Grid2Tall">
                 <div class="SubGrid">
@@ -1890,14 +1913,14 @@
             <div class="NPCGridContainer Grid2Tall">
                 <div class="SubGrid">
                     <div>
-                        <h2>Nova</h2>
+                        <h2>Nova</h2>./resources/img/Jacques00/x1/
                         <p><strong>Encounter</strong></p>
                         <pre><code class="language-js " data-prismajs-copy="Copy">Encounter()</code></pre>
                     </div>
                     <div class="CharImg">
                         <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Gray_Goo_Armor" >W</a>
-                        <img src="imgsourceurl/resources/img/Jacques00\x1\nova_nude.Jacques00.webp" alt="Clothed" loading="lazy">
-                        <img src="imgsourceurl/resources/img/Jacques00\x1\nova_nude_0.Jacques00.webp" alt="Clothed" loading="lazy">
+                        <img src="imgsourceurl/resources/img/Jacques00\x1\nova.Jacques00.webp" alt="Clothed" loading="lazy">
+                        <img src="imgsourceurl/resources/img/Jacques00\x1\nova_grabby.Jacques00.webp" alt="Clothed" loading="lazy">
                     </div>
                 </div>
                 <div class="SubGrid">
@@ -2074,6 +2097,33 @@
                     </div>
                 </div>
             </div>
+            <!-- Sam -->
+            <div class="NPCGridContainer Grid2Tall">
+                <div class="SubGrid">
+                    <div>
+                        <h2>Sam</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js " data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="CharImg">
+                        <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Sam" >W</a>
+                        <img src="imgsourceurl/resources/img/LiliRuru/x1/techie.LiliRuru.webp" alt="Clothed" loading="lazy">
+                        <img src="imgsourceurl/resources/img/LiliRuru/x1/techie_nude.LiliRuru.webp"" alt="Clothed" loading="lazy">
+                    </div>
+                </div>
+                <div class="SubGrid">
+                    <div>
+                        <h2>Major Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js " data-prismajs-copy="Copy"></code></pre>
+                    </div>
+                    <div>
+                        <h2>Minor Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js " data-prismajs-copy="Copy"></code></pre>
+                    </div>
+                </div>
+            </div>
             <!-- Sera -->
             <div class="NPCGridContainer Grid2Tall">
                 <div class="SubGrid">
@@ -2175,6 +2225,33 @@
                         <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Syri" >W</a>
                         <img src="imgsourceurl/resources/img/Cheshire\x1\syri.Cheshire.webp" alt="Clothed" loading="lazy">
                         <img src="imgsourceurl/resources/img/Cheshire\x1\syri_nude.Cheshire.webp" alt="Clothed" loading="lazy">
+                    </div>
+                </div>
+                <div class="SubGrid">
+                    <div>
+                        <h2>Major Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
+                    </div>
+                    <div>
+                        <h2>Minor Flags</h2>
+                        <p><strong>Flag</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy"></code></pre>
+                    </div>
+                </div>
+            </div>
+            <!-- Tika -->
+            <div class="NPCGridContainer Grid2Tall">
+                <div class="SubGrid">
+                    <div>
+                        <h2>Tika</h2>
+                        <p><strong>Encounter</strong></p>
+                        <pre><code class="language-js line-numbers" data-prismajs-copy="Copy">Encounter()</code></pre>
+                    </div>
+                    <div class="CharImg">
+                        <a class="characterWikiLink" href="https://wiki.smutosaur.us/TiTS/Tika" >W</a>
+                        <img src="imgsourceurl/resources/img/Adjatha/x1/tika.Adjatha.webp" alt="Clothed" loading="lazy">
+                        <img src="imgsourceurl/resources/img/Adjatha/x1/tika_tongue.Adjatha.webp" alt="Clothed" loading="lazy">
                     </div>
                 </div>
                 <div class="SubGrid">
